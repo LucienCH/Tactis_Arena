@@ -1,0 +1,186 @@
+\hypertarget{common_8h}{}\section{src/common.h File Reference}
+\label{common_8h}\index{src/common.\+h@{src/common.\+h}}
+
+
+Defining macros and other global variables common to the whole project.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{common_8h_adea6e0778ed738e315a134cb865c141f}\label{common_8h_adea6e0778ed738e315a134cb865c141f}} 
+\#define \hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}~50
+\begin{DoxyCompactList}\small\item\em Defines a length to use for short string arrays. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_a44318a4127425708d1a624818539430f}\label{common_8h_a44318a4127425708d1a624818539430f}} 
+\#define \hyperlink{common_8h_a44318a4127425708d1a624818539430f}{S\+T\+R\+\_\+\+L\+O\+NG}~256
+\begin{DoxyCompactList}\small\item\em Defines a length to use for long string arrays. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_aafc199a80a9a4962de773051abf51aaf}\label{common_8h_aafc199a80a9a4962de773051abf51aaf}} 
+\#define \hyperlink{common_8h_aafc199a80a9a4962de773051abf51aaf}{N\+U\+M\+\_\+\+E\+R\+R\+OR}~10
+\begin{DoxyCompactList}\small\item\em Indicates the number of custom error messages created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_ac7be76f31ad9c9e1473863914a97b50e}\label{common_8h_ac7be76f31ad9c9e1473863914a97b50e}} 
+\#define \hyperlink{common_8h_ac7be76f31ad9c9e1473863914a97b50e}{M\+A\+X\+R\+A\+N\+GE}~256
+\begin{DoxyCompactList}\small\item\em Indicates the Max Range of an ability, usefull when creating an array to store individual coordinates encompassed by the range. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_a064213c965bbbc0fc4482eb800c15969}\label{common_8h_a064213c965bbbc0fc4482eb800c15969}} 
+\#define \hyperlink{common_8h_a064213c965bbbc0fc4482eb800c15969}{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+A\+N\+I\+M\+\_\+}~13
+\begin{DoxyCompactList}\small\item\em Indicates the max number of animation frames an ability can have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_af255265266c7bffd8e2b3526038636ea}\label{common_8h_af255265266c7bffd8e2b3526038636ea}} 
+\#define \hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\begin{DoxyCompactList}\small\item\em Indicates the max horizontal size of the gameboard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_aa319b11913fc00b38adf54ee0b56ae09}\label{common_8h_aa319b11913fc00b38adf54ee0b56ae09}} 
+\#define \hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\begin{DoxyCompactList}\small\item\em Indicates the max vertical size of the gameboard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_a14ccaa62902eb389a39ffc64b2dcd30e}\label{common_8h_a14ccaa62902eb389a39ffc64b2dcd30e}} 
+\#define \hyperlink{common_8h_a14ccaa62902eb389a39ffc64b2dcd30e}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+M\+US}~2
+\begin{DoxyCompactList}\small\item\em Indicates the number of music tracks available in game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \{ \newline
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a1d9109dc66df8f33c439cb9c528611a6}{P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a8a98e7877e367accbc17e4c1b333a422}{S\+D\+L\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698ad59b7e32d9e9c0581e9228811b1233e2}{C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND}, 
+\newline
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698ab5b5f88257ef50375cc4005eacb86378}{S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698aaa0e21cabef99e86e24d70b5cc912fb2}{I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a5065034024d4b6fd93047b6cb8eec6c9}{C\+L\+I\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698ab4a033cc5ef175d756f5ac54114ccd30}{S\+E\+R\+V\+\_\+\+E\+R\+R\+OR}, 
+\newline
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a8b99f6163dc3152610fcd8b6878609b9}{S\+E\+N\+D\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698a8ae36d53532f5913868ce052aef604bf}{A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE}
+ \}\begin{DoxyCompactList}\small\item\em Labeling custom error types. \end{DoxyCompactList}
+\item 
+enum \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \{ \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}, 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839}{T\+R\+UE}
+ \}\begin{DoxyCompactList}\small\item\em Boolean Enumeration. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{common_8h_a9e0d6500e703a094902920920b32e095}{str\+To\+Upper} (char $\ast$chaine)
+\begin{DoxyCompactList}\small\item\em Transforms a string to all upper characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{common_8h_a0b2caeb4b6f130be43e5a2f0267dd453}\label{common_8h_a0b2caeb4b6f130be43e5a2f0267dd453}} 
+int \hyperlink{common_8h_a0b2caeb4b6f130be43e5a2f0267dd453}{verbose}
+\begin{DoxyCompactList}\small\item\em Global variable used to print messages depending on the level put in program parametres. 0 is saved only for debugging. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_a526f7341d781db3ef6c096d191769acc}\label{common_8h_a526f7341d781db3ef6c096d191769acc}} 
+int \hyperlink{common_8h_a526f7341d781db3ef6c096d191769acc}{server\+Status}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_status}{Status} of the server used in multi\+\_\+menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_afcb1bcbe719ae3b8f83535efd646dcb6}\label{common_8h_afcb1bcbe719ae3b8f83535efd646dcb6}} 
+int \hyperlink{common_8h_afcb1bcbe719ae3b8f83535efd646dcb6}{nb\+Player}
+\begin{DoxyCompactList}\small\item\em Number of players in game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_ad589db73cacdabd04b86f2358279b629}\label{common_8h_ad589db73cacdabd04b86f2358279b629}} 
+char \hyperlink{common_8h_ad589db73cacdabd04b86f2358279b629}{error\+\_\+message} \mbox{[}\hyperlink{common_8h_aafc199a80a9a4962de773051abf51aaf}{N\+U\+M\+\_\+\+E\+R\+R\+OR}\mbox{]}\mbox{[}\hyperlink{common_8h_a44318a4127425708d1a624818539430f}{S\+T\+R\+\_\+\+L\+O\+NG}\mbox{]}
+\begin{DoxyCompactList}\small\item\em String database containing custom error messages to be used with err\+\_\+t enumeration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_ad53fa5fd1d7e7aba87a446a226271672}\label{common_8h_ad53fa5fd1d7e7aba87a446a226271672}} 
+char \hyperlink{common_8h_ad53fa5fd1d7e7aba87a446a226271672}{pseudo\+User} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Name of the user used in multi\+\_\+menu, socket\+\_\+\+Client and socket\+\_\+server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{common_8h_a0a1af167d929ecfc3238297c4fcfd8e3}\label{common_8h_a0a1af167d929ecfc3238297c4fcfd8e3}} 
+char \hyperlink{common_8h_a0a1af167d929ecfc3238297c4fcfd8e3}{map\+Multi\+Selected} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Name of the map selected by the host used in multi\+\_\+menu, socket\+\_\+client and socket\+\_\+server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defining macros and other global variables common to the whole project. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL, Lucien C\+H\+A\+U\+V\+IN, Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{common_8h_af6a258d8f3ee5206d682d799316314b1}\label{common_8h_af6a258d8f3ee5206d682d799316314b1}} 
+\index{common.\+h@{common.\+h}!bool@{bool}}
+\index{bool@{bool}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{bool}{bool}}
+{\footnotesize\ttfamily enum \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}
+
+
+
+Boolean Enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+L\+SE@{F\+A\+L\+SE}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}}\mbox{\Hypertarget{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}\label{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}} 
+F\+A\+L\+SE&0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+UE@{T\+R\+UE}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!T\+R\+UE@{T\+R\+UE}}}\mbox{\Hypertarget{common_8h_af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839}\label{common_8h_af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839}} 
+T\+R\+UE&1 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698}} 
+\index{common.\+h@{common.\+h}!err\+\_\+t@{err\+\_\+t}}
+\index{err\+\_\+t@{err\+\_\+t}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{err\+\_\+t}{err\_t}}
+{\footnotesize\ttfamily enum \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t}}
+
+
+
+Labeling custom error types. 
+
+To be used with string database error\+\_\+message which contains custom error message for all custom error types \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!OK@{OK}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a2bc49ec37d6a5715dd23e85f1ff5bb59}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a2bc49ec37d6a5715dd23e85f1ff5bb59}} 
+OK&No error message \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL@{P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL@{P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a1d9109dc66df8f33c439cb9c528611a6}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a1d9109dc66df8f33c439cb9c528611a6}} 
+P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL&Pointer is Null \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+D\+L\+\_\+\+E\+R\+R\+OR@{S\+D\+L\+\_\+\+E\+R\+R\+OR}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!S\+D\+L\+\_\+\+E\+R\+R\+OR@{S\+D\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a8a98e7877e367accbc17e4c1b333a422}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a8a98e7877e367accbc17e4c1b333a422}} 
+S\+D\+L\+\_\+\+E\+R\+R\+OR&S\+DL error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND@{C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND@{C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698ad59b7e32d9e9c0581e9228811b1233e2}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698ad59b7e32d9e9c0581e9228811b1233e2}} 
+C\+O\+O\+R\+D\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+ND&Coordinates out of limits \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG@{S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG@{S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698ab5b5f88257ef50375cc4005eacb86378}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698ab5b5f88257ef50375cc4005eacb86378}} 
+S\+T\+R\+\_\+\+T\+O\+O\+\_\+\+L\+O\+NG&String too long \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR@{I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR@{I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698aaa0e21cabef99e86e24d70b5cc912fb2}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698aaa0e21cabef99e86e24d70b5cc912fb2}} 
+I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR&\hyperlink{struct_ability}{Ability} coordinates were not initialised correctly \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+L\+I\+\_\+\+E\+R\+R\+OR@{C\+L\+I\+\_\+\+E\+R\+R\+OR}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!C\+L\+I\+\_\+\+E\+R\+R\+OR@{C\+L\+I\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a5065034024d4b6fd93047b6cb8eec6c9}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a5065034024d4b6fd93047b6cb8eec6c9}} 
+C\+L\+I\+\_\+\+E\+R\+R\+OR&Client not initialised correctly \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+R\+V\+\_\+\+E\+R\+R\+OR@{S\+E\+R\+V\+\_\+\+E\+R\+R\+OR}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!S\+E\+R\+V\+\_\+\+E\+R\+R\+OR@{S\+E\+R\+V\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698ab4a033cc5ef175d756f5ac54114ccd30}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698ab4a033cc5ef175d756f5ac54114ccd30}} 
+S\+E\+R\+V\+\_\+\+E\+R\+R\+OR&Server not initialised correctly \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+E\+N\+D\+\_\+\+E\+R\+R\+OR@{S\+E\+N\+D\+\_\+\+E\+R\+R\+OR}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!S\+E\+N\+D\+\_\+\+E\+R\+R\+OR@{S\+E\+N\+D\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a8b99f6163dc3152610fcd8b6878609b9}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a8b99f6163dc3152610fcd8b6878609b9}} 
+S\+E\+N\+D\+\_\+\+E\+R\+R\+OR&Structure not sent correctly \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE@{A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE@{A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE}}}\mbox{\Hypertarget{common_8h_a5edd7aad54ac059bf561cf2f92017698a8ae36d53532f5913868ce052aef604bf}\label{common_8h_a5edd7aad54ac059bf561cf2f92017698a8ae36d53532f5913868ce052aef604bf}} 
+A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+\_\+\+C\+A\+C\+HE&Text already in cache, cannot add it twice \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{common_8h_a9e0d6500e703a094902920920b32e095}\label{common_8h_a9e0d6500e703a094902920920b32e095}} 
+\index{common.\+h@{common.\+h}!str\+To\+Upper@{str\+To\+Upper}}
+\index{str\+To\+Upper@{str\+To\+Upper}!common.\+h@{common.\+h}}
+\subsubsection{\texorpdfstring{str\+To\+Upper()}{strToUpper()}}
+{\footnotesize\ttfamily char$\ast$ str\+To\+Upper (\begin{DoxyParamCaption}\item[{char $\ast$}]{chaine }\end{DoxyParamCaption})}
+
+
+
+Transforms a string to all upper characters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chaine} & The string to be transformed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the transformed string 
+\end{DoxyReturn}

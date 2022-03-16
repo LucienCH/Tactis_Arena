@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['c',['c',['../structaction.html#a4a5c4af0a2a3274ecfce21da29e47cb5',1,'action']]],
+  ['cha_5fclass',['cha_class',['../structentity__t.html#a3abf9c71d2774124d4fa016df4754142',1,'entity_t']]],
+  ['cha_5fid',['cha_id',['../structentity__t.html#a218503eec9e98ad9b098b4f3337fd759',1,'entity_t::cha_id()'],['../struct_trap__t.html#a0155026ce99180189ad746853faf6725',1,'Trap_t::cha_id()']]],
+  ['cha_5fname',['cha_name',['../structentity__t.html#afb57034f4fd8ef96d972076ecd2a9349',1,'entity_t']]],
+  ['chance',['chance',['../struct_modifier.html#ae64995d87e4e17a0bfc1b08906fafe85',1,'Modifier']]],
+  ['char_5fid',['char_id',['../structaction.html#ae2499e72f25e9323a7e91160b8c58a87',1,'action']]],
+  ['chartextures',['charTextures',['../textures_8h.html#abf258a69594fe96f9fcade9f64c6ebc7',1,'textures.c']]],
+  ['chartextures_5floaded',['charTextures_loaded',['../textures_8h.html#ab552ab66b7aebe03ec1b7c66393120ff',1,'textures.h']]],
+  ['cla_5fabilities',['cla_abilities',['../struct_class.html#acbe95b42d1a383206b091c3510369d82',1,'Class']]],
+  ['cla_5fid',['cla_id',['../struct_class.html#ad62c4d6efa2b29a2154b24d0fbd1b68e',1,'Class']]],
+  ['cla_5fname',['cla_name',['../struct_class.html#aa4e0963690a36008c37129bdb527a7dd',1,'Class']]],
+  ['classes',['classes',['../init_8c.html#aad8bfa86fe0525863ba5f81c4d790984',1,'classes():&#160;init.c'],['../init_8h.html#aad8bfa86fe0525863ba5f81c4d790984',1,'classes():&#160;init.c']]],
+  ['color',['color',['../struct_text_cache.html#adf57a27170aab4f3e85e8379d7740719',1,'TextCache']]],
+  ['content',['content',['../struct_text_cache.html#aba8c3c28854ab2004e666cb0044d8608',1,'TextCache']]],
+  ['coord',['coord',['../struct_ability.html#aa26fadc3824d52cec6265751534c2a6d',1,'Ability']]],
+  ['coords',['coords',['../structentity__t.html#a90ace45b66435b2f4c6da0e3da82ad72',1,'entity_t']]],
+  ['csprites',['cSprites',['../textures_8h.html#a8a281ec94b46d7050def87aecd3e1ab7',1,'textures.c']]],
+  ['csprites_5floaded',['cSprites_loaded',['../textures_8h.html#abe67377f52dbf0a61db0b08b8ee49941',1,'textures.h']]]
+];

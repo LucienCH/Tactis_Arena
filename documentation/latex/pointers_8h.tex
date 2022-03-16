@@ -1,0 +1,97 @@
+\hypertarget{pointers_8h}{}\section{src/pointers.h File Reference}
+\label{pointers_8h}\index{src/pointers.\+h@{src/pointers.\+h}}
+
+
+Declaration of pointers used for initialisation in a header file to reduce clog in \hyperlink{init__classes_8c}{init\+\_\+classes.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{pointers_8h_a879c7aaa8a357923c4bb3b93104f1db9}\label{pointers_8h_a879c7aaa8a357923c4bb3b93104f1db9}} 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{pointers_8h_a879c7aaa8a357923c4bb3b93104f1db9}{one\+\_\+c}
+\begin{DoxyCompactList}\small\item\em Pointer to a reused \hyperlink{struct_coord}{Coord} structure indicating a single targeted coordinate (0,0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_aa9423fdf7e3833858d9462e7b29b7f18}\label{pointers_8h_aa9423fdf7e3833858d9462e7b29b7f18}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_aa9423fdf7e3833858d9462e7b29b7f18}{one\+\_\+a}
+\begin{DoxyCompactList}\small\item\em Pointer to a reused \hyperlink{struct_damage}{Damage} structure indicating a base damage modifier (1) for physical damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_aebead36d20241b993dbf4f65b0ce8a49}\label{pointers_8h_aebead36d20241b993dbf4f65b0ce8a49}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_aebead36d20241b993dbf4f65b0ce8a49}{one\+\_\+m}
+\begin{DoxyCompactList}\small\item\em Pointer to a reused \hyperlink{struct_damage}{Damage} structure indicating a base damage modifier (1) for magic damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_af9c8fa3d0584bcfcfe2f11b777065e84}\label{pointers_8h_af9c8fa3d0584bcfcfe2f11b777065e84}} 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{pointers_8h_af9c8fa3d0584bcfcfe2f11b777065e84}{aoe51}
+\begin{DoxyCompactList}\small\item\em Pointer to a reused \hyperlink{struct_coord}{Coord} structure indicating a zone of 51 Tiles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_ab0610b3fbfa4418cf7da54c6eb081aa4}\label{pointers_8h_ab0610b3fbfa4418cf7da54c6eb081aa4}} 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{pointers_8h_ab0610b3fbfa4418cf7da54c6eb081aa4}{aoe103}
+\begin{DoxyCompactList}\small\item\em Pointer to a reused \hyperlink{struct_coord}{Coord} structure indicating a zone of 103 Tiles. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a59cc84be81e503000bb7c7e278fa1fcf}\label{pointers_8h_a59cc84be81e503000bb7c7e278fa1fcf}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_a59cc84be81e503000bb7c7e278fa1fcf}{FD}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{struct_coord}{Coord} structure for the Berserker\textquotesingle{}s Frenzied Dash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a4cf149ae43a5026a029c11fa00f9f17a}\label{pointers_8h_a4cf149ae43a5026a029c11fa00f9f17a}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a4cf149ae43a5026a029c11fa00f9f17a}{DE}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{struct_modifier}{Modifier} structure for the Ranger\textquotesingle{}s Deadeye. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a1b576bd7f7d738cc73bbb4b1bc948f39}\label{pointers_8h_a1b576bd7f7d738cc73bbb4b1bc948f39}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a1b576bd7f7d738cc73bbb4b1bc948f39}{Ba}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Goliath\textquotesingle{}s Bash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_ac477e9ddb41e292aaefcf183fa4d2535}\label{pointers_8h_ac477e9ddb41e292aaefcf183fa4d2535}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_ac477e9ddb41e292aaefcf183fa4d2535}{SU}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Goliath\textquotesingle{}s Shields Up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a43426897a40b22f220ba28180958c76e}\label{pointers_8h_a43426897a40b22f220ba28180958c76e}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a43426897a40b22f220ba28180958c76e}{D}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Goliath\textquotesingle{}s Detained. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_af9bbc027e6a9bd70cf50d80e88f10152}\label{pointers_8h_af9bbc027e6a9bd70cf50d80e88f10152}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_af9bbc027e6a9bd70cf50d80e88f10152}{P}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Goliath\textquotesingle{}s Banner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}\label{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}{d}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_damage}{Damage} structure for the Mage\textquotesingle{}s Eruption, Shock and Lightning Chain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a5f56576e31dff9bc15c65c0c0cabac63}\label{pointers_8h_a5f56576e31dff9bc15c65c0c0cabac63}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_a5f56576e31dff9bc15c65c0c0cabac63}{u}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_damage}{Damage} Structure for the Mage\textquotesingle{}s Blizzard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a4fe55675eb538b1c2b9ef29d2c7f6b67}\label{pointers_8h_a4fe55675eb538b1c2b9ef29d2c7f6b67}} 
+\hyperlink{struct_damage}{Damage} $\ast$ \hyperlink{pointers_8h_a4fe55675eb538b1c2b9ef29d2c7f6b67}{red}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_damage}{Damage} structure for the Mage\textquotesingle{}s Freeze. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_afe59da3f578842bf8112d99058180a07}\label{pointers_8h_afe59da3f578842bf8112d99058180a07}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_afe59da3f578842bf8112d99058180a07}{fire1}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Fireball. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a6e8e3146f26546bdeddf46909ef9b843}\label{pointers_8h_a6e8e3146f26546bdeddf46909ef9b843}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a6e8e3146f26546bdeddf46909ef9b843}{fire2}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Flamecharge and Eruption. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_ae3ab40053e508931cc405a59e4ea6c6a}\label{pointers_8h_ae3ab40053e508931cc405a59e4ea6c6a}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_ae3ab40053e508931cc405a59e4ea6c6a}{ice1}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Icy Winds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a70f4cdde987a08bad7f7ea75168ea38c}\label{pointers_8h_a70f4cdde987a08bad7f7ea75168ea38c}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a70f4cdde987a08bad7f7ea75168ea38c}{ice2}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Freeze. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a4c751617ef6fa62013721e83e304c991}\label{pointers_8h_a4c751617ef6fa62013721e83e304c991}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a4c751617ef6fa62013721e83e304c991}{ice3}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Blizzard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_ac26547ea12cc414ad046486bcf8af624}\label{pointers_8h_ac26547ea12cc414ad046486bcf8af624}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_ac26547ea12cc414ad046486bcf8af624}{armor}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Frozen Armor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_acc132a40b3eead6eccc796cadf1f6807}\label{pointers_8h_acc132a40b3eead6eccc796cadf1f6807}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_acc132a40b3eead6eccc796cadf1f6807}{thera}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Mage\textquotesingle{}s Shock Therapy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_afb6446257c349c48b481b2adbaeb6c83}\label{pointers_8h_afb6446257c349c48b481b2adbaeb6c83}} 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{pointers_8h_afb6446257c349c48b481b2adbaeb6c83}{aoe75}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_coord}{Coord} structure for the Mage\textquotesingle{}s Eruption and Blizzard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a1c9ff1e88a1e17718b9e4a84166b39e6}\label{pointers_8h_a1c9ff1e88a1e17718b9e4a84166b39e6}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a1c9ff1e88a1e17718b9e4a84166b39e6}{para}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Valkyrie\textquotesingle{}s Thrust and Odin\textquotesingle{}s Eyes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_a283dbd2b5cd54dae98944548277f0cba}\label{pointers_8h_a283dbd2b5cd54dae98944548277f0cba}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_a283dbd2b5cd54dae98944548277f0cba}{heal}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Angel\textquotesingle{}s Condemn and Holy Storm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_afa18ea57ff5507ae0682a3862230f501}\label{pointers_8h_afa18ea57ff5507ae0682a3862230f501}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_afa18ea57ff5507ae0682a3862230f501}{passive}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Angel\textquotesingle{}s Passive Aura. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{pointers_8h_ab7f32b29a56c59ef30b8073ecafaf83f}\label{pointers_8h_ab7f32b29a56c59ef30b8073ecafaf83f}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$ \hyperlink{pointers_8h_ab7f32b29a56c59ef30b8073ecafaf83f}{bless}
+\begin{DoxyCompactList}\small\item\em Pointer to a \hyperlink{struct_modifier}{Modifier} structure for the Angel\textquotesingle{}s God\textquotesingle{}s Blessing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Declaration of pointers used for initialisation in a header file to reduce clog in \hyperlink{init__classes_8c}{init\+\_\+classes.\+c}. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}

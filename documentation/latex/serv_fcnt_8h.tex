@@ -1,0 +1,204 @@
+\hypertarget{serv_fcnt_8h}{}\section{src/serv\+Fcnt.h File Reference}
+\label{serv_fcnt_8h}\index{src/serv\+Fcnt.\+h@{src/serv\+Fcnt.\+h}}
+
+
+All the function used by the server or the client.  
+
+
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a212979f5fc9dcf0a420e90b9b21d780a}\label{serv_fcnt_8h_a212979f5fc9dcf0a420e90b9b21d780a}} 
+\#define {\bfseries M\+A\+X\+\_\+\+B\+U\+F\+F\+\_\+\+S\+I\+ZE}~1024
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a614217d263be1fb1a5f76e2ff7be19a2}\label{serv_fcnt_8h_a614217d263be1fb1a5f76e2ff7be19a2}} 
+\#define {\bfseries P\+O\+RT}~3555
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{serv_fcnt_8h_a6b15b495b991cef90460091cff47c0e9}{start\+T\+C\+P\+Socket\+Serv} ()
+\begin{DoxyCompactList}\small\item\em Function to create the server and wait incoming connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a25660c23b4a3f60ca45742a8bbb529a0}\label{serv_fcnt_8h_a25660c23b4a3f60ca45742a8bbb529a0}} 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} {\bfseries start\+T\+C\+P\+Socket\+Cli} ()
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{serv_fcnt_8h_a2fa8ce5117749a997e48dd8e2895aae9}{stop\+T\+C\+P\+Socket\+Serv} (int socket\+Connected)
+\begin{DoxyCompactList}\small\item\em Function to stop the server (close sockets) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a43d852b2b93f469c6477073cb7b7b71f}\label{serv_fcnt_8h_a43d852b2b93f469c6477073cb7b7b71f}} 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} {\bfseries stop\+T\+C\+P\+Socket\+Cli} (int socket\+Connected)
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{serv_fcnt_8h_a7c0e0be2b5dfc2f8278a369abbc53b81}{send\+Struct} (void $\ast$structure, int size, int socket, \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t}($\ast$print)(void $\ast$s, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Generic function to send a structur to a client or a server. \end{DoxyCompactList}\item 
+void \hyperlink{serv_fcnt_8h_a3fd4e6b35e05f1686dfbc4d5a619a8e2}{get\+Local\+IP} ()
+\begin{DoxyCompactList}\small\item\em Function to get the local ip of the server. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{serv_fcnt_8h_a12f9e809fa97073c4b7d0fffbacd2e85}{recep} (void $\ast$container, int size, int socket, \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t}($\ast$print)(void $\ast$s, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Generic function to receiv a structur of a client or a server. \end{DoxyCompactList}\item 
+int \hyperlink{serv_fcnt_8h_aaa283df11b3721c92e02971c4ea6fa2d}{setup\+Multi\+Map} (\hyperlink{struct_multi_tile}{Multi\+Tile} $\ast$map\+Multi, \hyperlink{struct_tile}{Tile} $\ast$map\+Local)
+\begin{DoxyCompactList}\small\item\em Function to create the multitile map that we want to send. \end{DoxyCompactList}\item 
+int \hyperlink{serv_fcnt_8h_a2889aef081e5c55b3ddb50d52329dd52}{display\+Map\+Multi} (\hyperlink{struct_multi_tile}{Multi\+Tile} $\ast$map\+Multi)
+\begin{DoxyCompactList}\small\item\em Function to display the Multitile map that we send or receive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_ae564d9eedfab6ede5a0f86398b9b095b}\label{serv_fcnt_8h_ae564d9eedfab6ede5a0f86398b9b095b}} 
+unsigned int {\bfseries log\+Flag}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a2ace8e2950831e4f783c3b998ec5232a}\label{serv_fcnt_8h_a2ace8e2950831e4f783c3b998ec5232a}} 
+int {\bfseries is\+Pseudo\+Valid}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_acc574239046394d8a2fbe0c58901464f}\label{serv_fcnt_8h_acc574239046394d8a2fbe0c58901464f}} 
+int {\bfseries is\+Info\+Join\+Set}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_ab25ab745266e8fb7923cb0eefaa2cfde}\label{serv_fcnt_8h_ab25ab745266e8fb7923cb0eefaa2cfde}} 
+char {\bfseries mon\+IP} \mbox{[}85\mbox{]}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a6a46354c53f3662f74822d6f6eca257b}\label{serv_fcnt_8h_a6a46354c53f3662f74822d6f6eca257b}} 
+char {\bfseries ip\+Srv} \mbox{[}85\mbox{]}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_ad61876878bbaadf25aac93e71e897881}\label{serv_fcnt_8h_ad61876878bbaadf25aac93e71e897881}} 
+char {\bfseries Map\+Multi\+Selected} \mbox{[}50\mbox{]}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a44e7692df4ecf1f4e3d9f1316670f173}\label{serv_fcnt_8h_a44e7692df4ecf1f4e3d9f1316670f173}} 
+char {\bfseries pseudo\+Client} \mbox{[}128\mbox{]}
+\item 
+\mbox{\Hypertarget{serv_fcnt_8h_a9e0951e469e94eb2336f5791a6ee37fd}\label{serv_fcnt_8h_a9e0951e469e94eb2336f5791a6ee37fd}} 
+int {\bfseries socket\+Connected}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the function used by the server or the client. 
+
+Contains all the function for server and client \begin{DoxyAuthor}{Author}
+Lucien Chauvin 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{serv_fcnt_8h_a2889aef081e5c55b3ddb50d52329dd52}\label{serv_fcnt_8h_a2889aef081e5c55b3ddb50d52329dd52}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!display\+Map\+Multi@{display\+Map\+Multi}}
+\index{display\+Map\+Multi@{display\+Map\+Multi}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{display\+Map\+Multi()}{displayMapMulti()}}
+{\footnotesize\ttfamily int display\+Map\+Multi (\begin{DoxyParamCaption}\item[{\hyperlink{struct_multi_tile}{Multi\+Tile} $\ast$}]{map\+Multi }\end{DoxyParamCaption})}
+
+
+
+Function to display the Multitile map that we send or receive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+Multi} & \hyperlink{struct_multi_tile}{Multi\+Tile} structure to display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_a3fd4e6b35e05f1686dfbc4d5a619a8e2}\label{serv_fcnt_8h_a3fd4e6b35e05f1686dfbc4d5a619a8e2}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!get\+Local\+IP@{get\+Local\+IP}}
+\index{get\+Local\+IP@{get\+Local\+IP}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{get\+Local\+I\+P()}{getLocalIP()}}
+{\footnotesize\ttfamily void get\+Local\+IP (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to get the local ip of the server. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_a12f9e809fa97073c4b7d0fffbacd2e85}\label{serv_fcnt_8h_a12f9e809fa97073c4b7d0fffbacd2e85}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!recep@{recep}}
+\index{recep@{recep}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{recep()}{recep()}}
+{\footnotesize\ttfamily void$\ast$ recep (\begin{DoxyParamCaption}\item[{void $\ast$}]{container,  }\item[{int}]{size,  }\item[{int}]{socket,  }\item[{\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t}($\ast$)(void $\ast$s, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})}]{print }\end{DoxyParamCaption})}
+
+
+
+Generic function to receiv a structur of a client or a server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em container} & The sturcture that we want to receive \\
+\hline
+{\em size} & Size of the structure to receive \\
+\hline
+{\em socket} & the socket that the user is connected to \\
+\hline
+{\em print} & Pointer to print the structure to receiv (N\+U\+LL if ther is no function to print) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t R\+E\+C\+E\+P\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_a7c0e0be2b5dfc2f8278a369abbc53b81}\label{serv_fcnt_8h_a7c0e0be2b5dfc2f8278a369abbc53b81}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!send\+Struct@{send\+Struct}}
+\index{send\+Struct@{send\+Struct}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{send\+Struct()}{sendStruct()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} send\+Struct (\begin{DoxyParamCaption}\item[{void $\ast$}]{structure,  }\item[{int}]{size,  }\item[{int}]{socket,  }\item[{\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t}($\ast$)(void $\ast$s, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})}]{print }\end{DoxyParamCaption})}
+
+
+
+Generic function to send a structur to a client or a server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em structure} & The sturcture that we want to send \\
+\hline
+{\em size} & Size of the structure to send \\
+\hline
+{\em socket} & the socket that the user is connected to \\
+\hline
+{\em print} & Pointer to print the structure to send (N\+U\+LL if ther is no function to print) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t S\+E\+N\+D\+\_\+\+OK or S\+E\+N\+D\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_aaa283df11b3721c92e02971c4ea6fa2d}\label{serv_fcnt_8h_aaa283df11b3721c92e02971c4ea6fa2d}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!setup\+Multi\+Map@{setup\+Multi\+Map}}
+\index{setup\+Multi\+Map@{setup\+Multi\+Map}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{setup\+Multi\+Map()}{setupMultiMap()}}
+{\footnotesize\ttfamily int setup\+Multi\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{struct_multi_tile}{Multi\+Tile} $\ast$}]{map\+Multi,  }\item[{\hyperlink{struct_tile}{Tile} $\ast$}]{map\+Local }\end{DoxyParamCaption})}
+
+
+
+Function to create the multitile map that we want to send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+Multi} & \hyperlink{struct_multi_tile}{Multi\+Tile} structure that we want to send to the client \\
+\hline
+{\em map\+Local} & Local map used to create the Multitile structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_a6b15b495b991cef90460091cff47c0e9}\label{serv_fcnt_8h_a6b15b495b991cef90460091cff47c0e9}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!start\+T\+C\+P\+Socket\+Serv@{start\+T\+C\+P\+Socket\+Serv}}
+\index{start\+T\+C\+P\+Socket\+Serv@{start\+T\+C\+P\+Socket\+Serv}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{start\+T\+C\+P\+Socket\+Serv()}{startTCPSocketServ()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} start\+T\+C\+P\+Socket\+Serv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to create the server and wait incoming connection. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t S\+E\+R\+V\+\_\+\+OK or S\+E\+R\+V\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{serv_fcnt_8h_a2fa8ce5117749a997e48dd8e2895aae9}\label{serv_fcnt_8h_a2fa8ce5117749a997e48dd8e2895aae9}} 
+\index{serv\+Fcnt.\+h@{serv\+Fcnt.\+h}!stop\+T\+C\+P\+Socket\+Serv@{stop\+T\+C\+P\+Socket\+Serv}}
+\index{stop\+T\+C\+P\+Socket\+Serv@{stop\+T\+C\+P\+Socket\+Serv}!serv\+Fcnt.\+h@{serv\+Fcnt.\+h}}
+\subsubsection{\texorpdfstring{stop\+T\+C\+P\+Socket\+Serv()}{stopTCPSocketServ()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} stop\+T\+C\+P\+Socket\+Serv (\begin{DoxyParamCaption}\item[{int}]{socket }\end{DoxyParamCaption})}
+
+
+
+Function to stop the server (close sockets) 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t S\+E\+R\+V\+\_\+\+OK 
+\end{DoxyReturn}

@@ -1,0 +1,772 @@
+\hypertarget{gameplay_8c}{}\section{src/gameplay.c File Reference}
+\label{gameplay_8c}\index{src/gameplay.\+c@{src/gameplay.\+c}}
+
+
+Many Miscellaneous Functions related to gameplay.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}deplacement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{gameplay_8c_ad442588d12b048cd22096b40d4282677}\label{gameplay_8c_ad442588d12b048cd22096b40d4282677}} 
+\#define \hyperlink{gameplay_8c_ad442588d12b048cd22096b40d4282677}{D\+E\+F\+\_\+\+M\+U\+LT}~15
+\begin{DoxyCompactList}\small\item\em Defining the defense multiplier for balancing purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_aeb79e46c2827d64a760e152be1fe4ffe}{rec\+\_\+id\+\_\+swap} (\hyperlink{structaction}{action} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Sets received character Ids to their local counterpart. \end{DoxyCompactList}\item 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$ \hyperlink{gameplay_8c_a96c91c8b40a4ff25f0f4892549326a7d}{e\+\_\+from\+\_\+id} (int Id)
+\begin{DoxyCompactList}\small\item\em Finds the entity corresponding to a character Id. \end{DoxyCompactList}\item 
+\hyperlink{struct_ability}{Ability} $\ast$ \hyperlink{gameplay_8c_a9586cfa9acd38883b850619c44c071f3}{ab\+\_\+from\+\_\+id} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} Id, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Finds the ability corresponding to an ability Id. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_aa35133475edd8d99fa98a99962118f85}{get\+\_\+team} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$$\ast$all, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} same)
+\begin{DoxyCompactList}\small\item\em Finds the allied/ennemy team from an entity. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{gameplay_8c_a6750275901a2c748f41a42b623a94707}{game\+\_\+over} ()
+\begin{DoxyCompactList}\small\item\em verifies the state of the game \end{DoxyCompactList}\item 
+int \hyperlink{gameplay_8c_aad4bb7a4b26dc8aba529c36f17e5396a}{get\+\_\+range} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} ab)
+\begin{DoxyCompactList}\small\item\em Finds the castable range of an ability. \end{DoxyCompactList}\item 
+int \hyperlink{gameplay_8c_a7b0fc7a70cc94848e2df79d89ddf98fd}{count\+\_\+dead\+\_\+allies} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Counts dead allies. \end{DoxyCompactList}\item 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$$\ast$ \hyperlink{gameplay_8c_a251fb8848141ebec341ac04020228f13}{get\+\_\+dead\+\_\+allies} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Puts dead allies in an array and returns it. \end{DoxyCompactList}\item 
+int \hyperlink{gameplay_8c_ac271a74cd944f9c99457515cdfd6f86c}{get\+\_\+cost} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} Id)
+\begin{DoxyCompactList}\small\item\em get the cost of an ability \end{DoxyCompactList}\item 
+int \hyperlink{gameplay_8c_abe0769c64b271e12d4797f5e06637678}{get\+\_\+cooldown} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} Id)
+\begin{DoxyCompactList}\small\item\em get the cooldown of an ability \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{gameplay_8c_a0d026a75dc190f5b83befa35e4a028db}{get\+\_\+name} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} ab\+\_\+id)
+\begin{DoxyCompactList}\small\item\em get the name of an ability \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{gameplay_8c_a3c63c2b5b4eae3d1dbd30d6833f4898b}{get\+\_\+desc} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} ab\+\_\+id)
+\begin{DoxyCompactList}\small\item\em get the description of an ability \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5}{castability\+Id} \hyperlink{gameplay_8c_a7d0c7bdf1a0d3b62d9006fdac1f36a9a}{able\+\_\+ability} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} ab\+\_\+id, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} show\+\_\+logs)
+\begin{DoxyCompactList}\small\item\em Get the castability of an ability. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_a79f721b3e48a91b200b999708686e480}{is\+\_\+ally} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Find if an entity is an ally. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_adee7fb0230fae569ef2b0d2cc715077b}{same\+\_\+team} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$a, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Checks if two entities are on the same team. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a8acd803ee88a8a63ef6ef07ba76332be}{end\+\_\+\+Detain} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Ends the detainement of an entity. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_ae9b80578a78ff6ecb86d54c31a5b7c70}{tile\+\_\+type} (\hyperlink{struct_coord}{Coord} c, \hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type} targeting, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Compares tile to ability cast requirements. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a4000239fb9f579d9bde10cc3dc22873d}{reset\+\_\+cooldowns} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Resets an entity\textquotesingle{}s cooldowns to zero. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_a8d03f528225794c8ddd7bfdbeedf3429}{same\+\_\+coord} (\hyperlink{struct_coord}{Coord} a, \hyperlink{struct_coord}{Coord} b)
+\begin{DoxyCompactList}\small\item\em Finds if two coords are the same. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_a7f51cd4295c98d9b8b7f0d4c93e20594}{closer\+\_\+coords} (\hyperlink{struct_coord}{Coord} a, \hyperlink{struct_coord}{Coord} b)
+\begin{DoxyCompactList}\small\item\em Finds which coord is closer to the origin. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{gameplay_8c_ad7498dd01de298e32c8ad2b7f70a521b}{compare\+\_\+coords} (\hyperlink{struct_coord}{Coord} a, \hyperlink{struct_coord}{Coord} b)
+\begin{DoxyCompactList}\small\item\em Substracts coordinate a from coordinate b. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{gameplay_8c_af62fd70fa8cd80437d760894ca92851b}{add\+\_\+coords} (\hyperlink{struct_coord}{Coord} a, \hyperlink{struct_coord}{Coord} b)
+\begin{DoxyCompactList}\small\item\em Adds two coordinates together. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a0730e1c7a8e22f5079abb13407152a28}{free\+\_\+spawn} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Spawns an entity on a free tile. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_ab02f6e75069a1e446bfa5509017494de}{remove\+\_\+mod} (\hyperlink{struct_status}{Status} $\ast$stat, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} show\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Removes a modifier from an entity. \end{DoxyCompactList}\item 
+\hyperlink{struct_status}{Status} $\ast$ \hyperlink{gameplay_8c_ad801a660714611d96cc52f338f039b32}{remove\+\_\+from\+\_\+list} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id} status, \hyperlink{struct_status}{Status} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Removes a ceratin element from both lists. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a2988e61a49661efdf9e24b3e18a41d35}{new\+\_\+death} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Kills an entity. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_a276f0f4dfb870b3ac01a5191fb8691ad}{death\+\_\+check} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Checks if an ennemy is dead. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_acdea31dbb16f3b91b23ff20a41a25890}{apply\+\_\+check} (\hyperlink{struct_modifier}{Modifier} $\ast$mod, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Checks if a random modifier lands. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{gameplay_8c_a0f9e189b274f03f0bbb0f69fa3a37427}{apply\+\_\+damage} (\hyperlink{struct_damage}{Damage} $\ast$\hyperlink{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}{d}, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$caster, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$target, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} show\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Calculates and applies damage. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a042a70abac7f4c5fb4e5e35ca4013fad}{apply\+\_\+status} (\hyperlink{struct_status}{Status} s, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$target, \hyperlink{struct_state_list}{State\+List} $\ast$list, int caster\+\_\+id, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} show\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Applies a status effect to an entity. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a6ec97dd541fcb94b1fd069788e5201ca}{apply\+\_\+stat\+\_\+change} (\hyperlink{struct_status}{Status} s, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$target, \hyperlink{struct_state_list}{State\+List} $\ast$list, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} show\+\_\+log)
+\begin{DoxyCompactList}\small\item\em Applies a stat change to an entity. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{gameplay_8c_a4321ffa59a979b832f488d110062db21}{apply\+\_\+mod} (\hyperlink{struct_modifier}{Modifier} m, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$target, \hyperlink{struct_state_list}{State\+List} $\ast$list, int caster\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Calls necessary functions to apply a modifier. \end{DoxyCompactList}\item 
+int \hyperlink{gameplay_8c_afc7bfd1c32601087aa14170805568592}{apply\+\_\+to} (\hyperlink{struct_ability}{Ability} active\+\_\+ab, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$active\+\_\+ent, \hyperlink{struct_state_list}{State\+List} $\ast$list, \hyperlink{struct_coord}{Coord} starting\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Main ability function that applies damage and mods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Many Miscellaneous Functions related to gameplay. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gameplay_8c_a9586cfa9acd38883b850619c44c071f3}\label{gameplay_8c_a9586cfa9acd38883b850619c44c071f3}} 
+\index{gameplay.\+c@{gameplay.\+c}!ab\+\_\+from\+\_\+id@{ab\+\_\+from\+\_\+id}}
+\index{ab\+\_\+from\+\_\+id@{ab\+\_\+from\+\_\+id}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{ab\+\_\+from\+\_\+id()}{ab\_from\_id()}}
+{\footnotesize\ttfamily ab\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{Id,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Finds the ability corresponding to an ability Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & The wanted ability\textquotesingle{}s Id \\
+\hline
+{\em e} & The Entity who has this ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the ability 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a7d0c7bdf1a0d3b62d9006fdac1f36a9a}\label{gameplay_8c_a7d0c7bdf1a0d3b62d9006fdac1f36a9a}} 
+\index{gameplay.\+c@{gameplay.\+c}!able\+\_\+ability@{able\+\_\+ability}}
+\index{able\+\_\+ability@{able\+\_\+ability}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{able\+\_\+ability()}{able\_ability()}}
+{\footnotesize\ttfamily able\+\_\+ability (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{ab\+\_\+id,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{show\+\_\+logs }\end{DoxyParamCaption})}
+
+
+
+Get the castability of an ability. 
+
+Checks cooldowns, action points, and status effects to return the castability of the ability 
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em ab\+\_\+id} & The ability\+Id of the selected ability \\
+\hline
+{\em show\+\_\+logs} & Set to T\+R\+UE if function should send logs to player, F\+A\+L\+SE if not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the castability of the ability 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_af62fd70fa8cd80437d760894ca92851b}\label{gameplay_8c_af62fd70fa8cd80437d760894ca92851b}} 
+\index{gameplay.\+c@{gameplay.\+c}!add\+\_\+coords@{add\+\_\+coords}}
+\index{add\+\_\+coords@{add\+\_\+coords}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{add\+\_\+coords()}{add\_coords()}}
+{\footnotesize\ttfamily add\+\_\+coords (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{a,  }\item[{\hyperlink{struct_coord}{Coord}}]{b }\end{DoxyParamCaption})}
+
+
+
+Adds two coordinates together. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First Coordinate to add \\
+\hline
+{\em b} & Second Coordinate to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the coordinate resulting from the addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_acdea31dbb16f3b91b23ff20a41a25890}\label{gameplay_8c_acdea31dbb16f3b91b23ff20a41a25890}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+check@{apply\+\_\+check}}
+\index{apply\+\_\+check@{apply\+\_\+check}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+check()}{apply\_check()}}
+{\footnotesize\ttfamily apply\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier}{Modifier} $\ast$}]{mod,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Checks if a random modifier lands. 
+
+If local turn, randomises outcome, if not, waits for outcome to be received 
+\begin{DoxyParams}{Parameters}
+{\em mod} & The mod attempting to be landed, N\+U\+LL if is damage \\
+\hline
+{\em target} & The target entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if mod/damage lands, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a0f9e189b274f03f0bbb0f69fa3a37427}\label{gameplay_8c_a0f9e189b274f03f0bbb0f69fa3a37427}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+damage@{apply\+\_\+damage}}
+\index{apply\+\_\+damage@{apply\+\_\+damage}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+damage()}{apply\_damage()}}
+{\footnotesize\ttfamily apply\+\_\+damage (\begin{DoxyParamCaption}\item[{\hyperlink{struct_damage}{Damage} $\ast$}]{d,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{caster,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{target,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{show\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Calculates and applies damage. 
+
+Uses target and caster stats as well as various status effects to determine damage 
+\begin{DoxyParams}{Parameters}
+{\em d} & Structure describing damage to apply \\
+\hline
+{\em caster} & Caster entity \\
+\hline
+{\em target} & Target entity \\
+\hline
+{\em show\+\_\+log} & set to T\+R\+UE if logs should be sent ot the player, F\+A\+L\+SE if not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if target dies, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a4321ffa59a979b832f488d110062db21}\label{gameplay_8c_a4321ffa59a979b832f488d110062db21}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+mod@{apply\+\_\+mod}}
+\index{apply\+\_\+mod@{apply\+\_\+mod}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+mod()}{apply\_mod()}}
+{\footnotesize\ttfamily apply\+\_\+mod (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier}{Modifier}}]{m,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{target,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{int}]{caster\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Calls necessary functions to apply a modifier. 
+
+A hub function that determines wether the effect to apply is a status effect or s stat change, then calls the correct function accordingly 
+\begin{DoxyParams}{Parameters}
+{\em m} & The modifier to apply \\
+\hline
+{\em target} & Th target entity \\
+\hline
+{\em list} & The active list (if local turn st\+Sent, if not st\+Received) \\
+\hline
+{\em caster\+\_\+id} & The id of the caster (in case the status is provocation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a6ec97dd541fcb94b1fd069788e5201ca}\label{gameplay_8c_a6ec97dd541fcb94b1fd069788e5201ca}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+stat\+\_\+change@{apply\+\_\+stat\+\_\+change}}
+\index{apply\+\_\+stat\+\_\+change@{apply\+\_\+stat\+\_\+change}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+stat\+\_\+change()}{apply\_stat\_change()}}
+{\footnotesize\ttfamily apply\+\_\+stat\+\_\+change (\begin{DoxyParamCaption}\item[{\hyperlink{struct_status}{Status}}]{s,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{target,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{show\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Applies a stat change to an entity. 
+
+Takes a stat change in the form if a \hyperlink{struct_status}{Status} structure and applies these changes onto a given entity 
+\begin{DoxyParams}{Parameters}
+{\em s} & The stat change to apply \\
+\hline
+{\em target} & The target entity \\
+\hline
+{\em list} & The active list (if local turn st\+Sent, if not st\+Received) \\
+\hline
+{\em show\+\_\+log} & set to T\+R\+UE if logs should be sent ot the player, F\+A\+L\+SE if not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+what list\+\_\+add(err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+L\+L or err\+\_\+t N\+U\+L\+L) returns if status is applied and is not permanent, else err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a042a70abac7f4c5fb4e5e35ca4013fad}\label{gameplay_8c_a042a70abac7f4c5fb4e5e35ca4013fad}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+status@{apply\+\_\+status}}
+\index{apply\+\_\+status@{apply\+\_\+status}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+status()}{apply\_status()}}
+{\footnotesize\ttfamily apply\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_status}{Status}}]{s,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{target,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{int}]{caster\+\_\+id,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{show\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Applies a status effect to an entity. 
+
+Takes a status effect in the form of a \hyperlink{struct_status}{Status} structure and translates it\textquotesingle{}s effects onto a given entity 
+\begin{DoxyParams}{Parameters}
+{\em s} & The status to apply \\
+\hline
+{\em target} & The target entity \\
+\hline
+{\em list} & The active list (if local turn the st\+Sent, if not then st\+Received) \\
+\hline
+{\em caster\+\_\+id} & The id of the caster (in case the status is provocation) \\
+\hline
+{\em show\+\_\+log} & set to T\+R\+UE if logs should be sent ot the player, F\+A\+L\+SE if not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+what list\+\_\+add(err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+L\+L or err\+\_\+t N\+U\+L\+L) returns if status is applied and is not permanent, else err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_afc7bfd1c32601087aa14170805568592}\label{gameplay_8c_afc7bfd1c32601087aa14170805568592}} 
+\index{gameplay.\+c@{gameplay.\+c}!apply\+\_\+to@{apply\+\_\+to}}
+\index{apply\+\_\+to@{apply\+\_\+to}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+to()}{apply\_to()}}
+{\footnotesize\ttfamily apply\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability}}]{active\+\_\+ab,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{active\+\_\+ent,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{\hyperlink{struct_coord}{Coord}}]{starting\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Main ability function that applies damage and mods. 
+
+Loop function that goes over all affected coordinates of an ability 
+\begin{DoxyParams}{Parameters}
+{\em active\+\_\+ab} & The cast ability \\
+\hline
+{\em active\+\_\+ent} & The caster of the ability \\
+\hline
+{\em list} & The active list (if local turn st\+Sent, if not st\+Received) \\
+\hline
+{\em starting\+\_\+point} & The coordinates at which the ability was cast \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a7f51cd4295c98d9b8b7f0d4c93e20594}\label{gameplay_8c_a7f51cd4295c98d9b8b7f0d4c93e20594}} 
+\index{gameplay.\+c@{gameplay.\+c}!closer\+\_\+coords@{closer\+\_\+coords}}
+\index{closer\+\_\+coords@{closer\+\_\+coords}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{closer\+\_\+coords()}{closer\_coords()}}
+{\footnotesize\ttfamily closer\+\_\+coords (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{a,  }\item[{\hyperlink{struct_coord}{Coord}}]{b }\end{DoxyParamCaption})}
+
+
+
+Finds which coord is closer to the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First Coordinate to compare \\
+\hline
+{\em b} & Second Coordinate to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the first coordinate is closer or they are tied, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_ad7498dd01de298e32c8ad2b7f70a521b}\label{gameplay_8c_ad7498dd01de298e32c8ad2b7f70a521b}} 
+\index{gameplay.\+c@{gameplay.\+c}!compare\+\_\+coords@{compare\+\_\+coords}}
+\index{compare\+\_\+coords@{compare\+\_\+coords}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{compare\+\_\+coords()}{compare\_coords()}}
+{\footnotesize\ttfamily compare\+\_\+coords (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{a,  }\item[{\hyperlink{struct_coord}{Coord}}]{b }\end{DoxyParamCaption})}
+
+
+
+Substracts coordinate a from coordinate b. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Coordinate to substract \\
+\hline
+{\em b} & Coordinate to substract from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the coordinate resulting from the substraction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a7b0fc7a70cc94848e2df79d89ddf98fd}\label{gameplay_8c_a7b0fc7a70cc94848e2df79d89ddf98fd}} 
+\index{gameplay.\+c@{gameplay.\+c}!count\+\_\+dead\+\_\+allies@{count\+\_\+dead\+\_\+allies}}
+\index{count\+\_\+dead\+\_\+allies@{count\+\_\+dead\+\_\+allies}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{count\+\_\+dead\+\_\+allies()}{count\_dead\_allies()}}
+{\footnotesize\ttfamily count\+\_\+dead\+\_\+allies (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Counts dead allies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & An entity on the team to count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of dead allies 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a276f0f4dfb870b3ac01a5191fb8691ad}\label{gameplay_8c_a276f0f4dfb870b3ac01a5191fb8691ad}} 
+\index{gameplay.\+c@{gameplay.\+c}!death\+\_\+check@{death\+\_\+check}}
+\index{death\+\_\+check@{death\+\_\+check}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{death\+\_\+check()}{death\_check()}}
+{\footnotesize\ttfamily death\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Checks if an ennemy is dead. 
+
+If the entity is dead, it calls new\+\_\+death 
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if dead, F\+A\+L\+SE if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a96c91c8b40a4ff25f0f4892549326a7d}\label{gameplay_8c_a96c91c8b40a4ff25f0f4892549326a7d}} 
+\index{gameplay.\+c@{gameplay.\+c}!e\+\_\+from\+\_\+id@{e\+\_\+from\+\_\+id}}
+\index{e\+\_\+from\+\_\+id@{e\+\_\+from\+\_\+id}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{e\+\_\+from\+\_\+id()}{e\_from\_id()}}
+{\footnotesize\ttfamily e\+\_\+from\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{Id }\end{DoxyParamCaption})}
+
+
+
+Finds the entity corresponding to a character Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & The wanted character\textquotesingle{}s Id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a8acd803ee88a8a63ef6ef07ba76332be}\label{gameplay_8c_a8acd803ee88a8a63ef6ef07ba76332be}} 
+\index{gameplay.\+c@{gameplay.\+c}!end\+\_\+\+Detain@{end\+\_\+\+Detain}}
+\index{end\+\_\+\+Detain@{end\+\_\+\+Detain}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{end\+\_\+\+Detain()}{end\_Detain()}}
+{\footnotesize\ttfamily end\+\_\+\+Detain (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Ends the detainement of an entity. 
+
+finds a place to make the detained entity reappear at the end of its detainement 
+\begin{DoxyParams}{Parameters}
+{\em e} & The detained entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a0730e1c7a8e22f5079abb13407152a28}\label{gameplay_8c_a0730e1c7a8e22f5079abb13407152a28}} 
+\index{gameplay.\+c@{gameplay.\+c}!free\+\_\+spawn@{free\+\_\+spawn}}
+\index{free\+\_\+spawn@{free\+\_\+spawn}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{free\+\_\+spawn()}{free\_spawn()}}
+{\footnotesize\ttfamily free\+\_\+spawn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Spawns an entity on a free tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to spawn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if e is N\+U\+LL, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a6750275901a2c748f41a42b623a94707}\label{gameplay_8c_a6750275901a2c748f41a42b623a94707}} 
+\index{gameplay.\+c@{gameplay.\+c}!game\+\_\+over@{game\+\_\+over}}
+\index{game\+\_\+over@{game\+\_\+over}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+over()}{game\_over()}}
+{\footnotesize\ttfamily game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+verifies the state of the game 
+
+\begin{DoxyReturn}{Returns}
+the state of the game\+: O\+N\+G\+O\+I\+NG if still going, W\+IN if local has won, L\+O\+SE if local lost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_abe0769c64b271e12d4797f5e06637678}\label{gameplay_8c_abe0769c64b271e12d4797f5e06637678}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+cooldown@{get\+\_\+cooldown}}
+\index{get\+\_\+cooldown@{get\+\_\+cooldown}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+cooldown()}{get\_cooldown()}}
+{\footnotesize\ttfamily get\+\_\+cooldown (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{Id }\end{DoxyParamCaption})}
+
+
+
+get the cooldown of an ability 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em Id} & The ability\+Id of the selected ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cooldown 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_ac271a74cd944f9c99457515cdfd6f86c}\label{gameplay_8c_ac271a74cd944f9c99457515cdfd6f86c}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+cost@{get\+\_\+cost}}
+\index{get\+\_\+cost@{get\+\_\+cost}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+cost()}{get\_cost()}}
+{\footnotesize\ttfamily get\+\_\+cost (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{Id }\end{DoxyParamCaption})}
+
+
+
+get the cost of an ability 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em Id} & The ability\+Id of the selected ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a251fb8848141ebec341ac04020228f13}\label{gameplay_8c_a251fb8848141ebec341ac04020228f13}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+dead\+\_\+allies@{get\+\_\+dead\+\_\+allies}}
+\index{get\+\_\+dead\+\_\+allies@{get\+\_\+dead\+\_\+allies}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+dead\+\_\+allies()}{get\_dead\_allies()}}
+{\footnotesize\ttfamily get\+\_\+dead\+\_\+allies (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Puts dead allies in an array and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & An entity on the team to get \\
+\hline
+{\em tab} & An array to store the dead allies \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the dead allies array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a3c63c2b5b4eae3d1dbd30d6833f4898b}\label{gameplay_8c_a3c63c2b5b4eae3d1dbd30d6833f4898b}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+desc@{get\+\_\+desc}}
+\index{get\+\_\+desc@{get\+\_\+desc}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+desc()}{get\_desc()}}
+{\footnotesize\ttfamily get\+\_\+desc (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{ab\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+get the description of an ability 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em ab\+\_\+id} & The ability\+Id of the selected ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the description 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a0d026a75dc190f5b83befa35e4a028db}\label{gameplay_8c_a0d026a75dc190f5b83befa35e4a028db}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{ab\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+get the name of an ability 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em ab\+\_\+id} & The ability\+Id of the selected ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_aad4bb7a4b26dc8aba529c36f17e5396a}\label{gameplay_8c_aad4bb7a4b26dc8aba529c36f17e5396a}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+range@{get\+\_\+range}}
+\index{get\+\_\+range@{get\+\_\+range}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+range()}{get\_range()}}
+{\footnotesize\ttfamily get\+\_\+range (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{ab }\end{DoxyParamCaption})}
+
+
+
+Finds the castable range of an ability. 
+
+Uses character vision and ability\textquotesingle{}s range value to calculate castable range 
+\begin{DoxyParams}{Parameters}
+{\em e} & The Entity who has this ability \\
+\hline
+{\em ab} & The ability\+Id of the selected ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the castable range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_aa35133475edd8d99fa98a99962118f85}\label{gameplay_8c_aa35133475edd8d99fa98a99962118f85}} 
+\index{gameplay.\+c@{gameplay.\+c}!get\+\_\+team@{get\+\_\+team}}
+\index{get\+\_\+team@{get\+\_\+team}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+team()}{get\_team()}}
+{\footnotesize\ttfamily get\+\_\+team (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$$\ast$}]{all,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{same }\end{DoxyParamCaption})}
+
+
+
+Finds the allied/ennemy team from an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity \\
+\hline
+{\em all} & a pointer to store the wanted team \\
+\hline
+{\em same} & set as T\+R\+UE if the team allied to e is wanted or F\+A\+L\+SE if the ennemy team is wanted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a79f721b3e48a91b200b999708686e480}\label{gameplay_8c_a79f721b3e48a91b200b999708686e480}} 
+\index{gameplay.\+c@{gameplay.\+c}!is\+\_\+ally@{is\+\_\+ally}}
+\index{is\+\_\+ally@{is\+\_\+ally}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{is\+\_\+ally()}{is\_ally()}}
+{\footnotesize\ttfamily is\+\_\+ally (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Find if an entity is an ally. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & entity to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if entity is an ally, F\+A\+L\+SE if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a2988e61a49661efdf9e24b3e18a41d35}\label{gameplay_8c_a2988e61a49661efdf9e24b3e18a41d35}} 
+\index{gameplay.\+c@{gameplay.\+c}!new\+\_\+death@{new\+\_\+death}}
+\index{new\+\_\+death@{new\+\_\+death}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{new\+\_\+death()}{new\_death()}}
+{\footnotesize\ttfamily new\+\_\+death (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Kills an entity. 
+
+Sets active to dead and resets entity for revival 
+\begin{DoxyParams}{Parameters}
+{\em e} & The dead entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_aeb79e46c2827d64a760e152be1fe4ffe}\label{gameplay_8c_aeb79e46c2827d64a760e152be1fe4ffe}} 
+\index{gameplay.\+c@{gameplay.\+c}!rec\+\_\+id\+\_\+swap@{rec\+\_\+id\+\_\+swap}}
+\index{rec\+\_\+id\+\_\+swap@{rec\+\_\+id\+\_\+swap}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{rec\+\_\+id\+\_\+swap()}{rec\_id\_swap()}}
+{\footnotesize\ttfamily rec\+\_\+id\+\_\+swap (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Sets received character Ids to their local counterpart. 
+
+Makes all received char\+\_\+ids negative 
+\begin{DoxyParams}{Parameters}
+{\em a} & the received action \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_ad801a660714611d96cc52f338f039b32}\label{gameplay_8c_ad801a660714611d96cc52f338f039b32}} 
+\index{gameplay.\+c@{gameplay.\+c}!remove\+\_\+from\+\_\+list@{remove\+\_\+from\+\_\+list}}
+\index{remove\+\_\+from\+\_\+list@{remove\+\_\+from\+\_\+list}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{remove\+\_\+from\+\_\+list()}{remove\_from\_list()}}
+{\footnotesize\ttfamily remove\+\_\+from\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id}}]{status,  }\item[{\hyperlink{struct_status}{Status} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Removes a ceratin element from both lists. 
+
+uses the list\+\_\+search function to find a ceratin element a to remove it from both lists 
+\begin{DoxyParams}{Parameters}
+{\em e} & The targeted entity \\
+\hline
+{\em status} & the mod to remove \\
+\hline
+{\em s} & A status pointer to store the status removed from the list so that it may be removed from the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the status removed (s) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_ab02f6e75069a1e446bfa5509017494de}\label{gameplay_8c_ab02f6e75069a1e446bfa5509017494de}} 
+\index{gameplay.\+c@{gameplay.\+c}!remove\+\_\+mod@{remove\+\_\+mod}}
+\index{remove\+\_\+mod@{remove\+\_\+mod}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{remove\+\_\+mod()}{remove\_mod()}}
+{\footnotesize\ttfamily remove\+\_\+mod (\begin{DoxyParamCaption}\item[{\hyperlink{struct_status}{Status} $\ast$}]{stat,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{show\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+Removes a modifier from an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat} & The mod to remove \\
+\hline
+{\em e} & The targeted entity \\
+\hline
+{\em show\+\_\+log} & set to T\+R\+UE if logs should be sent ot the player, F\+A\+L\+SE if not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if e is N\+U\+LL, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a4000239fb9f579d9bde10cc3dc22873d}\label{gameplay_8c_a4000239fb9f579d9bde10cc3dc22873d}} 
+\index{gameplay.\+c@{gameplay.\+c}!reset\+\_\+cooldowns@{reset\+\_\+cooldowns}}
+\index{reset\+\_\+cooldowns@{reset\+\_\+cooldowns}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{reset\+\_\+cooldowns()}{reset\_cooldowns()}}
+{\footnotesize\ttfamily reset\+\_\+cooldowns (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Resets an entity\textquotesingle{}s cooldowns to zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity whose cooldowns to reset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_a8d03f528225794c8ddd7bfdbeedf3429}\label{gameplay_8c_a8d03f528225794c8ddd7bfdbeedf3429}} 
+\index{gameplay.\+c@{gameplay.\+c}!same\+\_\+coord@{same\+\_\+coord}}
+\index{same\+\_\+coord@{same\+\_\+coord}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{same\+\_\+coord()}{same\_coord()}}
+{\footnotesize\ttfamily same\+\_\+coord (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{a,  }\item[{\hyperlink{struct_coord}{Coord}}]{b }\end{DoxyParamCaption})}
+
+
+
+Finds if two coords are the same. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First Coordinate to compare \\
+\hline
+{\em b} & Second Coordinate to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the coordinates are the same, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_adee7fb0230fae569ef2b0d2cc715077b}\label{gameplay_8c_adee7fb0230fae569ef2b0d2cc715077b}} 
+\index{gameplay.\+c@{gameplay.\+c}!same\+\_\+team@{same\+\_\+team}}
+\index{same\+\_\+team@{same\+\_\+team}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{same\+\_\+team()}{same\_team()}}
+{\footnotesize\ttfamily same\+\_\+team (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{a,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Checks if two entities are on the same team. 
+
+can put either Allies or Foes as one of the parametres to find out if an entity is part of Allies or of Foes 
+\begin{DoxyParams}{Parameters}
+{\em a} & First Entity to compare \\
+\hline
+{\em b} & Second Entity to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if entities are on the same team, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gameplay_8c_ae9b80578a78ff6ecb86d54c31a5b7c70}\label{gameplay_8c_ae9b80578a78ff6ecb86d54c31a5b7c70}} 
+\index{gameplay.\+c@{gameplay.\+c}!tile\+\_\+type@{tile\+\_\+type}}
+\index{tile\+\_\+type@{tile\+\_\+type}!gameplay.\+c@{gameplay.\+c}}
+\subsubsection{\texorpdfstring{tile\+\_\+type()}{tile\_type()}}
+{\footnotesize\ttfamily tile\+\_\+type (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type}}]{targeting,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Compares tile to ability cast requirements. 
+
+Finds if the targeted tile is of a targeting type corresponding to that of the cast ability 
+\begin{DoxyParams}{Parameters}
+{\em c} & The coordinate to check \\
+\hline
+{\em targeting} & the target\+Type of the ability cast \\
+\hline
+{\em e} & The caster, to know which team he is on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the ability can be cast there, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}

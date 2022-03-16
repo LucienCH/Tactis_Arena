@@ -1,0 +1,92 @@
+\hypertarget{map_8c}{}\section{src/map.c File Reference}
+\label{map_8c}\index{src/map.\+c@{src/map.\+c}}
+
+
+Map related functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}textures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}border.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}animations.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{map_8c_ae8d535a15d41a784109a3eb96d49f1d8}\label{map_8c_ae8d535a15d41a784109a3eb96d49f1d8}} 
+\#define {\bfseries \+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+}~50
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{map_8c_ae9efca618af34d1b6e7760cf4b478bb2}\label{map_8c_ae9efca618af34d1b6e7760cf4b478bb2}} 
+float {\bfseries cross\+Product} (\hyperlink{struct_vector}{Vector} AB, \hyperlink{struct_vector}{Vector} AC)
+\item 
+\mbox{\Hypertarget{map_8c_a332d7e25fb20883968aaeedda0b776b4}\label{map_8c_a332d7e25fb20883968aaeedda0b776b4}} 
+int {\bfseries hover\+Tile} (int xpos, int ypos, int mx, int my)
+\item 
+\mbox{\Hypertarget{map_8c_afc798b31e638e945a28ec74f641d8b4d}\label{map_8c_afc798b31e638e945a28ec74f641d8b4d}} 
+int {\bfseries select\+Tile} (int xpos, int ypos, int mx, int my)
+\item 
+\mbox{\Hypertarget{map_8c_a6a35873d74b82fb4acabdae73b78bc33}\label{map_8c_a6a35873d74b82fb4acabdae73b78bc33}} 
+int {\bfseries display\+Abilities} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+\mbox{\Hypertarget{map_8c_adbce266d695d2a773ec5ed771db92e2e}\label{map_8c_adbce266d695d2a773ec5ed771db92e2e}} 
+char $\ast$ {\bfseries clear\+Str} (char $\ast$str)
+\item 
+\mbox{\Hypertarget{map_8c_a470f4278b9f7a0d1d7901632fd192853}\label{map_8c_a470f4278b9f7a0d1d7901632fd192853}} 
+int {\bfseries display\+Interface} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\item 
+\mbox{\Hypertarget{map_8c_adbd8b010afa2ae4acefb66d2c158b409}\label{map_8c_adbd8b010afa2ae4acefb66d2c158b409}} 
+int {\bfseries display\+Map} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{map_8c_ab6b3c11f8c8eed005c7911e7eda4ddd2}\label{map_8c_ab6b3c11f8c8eed005c7911e7eda4ddd2}} 
+char {\bfseries selected\+Ability\+Desc} \mbox{[}\hyperlink{common_8h_a44318a4127425708d1a624818539430f}{S\+T\+R\+\_\+\+L\+O\+NG}\mbox{]}
+\item 
+\mbox{\Hypertarget{map_8c_a53290936a4d24e1da10cbd6a3c5677e6}\label{map_8c_a53290936a4d24e1da10cbd6a3c5677e6}} 
+char {\bfseries hover\+Ability\+Desc} \mbox{[}\hyperlink{common_8h_a44318a4127425708d1a624818539430f}{S\+T\+R\+\_\+\+L\+O\+NG}\mbox{]}
+\item 
+\mbox{\Hypertarget{map_8c_aa473d8d09d1362b6f552c44cd4e3ee04}\label{map_8c_aa473d8d09d1362b6f552c44cd4e3ee04}} 
+\hyperlink{struct_coord}{Coord} {\bfseries border\+Tab} \mbox{[}\hyperlink{common_8h_ac7be76f31ad9c9e1473863914a97b50e}{M\+A\+X\+R\+A\+N\+GE}\mbox{]}
+\item 
+\mbox{\Hypertarget{map_8c_af38896d9fc276a6aa90fdd294cbae829}\label{map_8c_af38896d9fc276a6aa90fdd294cbae829}} 
+\hyperlink{struct_coord}{Coord} {\bfseries range\+Tab} \mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+} $\ast$\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}
+\item 
+\mbox{\Hypertarget{map_8c_a84f492129ef846947fdfee0b07ab0a99}\label{map_8c_a84f492129ef846947fdfee0b07ab0a99}} 
+\hyperlink{struct_coord}{Coord} {\bfseries draw\+Pos} = \{-\/1, -\/1\}
+\item 
+\mbox{\Hypertarget{map_8c_a00e3a96e4e9d6e78dd65c54bb4838d2a}\label{map_8c_a00e3a96e4e9d6e78dd65c54bb4838d2a}} 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$ {\bfseries selected\+Entity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Map related functions. 
+
+Contains all functions required for map and interface \begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+9.\+9 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/04/2020 
+\end{DoxyDate}

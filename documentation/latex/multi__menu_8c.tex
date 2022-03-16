@@ -1,0 +1,292 @@
+\hypertarget{multi__menu_8c}{}\section{src/multi\+\_\+menu.c File Reference}
+\label{multi__menu_8c}\index{src/multi\+\_\+menu.\+c@{src/multi\+\_\+menu.\+c}}
+
+
+Menu for multiplayer mod.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}textures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmulti_thread__t}{multi\+Thread\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a3209b52ff5c82f114f75f63429c6799e}\label{multi__menu_8c_a3209b52ff5c82f114f75f63429c6799e}} 
+\#define {\bfseries \+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+M\+A\+P\+S\+\_\+}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{multi__menu_8c_ac9cedece2862c67dd6dbb91a81636919}{load\+Multi\+Menu\+Textures} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Function to load all multiplayer menu textures. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8c_a0d430329fbfbb46f32104557bdef786d}{free\+Multi\+Menu\+Textures} ()
+\begin{DoxyCompactList}\small\item\em Function to free all multiplayer menu textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{multi__menu_8c_a17b4e56a2a79f7631b44a6350d8a892d}\label{multi__menu_8c_a17b4e56a2a79f7631b44a6350d8a892d}} 
+int {\bfseries list\+Maps\+Multi} (char $\ast$map\+List\+Multi\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a327ed7f817667d6c90c6314edf67033e}\label{multi__menu_8c_a327ed7f817667d6c90c6314edf67033e}} 
+void {\bfseries disp\+Log} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int consoleX, int consoleY)
+\item 
+void \hyperlink{multi__menu_8c_aaf68af7687ebfe9f7874a5a5e7c4cd24}{disp\+Host\+Menu} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y, int index)
+\begin{DoxyCompactList}\small\item\em Adjust the window for the user that pressed Host button to host the game. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8c_ab1d227f9e3aef000678d3d288fb0b9dd}{disp\+Join\+Menu} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adjust the window for the user that pressed Join button to join a hosted game. \end{DoxyCompactList}\item 
+int \hyperlink{multi__menu_8c_afe95e4c35ad7e7057db02c7965a94096}{display\+Menu\+Multi} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Create the main window for multiplayer mod. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_afbf49c31a236a64a8694b0d8979254dd}\label{multi__menu_8c_afbf49c31a236a64a8694b0d8979254dd}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries background\+\_\+\+Multi} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a6b0bdade555edee25fa0fc0bf6778148}\label{multi__menu_8c_a6b0bdade555edee25fa0fc0bf6778148}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries quit\+\_\+button\+\_\+\+Multi} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a5400626d696dd2a27d9e01702bce3524}\label{multi__menu_8c_a5400626d696dd2a27d9e01702bce3524}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries music\+\_\+on\+\_\+\+Multi} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a4b4914325423afa6ef98be7976c8bdc7}\label{multi__menu_8c_a4b4914325423afa6ef98be7976c8bdc7}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries music\+\_\+off\+\_\+\+Multi} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_aa106943ed9d60f94e1d3c805e0cbf215}\label{multi__menu_8c_aa106943ed9d60f94e1d3c805e0cbf215}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries join\+\_\+button} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a4200330a3570d7909bd375165c9f327d}\label{multi__menu_8c_a4200330a3570d7909bd375165c9f327d}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries host\+\_\+button} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a5dd7e17badd8a4190327f3d0017505a2}\label{multi__menu_8c_a5dd7e17badd8a4190327f3d0017505a2}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries ok\+\_\+button\+\_\+\+Multi} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{multi__menu_8c_aa62807c74f2b0f0192720546d2379da3}\label{multi__menu_8c_aa62807c74f2b0f0192720546d2379da3}} 
+int {\bfseries is\+Host\+Menu} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a43d1455b4482d536aa684e2e0ae01a2b}\label{multi__menu_8c_a43d1455b4482d536aa684e2e0ae01a2b}} 
+int {\bfseries is\+Join\+Menu} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_ac1767f247bb87f38d96cb51040471666}\label{multi__menu_8c_ac1767f247bb87f38d96cb51040471666}} 
+int {\bfseries input\+Pseudo\+Btn} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a41423322409c89fd85c4a855ceb380c0}\label{multi__menu_8c_a41423322409c89fd85c4a855ceb380c0}} 
+int {\bfseries input\+Ip\+Btn} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a2ace8e2950831e4f783c3b998ec5232a}\label{multi__menu_8c_a2ace8e2950831e4f783c3b998ec5232a}} 
+int {\bfseries is\+Pseudo\+Valid} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_aff980d1c6bb7637b6df691e2eceaa35c}\label{multi__menu_8c_aff980d1c6bb7637b6df691e2eceaa35c}} 
+int {\bfseries is\+I\+P\+Valid} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_acc574239046394d8a2fbe0c58901464f}\label{multi__menu_8c_acc574239046394d8a2fbe0c58901464f}} 
+int {\bfseries is\+Info\+Join\+Set} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a33caccdf491219707a33b7182f1e5f41}\label{multi__menu_8c_a33caccdf491219707a33b7182f1e5f41}} 
+int {\bfseries is\+Client\+Co} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_ab1e2ba303059aaa8324895ad253f0278}\label{multi__menu_8c_ab1e2ba303059aaa8324895ad253f0278}} 
+int {\bfseries music\+\_\+\+Multi\+\_\+playing} = 1
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a6bdeacdcf90ce34c731222290ed60fc8}\label{multi__menu_8c_a6bdeacdcf90ce34c731222290ed60fc8}} 
+int {\bfseries map\+List\+Multi\+Index} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a126ada8ca0ed093ef28a8bf005096c24}\label{multi__menu_8c_a126ada8ca0ed093ef28a8bf005096c24}} 
+int {\bfseries is\+Map\+Multi\+Valid} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a7a33c7c20a09ecbbde09434d75cf3999}\label{multi__menu_8c_a7a33c7c20a09ecbbde09434d75cf3999}} 
+int {\bfseries index\+Map\+Multi} = 0
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a526f7341d781db3ef6c096d191769acc}\label{multi__menu_8c_a526f7341d781db3ef6c096d191769acc}} 
+int \hyperlink{multi__menu_8c_a526f7341d781db3ef6c096d191769acc}{server\+Status} = 0
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_status}{Status} of the server used in multi\+\_\+menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{multi__menu_8c_ad45494774a1b67532d643477c3aaed31}\label{multi__menu_8c_ad45494774a1b67532d643477c3aaed31}} 
+char {\bfseries pseudo\+Srv} \mbox{[}50\mbox{]} = \char`\"{}Pseudo \+: \char`\"{}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a5e123ac4b795ed75cd339378dbf61f11}\label{multi__menu_8c_a5e123ac4b795ed75cd339378dbf61f11}} 
+char {\bfseries pseudo\+Join} \mbox{[}50\mbox{]} = \char`\"{}Pseudo \+: \char`\"{}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_ad53fa5fd1d7e7aba87a446a226271672}\label{multi__menu_8c_ad53fa5fd1d7e7aba87a446a226271672}} 
+char \hyperlink{multi__menu_8c_ad53fa5fd1d7e7aba87a446a226271672}{pseudo\+User} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Name of the user used in multi\+\_\+menu, socket\+\_\+\+Client and socket\+\_\+server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{multi__menu_8c_a44e7692df4ecf1f4e3d9f1316670f173}\label{multi__menu_8c_a44e7692df4ecf1f4e3d9f1316670f173}} 
+char {\bfseries pseudo\+Client} \mbox{[}128\mbox{]}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a6a46354c53f3662f74822d6f6eca257b}\label{multi__menu_8c_a6a46354c53f3662f74822d6f6eca257b}} 
+char {\bfseries ip\+Srv} \mbox{[}85\mbox{]}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a3b29da7b0a0dc00c9ceb5dfd1f11b8d6}\label{multi__menu_8c_a3b29da7b0a0dc00c9ceb5dfd1f11b8d6}} 
+char {\bfseries ip\+Join} \mbox{[}90\mbox{]} = \char`\"{}IP \+: \char`\"{}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a3ee5760482740307e3a46a3557f73010}\label{multi__menu_8c_a3ee5760482740307e3a46a3557f73010}} 
+char $\ast$ {\bfseries compo}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a474e6b09c458186a80d1547509eda8d5}\label{multi__menu_8c_a474e6b09c458186a80d1547509eda8d5}} 
+char $\ast$ {\bfseries map\+List\+Multi} \mbox{[}\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+M\+A\+P\+S\+\_\+\mbox{]}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a25f31f84f6dbd389ebda0284259c5a94}\label{multi__menu_8c_a25f31f84f6dbd389ebda0284259c5a94}} 
+char {\bfseries map\+Name\+Multi} \mbox{[}50\mbox{]} = \char`\"{}map\+\_\+\char`\"{}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a0a1af167d929ecfc3238297c4fcfd8e3}\label{multi__menu_8c_a0a1af167d929ecfc3238297c4fcfd8e3}} 
+char \hyperlink{multi__menu_8c_a0a1af167d929ecfc3238297c4fcfd8e3}{map\+Multi\+Selected} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Name of the map selected by the host used in multi\+\_\+menu, socket\+\_\+client and socket\+\_\+server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{multi__menu_8c_aa4e7e5f0f03c51c08d78f0d703797997}\label{multi__menu_8c_aa4e7e5f0f03c51c08d78f0d703797997}} 
+Sint32 {\bfseries cursor}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a961864fe7adff267ae13a8400862f833}\label{multi__menu_8c_a961864fe7adff267ae13a8400862f833}} 
+Sint32 {\bfseries selection\+\_\+len}
+\item 
+char $\ast$ {\bfseries tab\+Log} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_aa98174f0bce3cd37dfb1a3e218ac1955}\label{multi__menu_8c_aa98174f0bce3cd37dfb1a3e218ac1955}} 
+\hyperlink{structmulti_thread__t}{multi\+Thread\+\_\+t} {\bfseries thread\+Serv}
+\item 
+\mbox{\Hypertarget{multi__menu_8c_a80ba321a3f8518385fa8ace85d783d6e}\label{multi__menu_8c_a80ba321a3f8518385fa8ace85d783d6e}} 
+\hyperlink{structmulti_thread__t}{multi\+Thread\+\_\+t} {\bfseries thread\+Cli}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Menu for multiplayer mod. 
+
+\begin{DoxyAuthor}{Author}
+Lucien C\+H\+A\+U\+V\+IN 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{multi__menu_8c_aaf68af7687ebfe9f7874a5a5e7c4cd24}\label{multi__menu_8c_aaf68af7687ebfe9f7874a5a5e7c4cd24}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!disp\+Host\+Menu@{disp\+Host\+Menu}}
+\index{disp\+Host\+Menu@{disp\+Host\+Menu}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{disp\+Host\+Menu()}{dispHostMenu()}}
+{\footnotesize\ttfamily disp\+Host\+Menu (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Adjust the window for the user that pressed Host button to host the game. 
+
+Display all the necessary tools to create the game server 
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer to render the window \\
+\hline
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+{\em index} & an index of the list of map that can be selected by the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8c_ab1d227f9e3aef000678d3d288fb0b9dd}\label{multi__menu_8c_ab1d227f9e3aef000678d3d288fb0b9dd}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!disp\+Join\+Menu@{disp\+Join\+Menu}}
+\index{disp\+Join\+Menu@{disp\+Join\+Menu}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{disp\+Join\+Menu()}{dispJoinMenu()}}
+{\footnotesize\ttfamily disp\+Join\+Menu (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Adjust the window for the user that pressed Join button to join a hosted game. 
+
+Display all the necessary tools to connect the user to the server 
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer to render the window \\
+\hline
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8c_afe95e4c35ad7e7057db02c7965a94096}\label{multi__menu_8c_afe95e4c35ad7e7057db02c7965a94096}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!display\+Menu\+Multi@{display\+Menu\+Multi}}
+\index{display\+Menu\+Multi@{display\+Menu\+Multi}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{display\+Menu\+Multi()}{displayMenuMulti()}}
+{\footnotesize\ttfamily display\+Menu\+Multi (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Create the main window for multiplayer mod. 
+
+Create a window and adjust it between client and server 
+\begin{DoxyParams}{Parameters}
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the client or server have started the game or 0 if a player press quit button 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8c_a0d430329fbfbb46f32104557bdef786d}\label{multi__menu_8c_a0d430329fbfbb46f32104557bdef786d}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!free\+Multi\+Menu\+Textures@{free\+Multi\+Menu\+Textures}}
+\index{free\+Multi\+Menu\+Textures@{free\+Multi\+Menu\+Textures}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{free\+Multi\+Menu\+Textures()}{freeMultiMenuTextures()}}
+{\footnotesize\ttfamily free\+Multi\+Menu\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to free all multiplayer menu textures. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8c_ac9cedece2862c67dd6dbb91a81636919}\label{multi__menu_8c_ac9cedece2862c67dd6dbb91a81636919}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!load\+Multi\+Menu\+Textures@{load\+Multi\+Menu\+Textures}}
+\index{load\+Multi\+Menu\+Textures@{load\+Multi\+Menu\+Textures}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{load\+Multi\+Menu\+Textures()}{loadMultiMenuTextures()}}
+{\footnotesize\ttfamily load\+Multi\+Menu\+Textures (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Function to load all multiplayer menu textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer where to load all textures \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{multi__menu_8c_aff624d4e7294eb3956a6ca56d3db386c}\label{multi__menu_8c_aff624d4e7294eb3956a6ca56d3db386c}} 
+\index{multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}!tab\+Log@{tab\+Log}}
+\index{tab\+Log@{tab\+Log}!multi\+\_\+menu.\+c@{multi\+\_\+menu.\+c}}
+\subsubsection{\texorpdfstring{tab\+Log}{tabLog}}
+{\footnotesize\ttfamily char$\ast$ tab\+Log\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    \textcolor{stringliteral}{"Création du serveur"},
+    \textcolor{stringliteral}{"Le serveur est initialisé !"},
+    \textcolor{stringliteral}{"En attente du client ..."},
+    \textcolor{stringliteral}{"Une connexion a été établie !"},
+    \textcolor{stringliteral}{" "},
+\}
+\end{DoxyCode}

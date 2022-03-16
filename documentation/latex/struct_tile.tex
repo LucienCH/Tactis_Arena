@@ -1,0 +1,40 @@
+\hypertarget{struct_tile}{}\section{Tile Struct Reference}
+\label{struct_tile}\index{Tile@{Tile}}
+
+
+Structure representing a tile on the map.  
+
+
+
+
+{\ttfamily \#include $<$struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_tile_a01d48a66ad0f50abcf70c124d0dfb4bf}\label{struct_tile_a01d48a66ad0f50abcf70c124d0dfb4bf}} 
+int \hyperlink{struct_tile_a01d48a66ad0f50abcf70c124d0dfb4bf}{tile\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Id of the block that will be displayed on the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_tile_ada4b43200e3c80bfff5f38f716187425}\label{struct_tile_ada4b43200e3c80bfff5f38f716187425}} 
+int \hyperlink{struct_tile_ada4b43200e3c80bfff5f38f716187425}{selected}
+\begin{DoxyCompactList}\small\item\em 1 if the tile has been selected by the user, else 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_tile_ae05a1db94d73450a74dcb7cbaa2bcc10}\label{struct_tile_ae05a1db94d73450a74dcb7cbaa2bcc10}} 
+int \hyperlink{struct_tile_ae05a1db94d73450a74dcb7cbaa2bcc10}{hovered}
+\begin{DoxyCompactList}\small\item\em 1 if the tile is hovered by the user, else 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_tile_a0dd60fad81006fc55f4395b699e20736}\label{struct_tile_a0dd60fad81006fc55f4395b699e20736}} 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$ \hyperlink{struct_tile_a0dd60fad81006fc55f4395b699e20736}{entity}
+\begin{DoxyCompactList}\small\item\em Pointer to the entity that is on the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_tile_abad7de3ef7deb8406c00f13bf20cc8a7}\label{struct_tile_abad7de3ef7deb8406c00f13bf20cc8a7}} 
+\hyperlink{struct_trap__t}{Trap\+\_\+t} \hyperlink{struct_tile_abad7de3ef7deb8406c00f13bf20cc8a7}{trap}
+\begin{DoxyCompactList}\small\item\em Pointer to the trap if one is on the tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_tile_acb2f7617ad3ab3635e896dabd9456466}\label{struct_tile_acb2f7617ad3ab3635e896dabd9456466}} 
+int \hyperlink{struct_tile_acb2f7617ad3ab3635e896dabd9456466}{walkable}
+\begin{DoxyCompactList}\small\item\em Define if characters wan walk on this tile (1 if they can, else 0);. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure representing a tile on the map. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{struct_8h}{struct.\+h}\end{DoxyCompactItemize}

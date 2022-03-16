@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['d',['d',['../pointers_8h.html#a4a07ca4e18acc73f5417ff466de86bd9',1,'d():&#160;pointers.h'],['../pointers_8h.html#a43426897a40b22f220ba28180958c76e',1,'D():&#160;pointers.h']]],
+  ['damage',['Damage',['../struct_damage.html',1,'Damage'],['../struct_ability.html#a3ce9e100d75fec1f76f38c443a42342a',1,'Ability::damage()']]],
+  ['de',['DE',['../pointers_8h.html#a4cf149ae43a5026a029c11fa00f9f17a',1,'pointers.h']]],
+  ['dead',['Dead',['../substruct_8h.html#a06473d9d883696038e0493de3944c9e4a2f872369e520d046b46b7cd0b49b1882',1,'substruct.h']]],
+  ['deadeye',['Deadeye',['../substruct_8h.html#a474a755e4cfa53534567029009496507a36d6c3da830a7a5cbbbc39575f4360df',1,'substruct.h']]],
+  ['death_5fcheck',['death_check',['../gameplay_8c.html#a276f0f4dfb870b3ac01a5191fb8691ad',1,'death_check(Entity *e):&#160;gameplay.c'],['../gameplay_8h.html#a0ea78254c604e02c83cce53019c6598b',1,'death_check(Entity *e):&#160;gameplay.c']]],
+  ['def_5fmult',['DEF_MULT',['../gameplay_8c.html#ad442588d12b048cd22096b40d4282677',1,'gameplay.c']]],
+  ['defiler',['defiler',['../file__coord_8c.html#a3afa1eeb5f127f8d7e528855d0e72973',1,'defiler(File *f):&#160;file_coord.c'],['../file__coord_8h.html#a6e4677315add576dd9ce0b92a2584201',1,'defiler(File *file):&#160;file_coord.c']]],
+  ['deplacement_2ec',['deplacement.c',['../deplacement_8c.html',1,'']]],
+  ['deplacement_2eh',['deplacement.h',['../deplacement_8h.html',1,'']]],
+  ['desc',['desc',['../structlang.html#af96f66d59e2344cea9aaeae828eecdc4',1,'lang']]],
+  ['destroy_5fgame',['destroy_game',['../init_8c.html#a25b7ba3198bcf88d6eae7a52912a38d2',1,'destroy_game():&#160;init.c'],['../init_8h.html#a097ab1e90e3d8bf414551411734b969a',1,'destroy_game():&#160;init.c']]],
+  ['detain',['Detain',['../substruct_8h.html#a474a755e4cfa53534567029009496507a43e6abc1c3e7cd8b7098893d86c1680b',1,'substruct.h']]],
+  ['detain_5ffn',['Detain_fn',['../abilities_8c.html#a10279f89dbaf47a49787e9eb4f011975',1,'Detain_fn(Coord c, Entity *e, StateList *list):&#160;abilities.c'],['../abilities_8h.html#a652c3a017d90b25f76582c809b2ced28',1,'Detain_fn(Coord c, Entity *e, StateList *list):&#160;abilities.c']]],
+  ['detained',['Detained',['../substruct_8h.html#a28c4ba069c82b615b006828888a97a47aa0292cd937dc4d348a65e5b707dd5346',1,'substruct.h']]],
+  ['detruire_5ffile',['detruire_file',['../file__coord_8c.html#a1131a6c90cc0924bae3820de28df9e61',1,'detruire_file(File *f):&#160;file_coord.c'],['../file__coord_8h.html#a83baee94b9e3ec9d82c91c817596ce14',1,'detruire_file(File *file):&#160;file_coord.c']]],
+  ['direction',['direction',['../structentity__t.html#a3c94e55b0e18cd033c69eea09391a5c7',1,'entity_t::direction()'],['../substruct_8h.html#a224b9163917ac32fc95a60d8c1eec3aa',1,'Direction():&#160;substruct.h']]],
+  ['disphostmenu',['dispHostMenu',['../multi__menu_8c.html#aaf68af7687ebfe9f7874a5a5e7c4cd24',1,'dispHostMenu(SDL_Renderer *renderer, int x, int y, int index):&#160;multi_menu.c'],['../multi__menu_8h.html#aed378dae7059176bd5d80a225931042a',1,'dispHostMenu(SDL_Renderer *renderer, int x, int y, int index):&#160;multi_menu.c']]],
+  ['dispjoinmenu',['dispJoinMenu',['../multi__menu_8c.html#ab1d227f9e3aef000678d3d288fb0b9dd',1,'dispJoinMenu(SDL_Renderer *renderer, int x, int y):&#160;multi_menu.c'],['../multi__menu_8h.html#ae82e9f31b7efa314ce112c7d4bdc4ea4',1,'dispJoinMenu(SDL_Renderer *renderer, int x, int y):&#160;multi_menu.c']]],
+  ['displaymapmulti',['displayMapMulti',['../serv_fcnt_8c.html#a7ae773c1e5a20159426d15e27bd48c9b',1,'displayMapMulti(MultiTile *mapMulti):&#160;servFcnt.c'],['../serv_fcnt_8h.html#a2889aef081e5c55b3ddb50d52329dd52',1,'displayMapMulti(MultiTile *mapMulti):&#160;servFcnt.c']]],
+  ['displaymenumulti',['displayMenuMulti',['../multi__menu_8c.html#afe95e4c35ad7e7057db02c7965a94096',1,'displayMenuMulti(int x, int y):&#160;multi_menu.c'],['../multi__menu_8h.html#a9da89d9ae8364971306c7c50477ac6e3',1,'displayMenuMulti(int x, int y):&#160;multi_menu.c']]],
+  ['drapeau',['drapeau',['../struct_state_list.html#a6f0e824aa109795c1b466ce69e471bbf',1,'StateList']]],
+  ['duration',['duration',['../struct_status.html#ab4e1dae6d047dddced8dc3523a3fa916',1,'Status']]],
+  ['during',['DURING',['../substruct_8h.html#aca32bbff6b66718eb538b2bfef2b5354ac52a80f28bdc6b1cd181af2bfe35a326',1,'substruct.h']]]
+];

@@ -1,0 +1,70 @@
+\hypertarget{struct_8h}{}\section{src/struct.h File Reference}
+\label{struct_8h}\index{src/struct.\+h@{src/struct.\+h}}
+
+
+Defining major structures.  
+
+
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}state.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}substruct.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_coord}{Coord}
+\begin{DoxyCompactList}\small\item\em Structure representing a coordinate, used to navigate the gameboard. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_vector}{Vector}
+\begin{DoxyCompactList}\small\item\em Structure representing a vector. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_timer}{Timer}
+\item 
+struct \hyperlink{struct_log}{Log}
+\item 
+struct \hyperlink{structmusic__t}{music\+\_\+t}
+\item 
+struct \hyperlink{structaction}{action}
+\begin{DoxyCompactList}\small\item\em Structure representing necessary information for the communication of actions done, wether between functions, threads, or players. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_ability}{Ability}
+\begin{DoxyCompactList}\small\item\em Structure representing a castable ability. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_class}{Class}
+\begin{DoxyCompactList}\small\item\em Structure representing the classes of the characters. \end{DoxyCompactList}\item 
+struct \hyperlink{structentity__t}{entity\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Defined as Entity. Structure representing the characters played by the player and his opponent. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_trap__t}{Trap\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure representing the existence of a Trap. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_tile}{Tile}
+\begin{DoxyCompactList}\small\item\em Structure representing a tile on the map. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_tab_texture}{Tab\+Texture}
+\begin{DoxyCompactList}\small\item\em Structure of how general textures are loaded. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_char_texture}{Char\+Texture}
+\begin{DoxyCompactList}\small\item\em Structure of how characters textures are loaded. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_anim_texture}{Anim\+Texture}
+\begin{DoxyCompactList}\small\item\em Structure of how animations textures are loaded. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_text_cache}{Text\+Cache}
+\begin{DoxyCompactList}\small\item\em Structure of how text are saved in cache. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_user}{User}
+\item 
+struct \hyperlink{struct_multi_tile}{Multi\+Tile}
+\begin{DoxyCompactList}\small\item\em Simplified version of \hyperlink{struct_tile}{Tile} structure. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_server_status__t}{Server\+Status\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure to get status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}\label{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}} 
+typedef struct \hyperlink{structentity__t}{entity\+\_\+t} \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity}
+\begin{DoxyCompactList}\small\item\em Structure representing the characters played by the player and his opponent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_8h_a952f4390a05966e58ce14e1978e9d915}\label{struct_8h_a952f4390a05966e58ce14e1978e9d915}} 
+typedef struct \hyperlink{struct_user}{User} {\bfseries t\+\_\+user}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defining major structures. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL, Thibault D\+O\+U\+C\+ET, Lucien C\+H\+A\+U\+V\+IN
+\end{DoxyAuthor}
+Code used to define major structures seperated into multiple categories \+: B\+A\+S\+IC, E\+N\+T\+I\+TY, A\+B\+I\+L\+I\+TY, T\+E\+R\+R\+A\+IN, T\+E\+X\+T\+U\+RE and C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+ON. 

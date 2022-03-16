@@ -1,0 +1,55 @@
+\hypertarget{structentity__t}{}\section{entity\+\_\+t Struct Reference}
+\label{structentity__t}\index{entity\+\_\+t@{entity\+\_\+t}}
+
+
+Defined as Entity. Structure representing the characters played by the player and his opponent.  
+
+
+
+
+{\ttfamily \#include $<$struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structentity__t_a218503eec9e98ad9b098b4f3337fd759}\label{structentity__t_a218503eec9e98ad9b098b4f3337fd759}} 
+int \hyperlink{structentity__t_a218503eec9e98ad9b098b4f3337fd759}{cha\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Character Id, positive if ally, negative if ennemy, is equal to class\+Id + 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_afb57034f4fd8ef96d972076ecd2a9349}\label{structentity__t_afb57034f4fd8ef96d972076ecd2a9349}} 
+char \hyperlink{structentity__t_afb57034f4fd8ef96d972076ecd2a9349}{cha\+\_\+name} \mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Character Name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a3abf9c71d2774124d4fa016df4754142}\label{structentity__t_a3abf9c71d2774124d4fa016df4754142}} 
+\hyperlink{struct_class}{Class} $\ast$ \hyperlink{structentity__t_a3abf9c71d2774124d4fa016df4754142}{cha\+\_\+class}
+\begin{DoxyCompactList}\small\item\em Pointer to Character \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a0d70a87514cf7efe85191e3c017d573a}\label{structentity__t_a0d70a87514cf7efe85191e3c017d573a}} 
+\hyperlink{substruct_8h_a06473d9d883696038e0493de3944c9e4}{life\+Id} \hyperlink{structentity__t_a0d70a87514cf7efe85191e3c017d573a}{active}
+\begin{DoxyCompactList}\small\item\em Boolean indicating if the character is alive or dead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a90ace45b66435b2f4c6da0e3da82ad72}\label{structentity__t_a90ace45b66435b2f4c6da0e3da82ad72}} 
+\hyperlink{struct_coord}{Coord} \hyperlink{structentity__t_a90ace45b66435b2f4c6da0e3da82ad72}{coords}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_coord}{Coord} indicating character\textquotesingle{}s current position on the gameboard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a3c94e55b0e18cd033c69eea09391a5c7}\label{structentity__t_a3c94e55b0e18cd033c69eea09391a5c7}} 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{structentity__t_a3c94e55b0e18cd033c69eea09391a5c7}{direction}
+\begin{DoxyCompactList}\small\item\em Indicates direction character is facing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a38c191aa02dca7815369a49837a3eb8e}\label{structentity__t_a38c191aa02dca7815369a49837a3eb8e}} 
+int \hyperlink{structentity__t_a38c191aa02dca7815369a49837a3eb8e}{id\+Anim}
+\begin{DoxyCompactList}\small\item\em Indicates animation stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_ae92b761dc4c74522fc725d5636f7545f}\label{structentity__t_ae92b761dc4c74522fc725d5636f7545f}} 
+int \hyperlink{structentity__t_ae92b761dc4c74522fc725d5636f7545f}{act\+\_\+points}
+\begin{DoxyCompactList}\small\item\em Number of action points (3 normally, 1 if paralyzed). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_ab609092b4a92813e695ef1023fd2c162}\label{structentity__t_ab609092b4a92813e695ef1023fd2c162}} 
+int \hyperlink{structentity__t_ab609092b4a92813e695ef1023fd2c162}{stats} \mbox{[}\hyperlink{substruct_8h_a8dd66bb045cef1046c504653db25ccde}{N\+U\+M\+\_\+\+S\+T\+A\+TS}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Character Stats arranged in an array respecting the order of stat\+Id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_a346fd34c9839a9ac920bfc9739deb7a4}\label{structentity__t_a346fd34c9839a9ac920bfc9739deb7a4}} 
+int \hyperlink{structentity__t_a346fd34c9839a9ac920bfc9739deb7a4}{status\+\_\+effect} \mbox{[}\hyperlink{substruct_8h_ae402e0b8f6d07e80d8c8a0eb3c87cf13}{N\+U\+M\+\_\+\+S\+T\+A\+T\+US}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array indicating current status\+\_\+effects of character, respecting the order of status\+Id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structentity__t_afce601ac707563d26335adb3ec2f5995}\label{structentity__t_afce601ac707563d26335adb3ec2f5995}} 
+int \hyperlink{structentity__t_afce601ac707563d26335adb3ec2f5995}{ab\+\_\+cooldown} \mbox{[}\hyperlink{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}{N\+U\+M\+\_\+\+AB}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array indicating current ability cooldowns respecting the order of ability\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defined as Entity. Structure representing the characters played by the player and his opponent. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{struct_8h}{struct.\+h}\end{DoxyCompactItemize}

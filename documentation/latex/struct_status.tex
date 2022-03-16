@@ -1,0 +1,31 @@
+\hypertarget{struct_status}{}\section{Status Struct Reference}
+\label{struct_status}\index{Status@{Status}}
+
+
+Structure representing stat modifier or status effect information (used to keep track of buffs and debuffs).  
+
+
+
+
+{\ttfamily \#include $<$substruct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_status_a5d07d0a3322e06260954630a35a701ec}\label{struct_status_a5d07d0a3322e06260954630a35a701ec}} 
+int \hyperlink{struct_status_a5d07d0a3322e06260954630a35a701ec}{value}
+\begin{DoxyCompactList}\small\item\em Indicates the value of the stat change, if equal to 0 then it is a status effect instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_status_ac40f96a86d3bdae29c68c65c1c54c345}\label{struct_status_ac40f96a86d3bdae29c68c65c1c54c345}} 
+int \hyperlink{struct_status_ac40f96a86d3bdae29c68c65c1c54c345}{stat}
+\begin{DoxyCompactList}\small\item\em Indicates the stat changed(stat\+Id), or if value equals 0, indicates the status effect(status\+Id). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_status_ab4e1dae6d047dddced8dc3523a3fa916}\label{struct_status_ab4e1dae6d047dddced8dc3523a3fa916}} 
+int \hyperlink{struct_status_ab4e1dae6d047dddced8dc3523a3fa916}{duration}
+\begin{DoxyCompactList}\small\item\em Indicates the duration of the modifier, if equal to 0 then it is a permanent modifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure representing stat modifier or status effect information (used to keep track of buffs and debuffs). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{substruct_8h}{substruct.\+h}\end{DoxyCompactItemize}

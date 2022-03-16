@@ -1,0 +1,33 @@
+\hypertarget{struct_server_status__t}{}\section{Server\+Status\+\_\+t Struct Reference}
+\label{struct_server_status__t}\index{Server\+Status\+\_\+t@{Server\+Status\+\_\+t}}
+
+
+Structure to get status.  
+
+
+
+
+{\ttfamily \#include $<$struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_server_status__t_a0800819f9f48cda4a3b61643f131f401}\label{struct_server_status__t_a0800819f9f48cda4a3b61643f131f401}} 
+int \hyperlink{struct_server_status__t_a0800819f9f48cda4a3b61643f131f401}{is\+Server\+Start\+Game}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_status}{Status} of the server between -\/2 and 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_server_status__t_a7c543ecd820e938afe93374dc52e736b}\label{struct_server_status__t_a7c543ecd820e938afe93374dc52e736b}} 
+char \hyperlink{struct_server_status__t_a7c543ecd820e938afe93374dc52e736b}{map\+Name\+Game} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Name of the map selected by the host. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_server_status__t_aee084fee1ff6b0310f26af75ec832816}\label{struct_server_status__t_aee084fee1ff6b0310f26af75ec832816}} 
+\hyperlink{struct_multi_tile}{Multi\+Tile} \hyperlink{struct_server_status__t_aee084fee1ff6b0310f26af75ec832816}{multi\+Map} \mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of Multitile to recreate the map client side. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure to get status. 
+
+Used to get status of connection, get the name of the map selected by the host and giv the bases to create the map with Multitile 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{struct_8h}{struct.\+h}\end{DoxyCompactItemize}

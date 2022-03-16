@@ -1,0 +1,629 @@
+\hypertarget{substruct_8h}{}\section{src/substruct.h File Reference}
+\label{substruct_8h}\index{src/substruct.\+h@{src/substruct.\+h}}
+
+
+Defining fundamental structures and enumerations.  
+
+
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlang}{lang}
+\begin{DoxyCompactList}\small\item\em Language structure that indicates name and description of a certain object. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_damage}{Damage}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_damage}{Damage} structure indicating a spell\textquotesingle{}s damage information. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_status}{Status}
+\begin{DoxyCompactList}\small\item\em Structure representing stat modifier or status effect information (used to keep track of buffs and debuffs). \end{DoxyCompactList}\item 
+struct \hyperlink{struct_modifier}{Modifier}
+\begin{DoxyCompactList}\small\item\em Structure representing a stat modifier or status effect information to determine if it will land. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{substruct_8h_a8dd66bb045cef1046c504653db25ccde}\label{substruct_8h_a8dd66bb045cef1046c504653db25ccde}} 
+\#define \hyperlink{substruct_8h_a8dd66bb045cef1046c504653db25ccde}{N\+U\+M\+\_\+\+S\+T\+A\+TS}~7
+\begin{DoxyCompactList}\small\item\em Indicates the total number of character stats. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}\label{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}} 
+\#define \hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}~6
+\begin{DoxyCompactList}\small\item\em Indicates the total number of created classes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}\label{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}} 
+\#define \hyperlink{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}{N\+U\+M\+\_\+\+AB}~4
+\begin{DoxyCompactList}\small\item\em Indicates the total number of abilities per character (omiting movement and passives). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_ae402e0b8f6d07e80d8c8a0eb3c87cf13}\label{substruct_8h_ae402e0b8f6d07e80d8c8a0eb3c87cf13}} 
+\#define \hyperlink{substruct_8h_ae402e0b8f6d07e80d8c8a0eb3c87cf13}{N\+U\+M\+\_\+\+S\+T\+A\+T\+US}~10
+\begin{DoxyCompactList}\small\item\em Indicates the total number of created status effects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_a054bb96480ecb4ed15a49b5fa12e9559}\label{substruct_8h_a054bb96480ecb4ed15a49b5fa12e9559}} 
+\#define \hyperlink{substruct_8h_a054bb96480ecb4ed15a49b5fa12e9559}{N\+B\+\_\+\+AB}~32
+\begin{DoxyCompactList}\small\item\em Indicates the total number of created Abilities, used for animations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}{stat\+Id} \{ \newline
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46ac4958f91767d1b86d43ed652b5529bb2}{pv}, 
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a316b50d129923c24ee2fb4191c08e167}{mv}, 
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a755a20c97e91185056123d053232e9b7}{vis}, 
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46adc97dcad862510f648dd67cbfafed308}{atk}, 
+\newline
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a2f657bcd62d335dd79f50077c9a3f555}{magic}, 
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46af0dcf8733563be3e5138ae5aabbdb910}{res\+\_\+physic}, 
+\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a5ee2af526e1d4b919b068eb509a67590}{res\+\_\+magic}
+ \}\begin{DoxyCompactList}\small\item\em Labeling the character\textquotesingle{}s stats. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}{class\+Id} \{ \newline
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a64fa9b5631109f0253d95adde1ba1ac9}{Berserker}, 
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8143b141c160c315e21fff83ed2e2341}{Ranger}, 
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a633fe7cd86ac6a4ba16f4d501fa08e2f}{Goliath}, 
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07ade6c51f323040e24a55b72a64f389e86}{Mage}, 
+\newline
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8a2999922e962f36b297694bccfb421e}{Valkyrie}, 
+\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a01d66a1869b66b942dca8ceee8a4e07b}{Angel}
+ \}\begin{DoxyCompactList}\small\item\em Labeling the different classes. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} \{ \newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ae0faf6544bd0060e100bc7b68cad83c3}{Slash}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a17f60aafb0c2406178acce5e0d2c9508}{Killing\+\_\+\+Blow}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a1f55f89bb318447d7a1ac335f34721c6}{Fury}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a3429ef0e0817932d2451976eaca35da4}{Frenzied\+\_\+\+Dash}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ab14bd7dd0e0e7bff4884137395860db3}{Bolt}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ace9aabd8e13c884472588325a665e44e}{Focus}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a178e499decd0c21272bc34e4b3056eab}{Trap}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a36d6c3da830a7a5cbbbc39575f4360df}{Deadeye}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ac768de96680900fd57b0c228099dc990}{Bash}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a950a3b6bc4b801c641214e8795dadd5d}{Shields\+\_\+\+Up}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a43e6abc1c3e7cd8b7098893d86c1680b}{Detain}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a427d304b8943edb6ca37aa8224de7c6f}{Banner}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507aa1e55e58697da7feaf1eb824fb0e3000}{Fireball}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ad5ed69e8f0bbba252680c6bb700184be}{Flame\+Charge}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a2c9775c4ff970492e5eea1c482e95922}{Flare}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a43ecf3d04571a9b9d15dbc680e798d57}{Eruption}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a66b78c00d56c74da8f9c647e9448e841}{Icy\+\_\+\+Winds}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a89ac6c10b21edd94533d2a24c16c0e1f}{Freeze}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a6594449bb532e0fb795dedd90541caf3}{Frozen\+\_\+\+Armor}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a0ef9a0ad87f0238a88141ef48443b10b}{Blizzard}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ad8e02d45f790302f10c88cbdc75aad63}{Shock}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a8f05f28f3b34cbc3f650ae61725083c3}{Volt\+\_\+\+Switch}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a3349bf6a5b5a3df6afb09379c4c05fcb}{Shock\+\_\+\+Therapy}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a37ef2d45166d740e9c9cce1e11db99ed}{Lightning\+\_\+\+Chain}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a694306c5eb7978bf19cfe69512ed8bca}{Thrust}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a43a35b1fb24e2f7445ed96497408456d}{Odins\+\_\+\+Eyes}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a72115498635c76e21e2781bb82c8602e}{Life\+\_\+\+Transfer}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a5e89d98841e7d484e7a76719aa8cd9e1}{Gates\+\_\+of\+\_\+\+Valhalla}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a00c5376967c9537abe2b582a2a9827e3}{Condemn}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507ad5da4d535b326f64a5d8d21a60cf3d1d}{Holy\+\_\+\+Storm}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a06e6e4009296ce7ac57d665cdd0aa4ee}{Last\+\_\+\+Sacrifice}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a4a3b143f8b32f6be9a619ac8fc4c212d}{Gods\+\_\+\+Blessing}, 
+\newline
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507a3e2e9e249d6812aac8e3692d22a29454}{Aura}, 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507aa3d2881ccc0cc6a20d3297115744b4fc}{Mvt}
+ \}\begin{DoxyCompactList}\small\item\em Labeling character abilities. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a06473d9d883696038e0493de3944c9e4}{life\+Id} \{ \hyperlink{substruct_8h_a06473d9d883696038e0493de3944c9e4a2f872369e520d046b46b7cd0b49b1882}{Dead}, 
+\hyperlink{substruct_8h_a06473d9d883696038e0493de3944c9e4abdae347178258aedd6b22a7c83bb1978}{Alive}
+ \}\begin{DoxyCompactList}\small\item\em Boolean labeling character dead/alive state. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id} \{ \newline
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a17e322cc1030dd0d08ad5f25b16cd262}{Cripple}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47aa0292cd937dc4d348a65e5b707dd5346}{Detained}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a880dd67b635c6d68c5902b94ff05bbcb}{Provoked}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a434ad6729a5264e8f6cf096467b5875a}{Burning}, 
+\newline
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a816064629524d6b426d8dfaf71d4676d}{Freezing}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a6a7237f0014617caf72ae7e7a5d331c3}{Paralyzed}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a63ccedf63d26d2c18ee956d8e29eba6b}{Blessed}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a5aef61c110ac0b61450d4c2cbfb50b6d}{Piercing}, 
+\newline
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47a0ef573c7bc6458257fc485a6ddfddc76}{Guarding}, 
+\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47acdc439284b26ca2fd174f1feb7218f1f}{Summoned}
+ \}\begin{DoxyCompactList}\small\item\em Labeling the different status effects. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5}{castability\+Id} \{ \hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a1b7b2b39b9e3413e236a3d1c1ecb4f75}{Castable\+\_\+c}, 
+\hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5ab45e6f5a933c26fb21a4332cf8a90ea4}{Locked\+\_\+c}, 
+\hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a521b7a150cde207f5709d33df1d7d227}{Frozen\+\_\+c}, 
+\hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a6b6086c87baf3104b4beb7532035dcdd}{Crippled\+\_\+c}
+ \}\begin{DoxyCompactList}\small\item\em Labeling states in which a spell cannot be cast. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type} \{ \newline
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a6d936fb04bca6b34aa279cd32545ab5e}{F\+O\+ES}, 
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ad0a00add06fd8d61ef0f1f366bea2546}{A\+L\+L\+I\+ES}, 
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a627abe5a430420baf29ebe1940a7f2fb}{B\+O\+TH}, 
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ab9bc68b392c4b56ad09b4f2ce423e59b}{F\+R\+E\+E\+\_\+\+T\+I\+LE}, 
+\newline
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a30793184783bf2d33c76ea30c6c75108}{A\+N\+Y\+\_\+\+T\+I\+LE}
+ \}\begin{DoxyCompactList}\small\item\em Labeling tile states to identify if tile can be targeted by a spell. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}{fnid} \{ \newline
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE}, 
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac52a80f28bdc6b1cd181af2bfe35a326}{D\+U\+R\+I\+NG}, 
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ae6b900100d080b3b2a415a74287ac51d}{B\+E\+F\+O\+RE}, 
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a620503848b4e75d10e3e198fb77a656b}{O\+N\+LY}, 
+\newline
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a7b7a4cb38549c6293e591b1efc6b8521}{A\+F\+T\+ER}
+ \}\begin{DoxyCompactList}\small\item\em Labeling Indicators on ability method usage. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \{ \hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaa2c63acbe79d9f41ba6bb7766e9c37702}{N}, 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab199e021998d49b1f09338d8b9b18ecb}{E}, 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaaf1ce01387d2348f8b858721a7db81670}{S}, 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab722ceeb601c72cd78fbd35f3581fdf7}{W}
+ \}\begin{DoxyCompactList}\small\item\em Labeling character directions. \end{DoxyCompactList}
+\item 
+enum \hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \{ \hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaea9e2a8ce4339ceb6af69f47c7610012}{O\+N\+G\+O\+I\+NG}, 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faa843dff91ff0b0e5b98a110a512b2f531}{W\+IN}, 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaa3c6650b8f7e145f2e4f434f5912b995}{L\+O\+SE}
+ \}\begin{DoxyCompactList}\small\item\em Labeling game states. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{substruct_8h_a788bd7386ff544dddb8ba39e71e59d5e}\label{substruct_8h_a788bd7386ff544dddb8ba39e71e59d5e}} 
+char \hyperlink{substruct_8h_a788bd7386ff544dddb8ba39e71e59d5e}{stat\+Name} \mbox{[}\hyperlink{substruct_8h_a8dd66bb045cef1046c504653db25ccde}{N\+U\+M\+\_\+\+S\+T\+A\+TS}\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em extern string database containing string version of stat names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_a9c0bc9871acc7c764a10339a2ffe62a6}\label{substruct_8h_a9c0bc9871acc7c764a10339a2ffe62a6}} 
+char \hyperlink{substruct_8h_a9c0bc9871acc7c764a10339a2ffe62a6}{Id\+Names} \mbox{[}\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507aa3d2881ccc0cc6a20d3297115744b4fc}{Mvt}+1\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em extern string database containing string version of ability names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_a2b77bf4ebb632bbfdc64ada732c5b176}\label{substruct_8h_a2b77bf4ebb632bbfdc64ada732c5b176}} 
+char \hyperlink{substruct_8h_a2b77bf4ebb632bbfdc64ada732c5b176}{status\+Name} \mbox{[}\hyperlink{substruct_8h_ae402e0b8f6d07e80d8c8a0eb3c87cf13}{N\+U\+M\+\_\+\+S\+T\+A\+T\+US}\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em extern string database containing string version of status effect names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_af106fc75235278b9e3808ca07e70d778}\label{substruct_8h_af106fc75235278b9e3808ca07e70d778}} 
+char \hyperlink{substruct_8h_af106fc75235278b9e3808ca07e70d778}{target\+Names} \mbox{[}5\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em extern string database containing string version of the target type enumeration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{substruct_8h_ac282f47cea75515c7ff983c278a90dbe}\label{substruct_8h_ac282f47cea75515c7ff983c278a90dbe}} 
+char \hyperlink{substruct_8h_ac282f47cea75515c7ff983c278a90dbe}{fn\+Names} \mbox{[}5\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em extern string database containing string version of the function use enumeration \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defining fundamental structures and enumerations. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL, Thibault D\+O\+U\+C\+ET
+\end{DoxyAuthor}
+Use of substruct to limit clogging up \hyperlink{struct_8h}{struct.\+h} and to define fundamental structures in a different file. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507}\label{substruct_8h_a474a755e4cfa53534567029009496507}} 
+\index{substruct.\+h@{substruct.\+h}!ability\+Id@{ability\+Id}}
+\index{ability\+Id@{ability\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{ability\+Id}{abilityId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}
+
+
+
+Labeling character abilities. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Slash@{Slash}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Slash@{Slash}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ae0faf6544bd0060e100bc7b68cad83c3}\label{substruct_8h_a474a755e4cfa53534567029009496507ae0faf6544bd0060e100bc7b68cad83c3}} 
+Slash&Berserker Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Killing\+\_\+\+Blow@{Killing\+\_\+\+Blow}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Killing\+\_\+\+Blow@{Killing\+\_\+\+Blow}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a17f60aafb0c2406178acce5e0d2c9508}\label{substruct_8h_a474a755e4cfa53534567029009496507a17f60aafb0c2406178acce5e0d2c9508}} 
+Killing\+\_\+\+Blow&Berserker Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fury@{Fury}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Fury@{Fury}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a1f55f89bb318447d7a1ac335f34721c6}\label{substruct_8h_a474a755e4cfa53534567029009496507a1f55f89bb318447d7a1ac335f34721c6}} 
+Fury&Berserker Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Frenzied\+\_\+\+Dash@{Frenzied\+\_\+\+Dash}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Frenzied\+\_\+\+Dash@{Frenzied\+\_\+\+Dash}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a3429ef0e0817932d2451976eaca35da4}\label{substruct_8h_a474a755e4cfa53534567029009496507a3429ef0e0817932d2451976eaca35da4}} 
+Frenzied\+\_\+\+Dash&Berserker Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bolt@{Bolt}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Bolt@{Bolt}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ab14bd7dd0e0e7bff4884137395860db3}\label{substruct_8h_a474a755e4cfa53534567029009496507ab14bd7dd0e0e7bff4884137395860db3}} 
+Bolt&Ranger Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Focus@{Focus}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Focus@{Focus}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ace9aabd8e13c884472588325a665e44e}\label{substruct_8h_a474a755e4cfa53534567029009496507ace9aabd8e13c884472588325a665e44e}} 
+Focus&Ranger Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Trap@{Trap}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Trap@{Trap}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a178e499decd0c21272bc34e4b3056eab}\label{substruct_8h_a474a755e4cfa53534567029009496507a178e499decd0c21272bc34e4b3056eab}} 
+Trap&Ranger Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deadeye@{Deadeye}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Deadeye@{Deadeye}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a36d6c3da830a7a5cbbbc39575f4360df}\label{substruct_8h_a474a755e4cfa53534567029009496507a36d6c3da830a7a5cbbbc39575f4360df}} 
+Deadeye&Ranger Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bash@{Bash}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Bash@{Bash}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ac768de96680900fd57b0c228099dc990}\label{substruct_8h_a474a755e4cfa53534567029009496507ac768de96680900fd57b0c228099dc990}} 
+Bash&Goliath Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shields\+\_\+\+Up@{Shields\+\_\+\+Up}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Shields\+\_\+\+Up@{Shields\+\_\+\+Up}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a950a3b6bc4b801c641214e8795dadd5d}\label{substruct_8h_a474a755e4cfa53534567029009496507a950a3b6bc4b801c641214e8795dadd5d}} 
+Shields\+\_\+\+Up&Goliath Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Detain@{Detain}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Detain@{Detain}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a43e6abc1c3e7cd8b7098893d86c1680b}\label{substruct_8h_a474a755e4cfa53534567029009496507a43e6abc1c3e7cd8b7098893d86c1680b}} 
+Detain&Goliath Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Banner@{Banner}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Banner@{Banner}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a427d304b8943edb6ca37aa8224de7c6f}\label{substruct_8h_a474a755e4cfa53534567029009496507a427d304b8943edb6ca37aa8224de7c6f}} 
+Banner&Goliath Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fireball@{Fireball}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Fireball@{Fireball}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507aa1e55e58697da7feaf1eb824fb0e3000}\label{substruct_8h_a474a755e4cfa53534567029009496507aa1e55e58697da7feaf1eb824fb0e3000}} 
+Fireball&Fire Mage Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flame\+Charge@{Flame\+Charge}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Flame\+Charge@{Flame\+Charge}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ad5ed69e8f0bbba252680c6bb700184be}\label{substruct_8h_a474a755e4cfa53534567029009496507ad5ed69e8f0bbba252680c6bb700184be}} 
+Flame\+Charge&Fire Mage Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flare@{Flare}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Flare@{Flare}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a2c9775c4ff970492e5eea1c482e95922}\label{substruct_8h_a474a755e4cfa53534567029009496507a2c9775c4ff970492e5eea1c482e95922}} 
+Flare&Fire Mage Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Eruption@{Eruption}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Eruption@{Eruption}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a43ecf3d04571a9b9d15dbc680e798d57}\label{substruct_8h_a474a755e4cfa53534567029009496507a43ecf3d04571a9b9d15dbc680e798d57}} 
+Eruption&Fire Mage Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Icy\+\_\+\+Winds@{Icy\+\_\+\+Winds}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Icy\+\_\+\+Winds@{Icy\+\_\+\+Winds}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a66b78c00d56c74da8f9c647e9448e841}\label{substruct_8h_a474a755e4cfa53534567029009496507a66b78c00d56c74da8f9c647e9448e841}} 
+Icy\+\_\+\+Winds&Ice Mage Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Freeze@{Freeze}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Freeze@{Freeze}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a89ac6c10b21edd94533d2a24c16c0e1f}\label{substruct_8h_a474a755e4cfa53534567029009496507a89ac6c10b21edd94533d2a24c16c0e1f}} 
+Freeze&Ice Mage Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Frozen\+\_\+\+Armor@{Frozen\+\_\+\+Armor}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Frozen\+\_\+\+Armor@{Frozen\+\_\+\+Armor}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a6594449bb532e0fb795dedd90541caf3}\label{substruct_8h_a474a755e4cfa53534567029009496507a6594449bb532e0fb795dedd90541caf3}} 
+Frozen\+\_\+\+Armor&Ice Mage Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Blizzard@{Blizzard}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Blizzard@{Blizzard}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a0ef9a0ad87f0238a88141ef48443b10b}\label{substruct_8h_a474a755e4cfa53534567029009496507a0ef9a0ad87f0238a88141ef48443b10b}} 
+Blizzard&Ice Mage Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shock@{Shock}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Shock@{Shock}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ad8e02d45f790302f10c88cbdc75aad63}\label{substruct_8h_a474a755e4cfa53534567029009496507ad8e02d45f790302f10c88cbdc75aad63}} 
+Shock&Electric Mage Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Volt\+\_\+\+Switch@{Volt\+\_\+\+Switch}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Volt\+\_\+\+Switch@{Volt\+\_\+\+Switch}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a8f05f28f3b34cbc3f650ae61725083c3}\label{substruct_8h_a474a755e4cfa53534567029009496507a8f05f28f3b34cbc3f650ae61725083c3}} 
+Volt\+\_\+\+Switch&Electric Mage Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shock\+\_\+\+Therapy@{Shock\+\_\+\+Therapy}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Shock\+\_\+\+Therapy@{Shock\+\_\+\+Therapy}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a3349bf6a5b5a3df6afb09379c4c05fcb}\label{substruct_8h_a474a755e4cfa53534567029009496507a3349bf6a5b5a3df6afb09379c4c05fcb}} 
+Shock\+\_\+\+Therapy&Electric Mage Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Lightning\+\_\+\+Chain@{Lightning\+\_\+\+Chain}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Lightning\+\_\+\+Chain@{Lightning\+\_\+\+Chain}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a37ef2d45166d740e9c9cce1e11db99ed}\label{substruct_8h_a474a755e4cfa53534567029009496507a37ef2d45166d740e9c9cce1e11db99ed}} 
+Lightning\+\_\+\+Chain&Electric Mage Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Thrust@{Thrust}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Thrust@{Thrust}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a694306c5eb7978bf19cfe69512ed8bca}\label{substruct_8h_a474a755e4cfa53534567029009496507a694306c5eb7978bf19cfe69512ed8bca}} 
+Thrust&Valkyrie Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Odins\+\_\+\+Eyes@{Odins\+\_\+\+Eyes}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Odins\+\_\+\+Eyes@{Odins\+\_\+\+Eyes}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a43a35b1fb24e2f7445ed96497408456d}\label{substruct_8h_a474a755e4cfa53534567029009496507a43a35b1fb24e2f7445ed96497408456d}} 
+Odins\+\_\+\+Eyes&Valkyrie Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Life\+\_\+\+Transfer@{Life\+\_\+\+Transfer}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Life\+\_\+\+Transfer@{Life\+\_\+\+Transfer}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a72115498635c76e21e2781bb82c8602e}\label{substruct_8h_a474a755e4cfa53534567029009496507a72115498635c76e21e2781bb82c8602e}} 
+Life\+\_\+\+Transfer&Valkyrie Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gates\+\_\+of\+\_\+\+Valhalla@{Gates\+\_\+of\+\_\+\+Valhalla}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Gates\+\_\+of\+\_\+\+Valhalla@{Gates\+\_\+of\+\_\+\+Valhalla}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a5e89d98841e7d484e7a76719aa8cd9e1}\label{substruct_8h_a474a755e4cfa53534567029009496507a5e89d98841e7d484e7a76719aa8cd9e1}} 
+Gates\+\_\+of\+\_\+\+Valhalla&Valkyrie Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Condemn@{Condemn}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Condemn@{Condemn}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a00c5376967c9537abe2b582a2a9827e3}\label{substruct_8h_a474a755e4cfa53534567029009496507a00c5376967c9537abe2b582a2a9827e3}} 
+Condemn&Angel Skill 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Holy\+\_\+\+Storm@{Holy\+\_\+\+Storm}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Holy\+\_\+\+Storm@{Holy\+\_\+\+Storm}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507ad5da4d535b326f64a5d8d21a60cf3d1d}\label{substruct_8h_a474a755e4cfa53534567029009496507ad5da4d535b326f64a5d8d21a60cf3d1d}} 
+Holy\+\_\+\+Storm&Angel Skill 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Last\+\_\+\+Sacrifice@{Last\+\_\+\+Sacrifice}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Last\+\_\+\+Sacrifice@{Last\+\_\+\+Sacrifice}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a06e6e4009296ce7ac57d665cdd0aa4ee}\label{substruct_8h_a474a755e4cfa53534567029009496507a06e6e4009296ce7ac57d665cdd0aa4ee}} 
+Last\+\_\+\+Sacrifice&Angel Skill 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Gods\+\_\+\+Blessing@{Gods\+\_\+\+Blessing}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Gods\+\_\+\+Blessing@{Gods\+\_\+\+Blessing}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a4a3b143f8b32f6be9a619ac8fc4c212d}\label{substruct_8h_a474a755e4cfa53534567029009496507a4a3b143f8b32f6be9a619ac8fc4c212d}} 
+Gods\+\_\+\+Blessing&Angel Skill 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aura@{Aura}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Aura@{Aura}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507a3e2e9e249d6812aac8e3692d22a29454}\label{substruct_8h_a474a755e4cfa53534567029009496507a3e2e9e249d6812aac8e3692d22a29454}} 
+Aura&Angel Passive \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mvt@{Mvt}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Mvt@{Mvt}}}\mbox{\Hypertarget{substruct_8h_a474a755e4cfa53534567029009496507aa3d2881ccc0cc6a20d3297115744b4fc}\label{substruct_8h_a474a755e4cfa53534567029009496507aa3d2881ccc0cc6a20d3297115744b4fc}} 
+Mvt&Movement \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5}\label{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5}} 
+\index{substruct.\+h@{substruct.\+h}!castability\+Id@{castability\+Id}}
+\index{castability\+Id@{castability\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{castability\+Id}{castabilityId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5}{castability\+Id}}
+
+
+
+Labeling states in which a spell cannot be cast. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Castable\+\_\+c@{Castable\+\_\+c}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Castable\+\_\+c@{Castable\+\_\+c}}}\mbox{\Hypertarget{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a1b7b2b39b9e3413e236a3d1c1ecb4f75}\label{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a1b7b2b39b9e3413e236a3d1c1ecb4f75}} 
+Castable\+\_\+c&Spell is castable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Locked\+\_\+c@{Locked\+\_\+c}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Locked\+\_\+c@{Locked\+\_\+c}}}\mbox{\Hypertarget{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5ab45e6f5a933c26fb21a4332cf8a90ea4}\label{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5ab45e6f5a933c26fb21a4332cf8a90ea4}} 
+Locked\+\_\+c&Not enough action points to cast the spell, or it is on cooldown \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Frozen\+\_\+c@{Frozen\+\_\+c}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Frozen\+\_\+c@{Frozen\+\_\+c}}}\mbox{\Hypertarget{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a521b7a150cde207f5709d33df1d7d227}\label{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a521b7a150cde207f5709d33df1d7d227}} 
+Frozen\+\_\+c&Character is frozen and cannot cast the spell \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Crippled\+\_\+c@{Crippled\+\_\+c}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Crippled\+\_\+c@{Crippled\+\_\+c}}}\mbox{\Hypertarget{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a6b6086c87baf3104b4beb7532035dcdd}\label{substruct_8h_a54c77f9f7fbd4d63758a1066946dc6f5a6b6086c87baf3104b4beb7532035dcdd}} 
+Crippled\+\_\+c&Character is crippled and the spell includes movement \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}} 
+\index{substruct.\+h@{substruct.\+h}!class\+Id@{class\+Id}}
+\index{class\+Id@{class\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{class\+Id}{classId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}{class\+Id}}
+
+
+
+Labeling the different classes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Berserker@{Berserker}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Berserker@{Berserker}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a64fa9b5631109f0253d95adde1ba1ac9}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a64fa9b5631109f0253d95adde1ba1ac9}} 
+Berserker&\hyperlink{struct_class}{Class} id of 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ranger@{Ranger}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Ranger@{Ranger}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8143b141c160c315e21fff83ed2e2341}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8143b141c160c315e21fff83ed2e2341}} 
+Ranger&\hyperlink{struct_class}{Class} id of 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Goliath@{Goliath}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Goliath@{Goliath}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a633fe7cd86ac6a4ba16f4d501fa08e2f}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a633fe7cd86ac6a4ba16f4d501fa08e2f}} 
+Goliath&\hyperlink{struct_class}{Class} id of 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mage@{Mage}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Mage@{Mage}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07ade6c51f323040e24a55b72a64f389e86}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07ade6c51f323040e24a55b72a64f389e86}} 
+Mage&\hyperlink{struct_class}{Class} id of 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Valkyrie@{Valkyrie}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Valkyrie@{Valkyrie}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8a2999922e962f36b297694bccfb421e}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8a2999922e962f36b297694bccfb421e}} 
+Valkyrie&\hyperlink{struct_class}{Class} id of 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Angel@{Angel}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Angel@{Angel}}}\mbox{\Hypertarget{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a01d66a1869b66b942dca8ceee8a4e07b}\label{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a01d66a1869b66b942dca8ceee8a4e07b}} 
+Angel&\hyperlink{struct_class}{Class} id of 5 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}\label{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}} 
+\index{substruct.\+h@{substruct.\+h}!Direction@{Direction}}
+\index{Direction@{Direction}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}
+
+
+
+Labeling character directions. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N@{N}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!N@{N}}}\mbox{\Hypertarget{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaa2c63acbe79d9f41ba6bb7766e9c37702}\label{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaa2c63acbe79d9f41ba6bb7766e9c37702}} 
+N&N\+O\+R\+T\+H/\+T\+O\+P\+L\+E\+FT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E@{E}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!E@{E}}}\mbox{\Hypertarget{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab199e021998d49b1f09338d8b9b18ecb}\label{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab199e021998d49b1f09338d8b9b18ecb}} 
+E&E\+A\+S\+T/\+T\+O\+P\+R\+I\+G\+HT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!S@{S}}}\mbox{\Hypertarget{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaaf1ce01387d2348f8b858721a7db81670}\label{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaaf1ce01387d2348f8b858721a7db81670}} 
+S&S\+O\+U\+T\+H/\+B\+O\+T\+T\+O\+M\+R\+I\+G\+HT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!W@{W}}}\mbox{\Hypertarget{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab722ceeb601c72cd78fbd35f3581fdf7}\label{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aaab722ceeb601c72cd78fbd35f3581fdf7}} 
+W&S\+O\+U\+T\+H/\+B\+O\+T\+T\+O\+M\+L\+E\+FT \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}} 
+\index{substruct.\+h@{substruct.\+h}!fnid@{fnid}}
+\index{fnid@{fnid}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{fnid}{fnid}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}{fnid}}
+
+
+
+Labeling Indicators on ability method usage. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac157bdf0b85a40d2619cbc8bc1ae5fe2}} 
+N\+O\+NE&There is no method, use only the loop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+U\+R\+I\+NG@{D\+U\+R\+I\+NG}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!D\+U\+R\+I\+NG@{D\+U\+R\+I\+NG}}}\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac52a80f28bdc6b1cd181af2bfe35a326}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ac52a80f28bdc6b1cd181af2bfe35a326}} 
+D\+U\+R\+I\+NG&Apply during the loop, to every tile \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+E\+F\+O\+RE@{B\+E\+F\+O\+RE}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!B\+E\+F\+O\+RE@{B\+E\+F\+O\+RE}}}\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ae6b900100d080b3b2a415a74287ac51d}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354ae6b900100d080b3b2a415a74287ac51d}} 
+B\+E\+F\+O\+RE&Apply before the loop and the activation of cooldown \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+N\+LY@{O\+N\+LY}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!O\+N\+LY@{O\+N\+LY}}}\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a620503848b4e75d10e3e198fb77a656b}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a620503848b4e75d10e3e198fb77a656b}} 
+O\+N\+LY&Only use the method, don\textquotesingle{}t use the loop \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+F\+T\+ER@{A\+F\+T\+ER}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!A\+F\+T\+ER@{A\+F\+T\+ER}}}\mbox{\Hypertarget{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a7b7a4cb38549c6293e591b1efc6b8521}\label{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354a7b7a4cb38549c6293e591b1efc6b8521}} 
+A\+F\+T\+ER&Apply after the loop \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a06473d9d883696038e0493de3944c9e4}\label{substruct_8h_a06473d9d883696038e0493de3944c9e4}} 
+\index{substruct.\+h@{substruct.\+h}!life\+Id@{life\+Id}}
+\index{life\+Id@{life\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{life\+Id}{lifeId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a06473d9d883696038e0493de3944c9e4}{life\+Id}}
+
+
+
+Boolean labeling character dead/alive state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dead@{Dead}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Dead@{Dead}}}\mbox{\Hypertarget{substruct_8h_a06473d9d883696038e0493de3944c9e4a2f872369e520d046b46b7cd0b49b1882}\label{substruct_8h_a06473d9d883696038e0493de3944c9e4a2f872369e520d046b46b7cd0b49b1882}} 
+Dead&0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alive@{Alive}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Alive@{Alive}}}\mbox{\Hypertarget{substruct_8h_a06473d9d883696038e0493de3944c9e4abdae347178258aedd6b22a7c83bb1978}\label{substruct_8h_a06473d9d883696038e0493de3944c9e4abdae347178258aedd6b22a7c83bb1978}} 
+Alive&1 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}} 
+\index{substruct.\+h@{substruct.\+h}!stat\+Id@{stat\+Id}}
+\index{stat\+Id@{stat\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{stat\+Id}{statId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}{stat\+Id}}
+
+
+
+Labeling the character\textquotesingle{}s stats. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pv@{pv}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!pv@{pv}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46ac4958f91767d1b86d43ed652b5529bb2}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46ac4958f91767d1b86d43ed652b5529bb2}} 
+pv&Health \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mv@{mv}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!mv@{mv}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a316b50d129923c24ee2fb4191c08e167}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a316b50d129923c24ee2fb4191c08e167}} 
+mv&Movement Range \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vis@{vis}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!vis@{vis}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a755a20c97e91185056123d053232e9b7}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a755a20c97e91185056123d053232e9b7}} 
+vis&Vision (used with spell range to calculate castable range) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{atk@{atk}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!atk@{atk}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46adc97dcad862510f648dd67cbfafed308}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46adc97dcad862510f648dd67cbfafed308}} 
+atk&Physical attack (used with spell damage modifier to calculate damage) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{magic@{magic}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!magic@{magic}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a2f657bcd62d335dd79f50077c9a3f555}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a2f657bcd62d335dd79f50077c9a3f555}} 
+magic&Magical attack (used with spell damage modifier to calculate damage) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{res\+\_\+physic@{res\+\_\+physic}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!res\+\_\+physic@{res\+\_\+physic}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46af0dcf8733563be3e5138ae5aabbdb910}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46af0dcf8733563be3e5138ae5aabbdb910}} 
+res\+\_\+physic&Physical Resistance (reduces incoming physical damage) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{res\+\_\+magic@{res\+\_\+magic}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!res\+\_\+magic@{res\+\_\+magic}}}\mbox{\Hypertarget{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a5ee2af526e1d4b919b068eb509a67590}\label{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46a5ee2af526e1d4b919b068eb509a67590}} 
+res\+\_\+magic&Magical Resistance (reduces incoming magical damage) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47}} 
+\index{substruct.\+h@{substruct.\+h}!status\+Id@{status\+Id}}
+\index{status\+Id@{status\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{status\+Id}{statusId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id}}
+
+
+
+Labeling the different status effects. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cripple@{Cripple}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Cripple@{Cripple}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a17e322cc1030dd0d08ad5f25b16cd262}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a17e322cc1030dd0d08ad5f25b16cd262}} 
+Cripple&Character cannot move and takes increased damage from most sources \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Detained@{Detained}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Detained@{Detained}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47aa0292cd937dc4d348a65e5b707dd5346}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47aa0292cd937dc4d348a65e5b707dd5346}} 
+Detained&Character is catured by an ennemy, unable to do anything for three turns or until detainer is killed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Provoked@{Provoked}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Provoked@{Provoked}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a880dd67b635c6d68c5902b94ff05bbcb}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a880dd67b635c6d68c5902b94ff05bbcb}} 
+Provoked&Character may only target provoker with abilities \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Burning@{Burning}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Burning@{Burning}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a434ad6729a5264e8f6cf096467b5875a}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a434ad6729a5264e8f6cf096467b5875a}} 
+Burning&Character takes damage at the beginning of every turn, prevents him from being frozen \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Freezing@{Freezing}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Freezing@{Freezing}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a816064629524d6b426d8dfaf71d4676d}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a816064629524d6b426d8dfaf71d4676d}} 
+Freezing&Character is unable to do anything but has increased resistances \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Paralyzed@{Paralyzed}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Paralyzed@{Paralyzed}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a6a7237f0014617caf72ae7e7a5d331c3}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a6a7237f0014617caf72ae7e7a5d331c3}} 
+Paralyzed&Character only has 1 action point per turn \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Blessed@{Blessed}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Blessed@{Blessed}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a63ccedf63d26d2c18ee956d8e29eba6b}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a63ccedf63d26d2c18ee956d8e29eba6b}} 
+Blessed&Character\textquotesingle{}s cooldowns don\textquotesingle{}t get applied \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Piercing@{Piercing}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Piercing@{Piercing}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a5aef61c110ac0b61450d4c2cbfb50b6d}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a5aef61c110ac0b61450d4c2cbfb50b6d}} 
+Piercing&Character ignores armor when attacking \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Guarding@{Guarding}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Guarding@{Guarding}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47a0ef573c7bc6458257fc485a6ddfddc76}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47a0ef573c7bc6458257fc485a6ddfddc76}} 
+Guarding&Character has increased block chance \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Summoned@{Summoned}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!Summoned@{Summoned}}}\mbox{\Hypertarget{substruct_8h_a28c4ba069c82b615b006828888a97a47acdc439284b26ca2fd174f1feb7218f1f}\label{substruct_8h_a28c4ba069c82b615b006828888a97a47acdc439284b26ca2fd174f1feb7218f1f}} 
+Summoned&Character has been summoned for a turn \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}} 
+\index{substruct.\+h@{substruct.\+h}!target\+Type@{target\+Type}}
+\index{target\+Type@{target\+Type}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{target\+Type}{targetType}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type}}
+
+
+
+Labeling tile states to identify if tile can be targeted by a spell. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+O\+ES@{F\+O\+ES}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!F\+O\+ES@{F\+O\+ES}}}\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a6d936fb04bca6b34aa279cd32545ab5e}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a6d936fb04bca6b34aa279cd32545ab5e}} 
+F\+O\+ES&A foe is on this tile \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+L\+I\+ES@{A\+L\+L\+I\+ES}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!A\+L\+L\+I\+ES@{A\+L\+L\+I\+ES}}}\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ad0a00add06fd8d61ef0f1f366bea2546}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ad0a00add06fd8d61ef0f1f366bea2546}} 
+A\+L\+L\+I\+ES&An ally is on this tile \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+TH@{B\+O\+TH}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!B\+O\+TH@{B\+O\+TH}}}\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a627abe5a430420baf29ebe1940a7f2fb}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a627abe5a430420baf29ebe1940a7f2fb}} 
+B\+O\+TH&Either a foe or an ally are on this tile \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+R\+E\+E\+\_\+\+T\+I\+LE@{F\+R\+E\+E\+\_\+\+T\+I\+LE}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!F\+R\+E\+E\+\_\+\+T\+I\+LE@{F\+R\+E\+E\+\_\+\+T\+I\+LE}}}\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ab9bc68b392c4b56ad09b4f2ce423e59b}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2ab9bc68b392c4b56ad09b4f2ce423e59b}} 
+F\+R\+E\+E\+\_\+\+T\+I\+LE&This tile is walkeable and contains no entity \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+N\+Y\+\_\+\+T\+I\+LE@{A\+N\+Y\+\_\+\+T\+I\+LE}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!A\+N\+Y\+\_\+\+T\+I\+LE@{A\+N\+Y\+\_\+\+T\+I\+LE}}}\mbox{\Hypertarget{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a30793184783bf2d33c76ea30c6c75108}\label{substruct_8h_a02962753cb153ca273ca219aa4c33ba2a30793184783bf2d33c76ea30c6c75108}} 
+A\+N\+Y\+\_\+\+T\+I\+LE&Any \hyperlink{struct_tile}{Tile} \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}\label{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}} 
+\index{substruct.\+h@{substruct.\+h}!win\+Id@{win\+Id}}
+\index{win\+Id@{win\+Id}!substruct.\+h@{substruct.\+h}}
+\subsubsection{\texorpdfstring{win\+Id}{winId}}
+{\footnotesize\ttfamily enum \hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}}
+
+
+
+Labeling game states. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+N\+G\+O\+I\+NG@{O\+N\+G\+O\+I\+NG}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!O\+N\+G\+O\+I\+NG@{O\+N\+G\+O\+I\+NG}}}\mbox{\Hypertarget{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaea9e2a8ce4339ceb6af69f47c7610012}\label{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaea9e2a8ce4339ceb6af69f47c7610012}} 
+O\+N\+G\+O\+I\+NG&Game is not over \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+IN@{W\+IN}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!W\+IN@{W\+IN}}}\mbox{\Hypertarget{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faa843dff91ff0b0e5b98a110a512b2f531}\label{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faa843dff91ff0b0e5b98a110a512b2f531}} 
+W\+IN&Game is over, you have won \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+SE@{L\+O\+SE}!substruct.\+h@{substruct.\+h}}\index{substruct.\+h@{substruct.\+h}!L\+O\+SE@{L\+O\+SE}}}\mbox{\Hypertarget{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaa3c6650b8f7e145f2e4f434f5912b995}\label{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaa3c6650b8f7e145f2e4f434f5912b995}} 
+L\+O\+SE&Game is over, you have lost \\
+\hline
+
+\end{DoxyEnumFields}

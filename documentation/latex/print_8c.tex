@@ -1,0 +1,421 @@
+\hypertarget{print_8c}{}\section{src/print.c File Reference}
+\label{print_8c}\index{src/print.\+c@{src/print.\+c}}
+
+
+Contains functions for printing various structures to standard output.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a5d32a82cdcbd5ce97cab1920575920e8}{print\+\_\+class\+\_\+name} (\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}{class\+Id} Id, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints class\+Id in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a80a8d15685ab76f2bf865c634f07caa3}{print\+\_\+int} (int $\ast$i, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints integer \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a0626720b22773e9695186c93a1db5aef}{print\+\_\+ability\+Id} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints ability\+Id enumeration in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a3110d71cbb6a85192b18c49cf7fbb0e8}{print\+\_\+target\+Type} (\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type} target, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints target\+Type in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a9734fa1162c67fb8d3be0019e36596a4}{print\+\_\+stat\+Id} (\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}{stat\+Id} id, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints stat\+Id in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a0273ee4a7a7d8e4f32fd40990d0c104d}{print\+\_\+status\+Id} (\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id} id, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints status\+Id in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_aeb17f99b9e2e1e4d4bc7d513c6faa897}{print\+\_\+fnid} (\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}{fnid} id, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints fnid in string form \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a02e5ebc7f3ea2695fe575c0cb124a3c1}{print\+\_\+\+Damage} (\hyperlink{struct_damage}{Damage} $\ast$$\ast$\hyperlink{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}{d}, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints \hyperlink{struct_damage}{Damage} structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_af4abb2683378e57e41ece616871bbe71}{print\+\_\+\+Coord} (\hyperlink{struct_coord}{Coord} $\ast$c, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints \hyperlink{struct_coord}{Coord} structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a3afcb67b4561ed33b4479a14054b022a}{print\+\_\+\+Coord\+\_\+list} (\hyperlink{struct_coord}{Coord} $\ast$$\ast$c, int nb, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints a list of \hyperlink{struct_coord}{Coord} structures \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a20207719f7531a3ec87dfb8894ecee49}{print\+\_\+action} (\hyperlink{structaction}{action} $\ast$a, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints an action structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a55a9cffe8e12b8b0711ecdaaeefe449b}{print\+\_\+\+Status} (\hyperlink{struct_status}{Status} s, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints a \hyperlink{struct_status}{Status} structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a8bc74c365e77d1cb0d1bfb951a766d51}{print\+\_\+\+Modifier} (\hyperlink{struct_modifier}{Modifier} $\ast$m, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints a \hyperlink{struct_modifier}{Modifier} structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a4f1ebb510f5916a588d4f0f116b88d32}{print\+\_\+\+Modifier\+\_\+list} (\hyperlink{struct_modifier}{Modifier} $\ast$$\ast$m, int nb, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints a list of \hyperlink{struct_modifier}{Modifier} structures \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a22aab9ec4cbe11738fb262df75b6ecba}{print\+\_\+\+Ability} (\hyperlink{struct_ability}{Ability} $\ast$a, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints an \hyperlink{struct_ability}{Ability} structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_adfeb70b34a00e4319987a2aee24e34bb}{print\+\_\+\+State\+List} (\hyperlink{struct_state_list}{State\+List} $\ast$list, char tab\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]})
+\begin{DoxyCompactList}\small\item\em prints a Statelist structure \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_a2b68cd1058d9e35cebf1cdaa0a1d07a8}{print\+\_\+grid} (\hyperlink{struct_coord}{Coord} tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Prints a test grid. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{print_8c_adbee4881f5f4f85db49f10f0858e73ae}{print\+\_\+mage\+\_\+passive} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Prints the Mage\textquotesingle{}s current moveset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains functions for printing various structures to standard output. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{print_8c_a22aab9ec4cbe11738fb262df75b6ecba}\label{print_8c_a22aab9ec4cbe11738fb262df75b6ecba}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Ability@{print\+\_\+\+Ability}}
+\index{print\+\_\+\+Ability@{print\+\_\+\+Ability}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Ability()}{print\_Ability()}}
+{\footnotesize\ttfamily print\+\_\+\+Ability (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability} $\ast$}]{a,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints an \hyperlink{struct_ability}{Ability} structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \hyperlink{struct_ability}{Ability} structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a0626720b22773e9695186c93a1db5aef}\label{print_8c_a0626720b22773e9695186c93a1db5aef}} 
+\index{print.\+c@{print.\+c}!print\+\_\+ability\+Id@{print\+\_\+ability\+Id}}
+\index{print\+\_\+ability\+Id@{print\+\_\+ability\+Id}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+ability\+Id()}{print\_abilityId()}}
+{\footnotesize\ttfamily print\+\_\+ability\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints ability\+Id enumeration in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ability\+Id to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a20207719f7531a3ec87dfb8894ecee49}\label{print_8c_a20207719f7531a3ec87dfb8894ecee49}} 
+\index{print.\+c@{print.\+c}!print\+\_\+action@{print\+\_\+action}}
+\index{print\+\_\+action@{print\+\_\+action}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+action()}{print\_action()}}
+{\footnotesize\ttfamily print\+\_\+action (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action} $\ast$}]{a,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints an action structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & action structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a5d32a82cdcbd5ce97cab1920575920e8}\label{print_8c_a5d32a82cdcbd5ce97cab1920575920e8}} 
+\index{print.\+c@{print.\+c}!print\+\_\+class\+\_\+name@{print\+\_\+class\+\_\+name}}
+\index{print\+\_\+class\+\_\+name@{print\+\_\+class\+\_\+name}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+class\+\_\+name()}{print\_class\_name()}}
+{\footnotesize\ttfamily print\+\_\+class\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07}{class\+Id}}]{Id,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints class\+Id in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & class\+Id to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_af4abb2683378e57e41ece616871bbe71}\label{print_8c_af4abb2683378e57e41ece616871bbe71}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Coord@{print\+\_\+\+Coord}}
+\index{print\+\_\+\+Coord@{print\+\_\+\+Coord}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Coord()}{print\_Coord()}}
+{\footnotesize\ttfamily print\+\_\+\+Coord (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord} $\ast$}]{c,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints \hyperlink{struct_coord}{Coord} structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \hyperlink{struct_coord}{Coord} structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a3afcb67b4561ed33b4479a14054b022a}\label{print_8c_a3afcb67b4561ed33b4479a14054b022a}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Coord\+\_\+list@{print\+\_\+\+Coord\+\_\+list}}
+\index{print\+\_\+\+Coord\+\_\+list@{print\+\_\+\+Coord\+\_\+list}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Coord\+\_\+list()}{print\_Coord\_list()}}
+{\footnotesize\ttfamily print\+\_\+\+Coord\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord} $\ast$$\ast$}]{c,  }\item[{int}]{nb,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints a list of \hyperlink{struct_coord}{Coord} structures 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & list of \hyperlink{struct_coord}{Coord} structures to print \\
+\hline
+{\em nb} & number of coordinates in the list \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a02e5ebc7f3ea2695fe575c0cb124a3c1}\label{print_8c_a02e5ebc7f3ea2695fe575c0cb124a3c1}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Damage@{print\+\_\+\+Damage}}
+\index{print\+\_\+\+Damage@{print\+\_\+\+Damage}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Damage()}{print\_Damage()}}
+{\footnotesize\ttfamily print\+\_\+\+Damage (\begin{DoxyParamCaption}\item[{\hyperlink{struct_damage}{Damage} $\ast$$\ast$}]{d,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints \hyperlink{struct_damage}{Damage} structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & \hyperlink{struct_damage}{Damage} structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_aeb17f99b9e2e1e4d4bc7d513c6faa897}\label{print_8c_aeb17f99b9e2e1e4d4bc7d513c6faa897}} 
+\index{print.\+c@{print.\+c}!print\+\_\+fnid@{print\+\_\+fnid}}
+\index{print\+\_\+fnid@{print\+\_\+fnid}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+fnid()}{print\_fnid()}}
+{\footnotesize\ttfamily print\+\_\+fnid (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}{fnid}}]{id,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints fnid in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & fnid to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a2b68cd1058d9e35cebf1cdaa0a1d07a8}\label{print_8c_a2b68cd1058d9e35cebf1cdaa0a1d07a8}} 
+\index{print.\+c@{print.\+c}!print\+\_\+grid@{print\+\_\+grid}}
+\index{print\+\_\+grid@{print\+\_\+grid}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+grid()}{print\_grid()}}
+{\footnotesize\ttfamily print\+\_\+grid (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Prints a test grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & \hyperlink{struct_coord}{Coord} array with coordinates where you want an X to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a80a8d15685ab76f2bf865c634f07caa3}\label{print_8c_a80a8d15685ab76f2bf865c634f07caa3}} 
+\index{print.\+c@{print.\+c}!print\+\_\+int@{print\+\_\+int}}
+\index{print\+\_\+int@{print\+\_\+int}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+int()}{print\_int()}}
+{\footnotesize\ttfamily print\+\_\+int (\begin{DoxyParamCaption}\item[{int $\ast$}]{i,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints integer 
+
+mainly used to test our send\+Struct and recep functions 
+\begin{DoxyParams}{Parameters}
+{\em i} & integer to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_adbee4881f5f4f85db49f10f0858e73ae}\label{print_8c_adbee4881f5f4f85db49f10f0858e73ae}} 
+\index{print.\+c@{print.\+c}!print\+\_\+mage\+\_\+passive@{print\+\_\+mage\+\_\+passive}}
+\index{print\+\_\+mage\+\_\+passive@{print\+\_\+mage\+\_\+passive}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+mage\+\_\+passive()}{print\_mage\_passive()}}
+{\footnotesize\ttfamily print\+\_\+mage\+\_\+passive (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Prints the Mage\textquotesingle{}s current moveset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The Mage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a8bc74c365e77d1cb0d1bfb951a766d51}\label{print_8c_a8bc74c365e77d1cb0d1bfb951a766d51}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Modifier@{print\+\_\+\+Modifier}}
+\index{print\+\_\+\+Modifier@{print\+\_\+\+Modifier}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Modifier()}{print\_Modifier()}}
+{\footnotesize\ttfamily print\+\_\+\+Modifier (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier}{Modifier} $\ast$}]{m,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints a \hyperlink{struct_modifier}{Modifier} structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \hyperlink{struct_modifier}{Modifier} structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a4f1ebb510f5916a588d4f0f116b88d32}\label{print_8c_a4f1ebb510f5916a588d4f0f116b88d32}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Modifier\+\_\+list@{print\+\_\+\+Modifier\+\_\+list}}
+\index{print\+\_\+\+Modifier\+\_\+list@{print\+\_\+\+Modifier\+\_\+list}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Modifier\+\_\+list()}{print\_Modifier\_list()}}
+{\footnotesize\ttfamily print\+\_\+\+Modifier\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_modifier}{Modifier} $\ast$$\ast$}]{m,  }\item[{int}]{nb,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints a list of \hyperlink{struct_modifier}{Modifier} structures 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & list of \hyperlink{struct_modifier}{Modifier} structures to print \\
+\hline
+{\em nb} & number of Modifiers in the list \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_adfeb70b34a00e4319987a2aee24e34bb}\label{print_8c_adfeb70b34a00e4319987a2aee24e34bb}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+State\+List@{print\+\_\+\+State\+List}}
+\index{print\+\_\+\+State\+List@{print\+\_\+\+State\+List}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+State\+List()}{print\_StateList()}}
+{\footnotesize\ttfamily print\+\_\+\+State\+List (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints a Statelist structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The Statelist to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a9734fa1162c67fb8d3be0019e36596a4}\label{print_8c_a9734fa1162c67fb8d3be0019e36596a4}} 
+\index{print.\+c@{print.\+c}!print\+\_\+stat\+Id@{print\+\_\+stat\+Id}}
+\index{print\+\_\+stat\+Id@{print\+\_\+stat\+Id}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+stat\+Id()}{print\_statId()}}
+{\footnotesize\ttfamily print\+\_\+stat\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a90abc0a2e0eca99669a991794b8a9b46}{stat\+Id}}]{id,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints stat\+Id in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & stat\+Id to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a55a9cffe8e12b8b0711ecdaaeefe449b}\label{print_8c_a55a9cffe8e12b8b0711ecdaaeefe449b}} 
+\index{print.\+c@{print.\+c}!print\+\_\+\+Status@{print\+\_\+\+Status}}
+\index{print\+\_\+\+Status@{print\+\_\+\+Status}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Status()}{print\_Status()}}
+{\footnotesize\ttfamily print\+\_\+\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{struct_status}{Status}}]{s,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints a \hyperlink{struct_status}{Status} structure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \hyperlink{struct_status}{Status} structure to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a0273ee4a7a7d8e4f32fd40990d0c104d}\label{print_8c_a0273ee4a7a7d8e4f32fd40990d0c104d}} 
+\index{print.\+c@{print.\+c}!print\+\_\+status\+Id@{print\+\_\+status\+Id}}
+\index{print\+\_\+status\+Id@{print\+\_\+status\+Id}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+status\+Id()}{print\_statusId()}}
+{\footnotesize\ttfamily print\+\_\+status\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id}}]{id,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints status\+Id in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & status\+Id to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{print_8c_a3110d71cbb6a85192b18c49cf7fbb0e8}\label{print_8c_a3110d71cbb6a85192b18c49cf7fbb0e8}} 
+\index{print.\+c@{print.\+c}!print\+\_\+target\+Type@{print\+\_\+target\+Type}}
+\index{print\+\_\+target\+Type@{print\+\_\+target\+Type}!print.\+c@{print.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+target\+Type()}{print\_targetType()}}
+{\footnotesize\ttfamily print\+\_\+target\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type}}]{target,  }\item[{char}]{tab\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+prints target\+Type in string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & target\+Type to print \\
+\hline
+{\em tab} & String to print before the name (used for formating the display) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}

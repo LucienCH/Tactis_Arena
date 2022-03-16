@@ -1,0 +1,67 @@
+BERSERKER
+0: Bloodlust : Killing two ennemies in the same turn refills action points and doubles mp and atk stats for one turn.
+1: Slash : Slash at an ennemy
+2: Killing Blow : Slash at an ennemy, killing him permanently increases attack and gives one action point back.
+2: Fury : Remove all debuffs and increase attack permanently by the number of turns removed.
+3: Frenzied Dash : Jump to a tile, dealing aoe damage when landing.
+
+RANGER
+0: Sentinel : The first ennemy that moves in ranger's vision every turn, will get bolted.
+1: Bolt : Attack an ennemy from range.
+2: Focus : Increase by two turns all buffs and decrease by one all debuffs.
+2: Trap : Put a hidden trap that will cripple an ennemy that walks over it.
+3: Deadeye : Increases range and makes bolt piercing but reduces mp for three turns.
+
+GOLIATH
+0: Guardian : Has a 30% chance to block incoming damage.
+1: Bash: Damage and reduce the ennemy's defences for a turn.
+2: Shields Up : Increase passive block chance to 70% for one turn.
+2: Detain : Capture an Ennemy for three turns.
+3: Banner : Provoke all ennemies in a zone for one turn and reset all allies' cooldowns.
+
+MAGE
+0: Elementalist : After every use of a basic attack, change element (Fire, Ice, Electricity).
+1: Fireball : Deals damage and has a chance to set target ablaze. 
+Icy Winds : Deals damage and has a chance to freeze target. 
+Shock : Zap an ennemy.
+
+2: FlameCharge : Engulf yourself in flames and dash, dealing damage and burning entities in your path. 
+Freeze : Deal damage to and freeze an ennemy. 
+Volt Switch : Switch spots with an ally and deal electric damage around caster.
+
+2: Flare : Increases all allies' vision and their mp for two turns, will spot traps in the chosen area. 
+Frozen Armor : Increase ally physical and magic resistances. 
+Shock Therapy : Increase ally atk and magic.
+
+3: Eruption : Deal massive damage in a zone and burn all entities. 
+Blizzard : Deal damage in a zone and highly reduce ennemy vision for a turn, has a chance to freeze ennemies. Water tiles in the are will also freeze.
+Lightning Chain : Zap an ennemy, the bolt will bounce to another close ennemy until either there are no ennemies close enough or it has bounced 3 times.
+
+VALKYRIE
+0: Precision: Damaging an ennemy has a chance to paralyze them.
+1: Thrust : Thrust your spear forward.
+2: Odin's Eyes : Call forth a swarm of crows to deal magic damage to an area.
+2: Life Transfer : Select an Ally, heal the ally back to full and slow a random ennemy by the amount healed.
+3: Gates of Valhalla : Resurrect all dead allies for a turn.
+
+ANGEL
+0: Aura : Heal all nearby allies at start of your turn.
+1: Condemn : Deal magic damage to an ennemy.
+2: Holy Storm : Deal magic damage to ennemies in an area and heal all allies in the area.
+2: Last Sacrfice : Kill self to resurrect an Ally.
+3: God's Blessing : Double an Ally's action points and apply no cooldowns for a turn.
+
+
+Cripple : Can't move and takes increased damage from all sources.
+Detained : Captured by an ennemy, unable to do anything, can be freed by killing the ennemy.
+Provoked : Can only cast spells on to a specific target.
+Burning : Take damage over time, a burning target is unable to be frozen.
+Freezing : Become unable to do anything, increases resistances, setting a frozen target ablaze thaws them out.
+Paralyzed : Reduces your action points to 1 per turn.
+Blessed : Under God's Blessing.
+Piercing : Attacks ignore armor.
+Guarding : Has increased block chance
+Summoned : Revived for a turn.
+
+damage = atk/(1+(def/15))
+range=range_modifier * (vision/10) if range = 0 then range = 1

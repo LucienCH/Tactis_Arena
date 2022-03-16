@@ -1,0 +1,83 @@
+\hypertarget{game__window_8h}{}\section{src/game\+\_\+window.h File Reference}
+\label{game__window_8h}\index{src/game\+\_\+window.\+h@{src/game\+\_\+window.\+h}}
+
+
+Game window method functions.  
+
+
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{game__window_8h_a5fbbf18e0bbeac1d8ff30c29abcbf260}{create\+Game\+Window} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Create the window where the game is played. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game__window_8h_a966da7a60c4ea3ba301e26ccc5efe452}\label{game__window_8h_a966da7a60c4ea3ba301e26ccc5efe452}} 
+S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries renderer}
+\item 
+\mbox{\Hypertarget{game__window_8h_a41da1d9c960c28bf3d7e2ec2138425c8}\label{game__window_8h_a41da1d9c960c28bf3d7e2ec2138425c8}} 
+S\+D\+L\+\_\+\+Window $\ast$ {\bfseries p\+Window}
+\item 
+\mbox{\Hypertarget{game__window_8h_ab300e36986f042959d7a48ebd08044ed}\label{game__window_8h_ab300e36986f042959d7a48ebd08044ed}} 
+int {\bfseries X\+P\+OS}
+\item 
+\mbox{\Hypertarget{game__window_8h_a5af40e9989dc2eaf91ca1f4ef72f6270}\label{game__window_8h_a5af40e9989dc2eaf91ca1f4ef72f6270}} 
+int {\bfseries Y\+P\+OS}
+\item 
+\mbox{\Hypertarget{game__window_8h_a56413a1e96b00003c7ae2ec378f51848}\label{game__window_8h_a56413a1e96b00003c7ae2ec378f51848}} 
+int {\bfseries selected\+\_\+ability}
+\item 
+\mbox{\Hypertarget{game__window_8h_a888f2135e73aa84232652f4f2685f6da}\label{game__window_8h_a888f2135e73aa84232652f4f2685f6da}} 
+int {\bfseries hover\+\_\+ability}
+\item 
+\mbox{\Hypertarget{game__window_8h_a74f25efd55e23ada6a3960295c18a476}\label{game__window_8h_a74f25efd55e23ada6a3960295c18a476}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} {\bfseries hover\+\_\+next\+\_\+turn}
+\item 
+\mbox{\Hypertarget{game__window_8h_aa1e66b74ca08399d9edf6f864dd71eec}\label{game__window_8h_aa1e66b74ca08399d9edf6f864dd71eec}} 
+int {\bfseries hover\+\_\+stats}
+\item 
+\mbox{\Hypertarget{game__window_8h_ad74cb659e82d3067abedbe27c8fb01e7}\label{game__window_8h_ad74cb659e82d3067abedbe27c8fb01e7}} 
+int {\bfseries hover\+\_\+passive\+\_\+help}
+\item 
+\mbox{\Hypertarget{game__window_8h_aa4b75cc92456fd2921ac0f0fd736453b}\label{game__window_8h_aa4b75cc92456fd2921ac0f0fd736453b}} 
+\hyperlink{struct_coord}{Coord} {\bfseries mouse\+\_\+position}
+\item 
+\mbox{\Hypertarget{game__window_8h_a475a6e66e336273ac6df9fb4fd47ba68}\label{game__window_8h_a475a6e66e336273ac6df9fb4fd47ba68}} 
+char {\bfseries description} \mbox{[}100\mbox{]}
+\item 
+\mbox{\Hypertarget{game__window_8h_a1d0c350d850768eea3e553036eca4be8}\label{game__window_8h_a1d0c350d850768eea3e553036eca4be8}} 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} {\bfseries cam\+Move}
+\item 
+\mbox{\Hypertarget{game__window_8h_a87fcaeb2842f246f580144b0d47162b0}\label{game__window_8h_a87fcaeb2842f246f580144b0d47162b0}} 
+T\+T\+F\+\_\+\+Font $\ast$ {\bfseries police\+Pixels}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Game window method functions. 
+
+\begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game__window_8h_a5fbbf18e0bbeac1d8ff30c29abcbf260}\label{game__window_8h_a5fbbf18e0bbeac1d8ff30c29abcbf260}} 
+\index{game\+\_\+window.\+h@{game\+\_\+window.\+h}!create\+Game\+Window@{create\+Game\+Window}}
+\index{create\+Game\+Window@{create\+Game\+Window}!game\+\_\+window.\+h@{game\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{create\+Game\+Window()}{createGameWindow()}}
+{\footnotesize\ttfamily int create\+Game\+Window (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Create the window where the game is played. 
+
+This function manages the different events of the window \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

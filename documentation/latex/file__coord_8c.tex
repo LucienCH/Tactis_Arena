@@ -1,0 +1,139 @@
+\hypertarget{file__coord_8c}{}\section{src/file\+\_\+coord.c File Reference}
+\label{file__coord_8c}\index{src/file\+\_\+coord.\+c@{src/file\+\_\+coord.\+c}}
+
+
+file program for deplacement files  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+coord.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_file}{File} $\ast$ \hyperlink{file__coord_8c_a39a43de1dd0982134429c038e21535fb}{initialiser} ()
+\begin{DoxyCompactList}\small\item\em Initializes the empty file. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{file__coord_8c_ae139b96310264f89ae31dad8a4d67791}{file\+\_\+vide} (\hyperlink{struct_file}{File} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Deliver true if the file is empty, false otherwise. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8c_a4101a0264a7f8dd88b0063ebffe1607a}{enfiler} (\hyperlink{struct_file}{File} $\ast$f, \hyperlink{struct_coord}{Coord} nv\+Nombre)
+\begin{DoxyCompactList}\small\item\em Adds the queue value. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{file__coord_8c_a3afa1eeb5f127f8d7e528855d0e72973}{defiler} (\hyperlink{struct_file}{File} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Removes the file head value. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8c_abd1ee9689ac4b549b453f9324890a5e8}{afficher\+File} (\hyperlink{struct_file}{File} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Display the file. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8c_a1131a6c90cc0924bae3820de28df9e61}{detruire\+\_\+file} (\hyperlink{struct_file}{File} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Destruct the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+file program for deplacement files 
+
+Contains all the file\textquotesingle{}s primitives \begin{DoxyAuthor}{Author}
+Louis L\+A\+F\+AY 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/04/2020 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{file__coord_8c_abd1ee9689ac4b549b453f9324890a5e8}\label{file__coord_8c_abd1ee9689ac4b549b453f9324890a5e8}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!afficher\+File@{afficher\+File}}
+\index{afficher\+File@{afficher\+File}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{afficher\+File()}{afficherFile()}}
+{\footnotesize\ttfamily afficher\+File (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Display the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8c_a3afa1eeb5f127f8d7e528855d0e72973}\label{file__coord_8c_a3afa1eeb5f127f8d7e528855d0e72973}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!defiler@{defiler}}
+\index{defiler@{defiler}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{defiler()}{defiler()}}
+{\footnotesize\ttfamily defiler (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Removes the file head value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_element}{Element}\textquotesingle{}s value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__coord_8c_a1131a6c90cc0924bae3820de28df9e61}\label{file__coord_8c_a1131a6c90cc0924bae3820de28df9e61}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!detruire\+\_\+file@{detruire\+\_\+file}}
+\index{detruire\+\_\+file@{detruire\+\_\+file}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{detruire\+\_\+file()}{detruire\_file()}}
+{\footnotesize\ttfamily detruire\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Destruct the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8c_a4101a0264a7f8dd88b0063ebffe1607a}\label{file__coord_8c_a4101a0264a7f8dd88b0063ebffe1607a}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!enfiler@{enfiler}}
+\index{enfiler@{enfiler}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{enfiler()}{enfiler()}}
+{\footnotesize\ttfamily enfiler (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{file,  }\item[{\hyperlink{struct_coord}{Coord}}]{nv\+Nombre }\end{DoxyParamCaption})}
+
+
+
+Adds the queue value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+{\em nv\+Nombre} & Value that we put in file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8c_ae139b96310264f89ae31dad8a4d67791}\label{file__coord_8c_ae139b96310264f89ae31dad8a4d67791}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!file\+\_\+vide@{file\+\_\+vide}}
+\index{file\+\_\+vide@{file\+\_\+vide}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{file\+\_\+vide()}{file\_vide()}}
+{\footnotesize\ttfamily file\+\_\+vide (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Deliver true if the file is empty, false otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__coord_8c_a39a43de1dd0982134429c038e21535fb}\label{file__coord_8c_a39a43de1dd0982134429c038e21535fb}} 
+\index{file\+\_\+coord.\+c@{file\+\_\+coord.\+c}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!file\+\_\+coord.\+c@{file\+\_\+coord.\+c}}
+\subsubsection{\texorpdfstring{initialiser()}{initialiser()}}
+{\footnotesize\ttfamily initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the empty file. 
+
+\begin{DoxyReturn}{Returns}
+the file 
+\end{DoxyReturn}

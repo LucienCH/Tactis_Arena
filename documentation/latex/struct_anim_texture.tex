@@ -1,0 +1,46 @@
+\hypertarget{struct_anim_texture}{}\section{Anim\+Texture Struct Reference}
+\label{struct_anim_texture}\index{Anim\+Texture@{Anim\+Texture}}
+
+
+Structure of how animations textures are loaded.  
+
+
+
+
+{\ttfamily \#include $<$struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_anim_texture_a67f19df248b2ff1ae24ae2323266ecd2}\label{struct_anim_texture_a67f19df248b2ff1ae24ae2323266ecd2}} 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} \hyperlink{struct_anim_texture_a67f19df248b2ff1ae24ae2323266ecd2}{id}
+\begin{DoxyCompactList}\small\item\em Id of the ability linked to the animation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a6f41b3cfde74d8e25b3f5667676e59d3}\label{struct_anim_texture_a6f41b3cfde74d8e25b3f5667676e59d3}} 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{struct_anim_texture_a6f41b3cfde74d8e25b3f5667676e59d3}{sprites\+Small} \mbox{[}\hyperlink{common_8h_a064213c965bbbc0fc4482eb800c15969}{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+A\+N\+I\+M\+\_\+}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table of all the textures needed for the animation in 64x64 resolution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a6dc8bf1106fea8390bdabbbe117f5fbe}\label{struct_anim_texture_a6dc8bf1106fea8390bdabbbe117f5fbe}} 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{struct_anim_texture_a6dc8bf1106fea8390bdabbbe117f5fbe}{sprites\+Big} \mbox{[}\hyperlink{common_8h_a064213c965bbbc0fc4482eb800c15969}{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+A\+N\+I\+M\+\_\+}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Table of all the textures needed for the animation in 128x128 resolution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a59c1b261e88950d13979194bd7a45915}\label{struct_anim_texture_a59c1b261e88950d13979194bd7a45915}} 
+int \hyperlink{struct_anim_texture_a59c1b261e88950d13979194bd7a45915}{nb\+\_\+steps}
+\begin{DoxyCompactList}\small\item\em Number of sprites of the animation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a4522bceaeace9c6cf2b60f1745249ffe}\label{struct_anim_texture_a4522bceaeace9c6cf2b60f1745249ffe}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{struct_anim_texture_a4522bceaeace9c6cf2b60f1745249ffe}{aoe}
+\begin{DoxyCompactList}\small\item\em Define if the animation should be displayed on each tile of an A\+OE (Area Of Effect) ability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a01bc376437dc0b8194e9fc7abba08a6b}\label{struct_anim_texture_a01bc376437dc0b8194e9fc7abba08a6b}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{struct_anim_texture_a01bc376437dc0b8194e9fc7abba08a6b}{on\+\_\+ground}
+\begin{DoxyCompactList}\small\item\em Define if the animation should be displayed on the ground or at head-\/level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_abfe7a1c3042d0d420b49b21f57b7e225}\label{struct_anim_texture_abfe7a1c3042d0d420b49b21f57b7e225}} 
+int \hyperlink{struct_anim_texture_abfe7a1c3042d0d420b49b21f57b7e225}{speed}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_tile}{Tile} in miliseconds between each sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_anim_texture_a6e905369d58781861467a13b171a7db0}\label{struct_anim_texture_a6e905369d58781861467a13b171a7db0}} 
+Mix\+\_\+\+Chunk $\ast$ \hyperlink{struct_anim_texture_a6e905369d58781861467a13b171a7db0}{sound\+\_\+effect}
+\begin{DoxyCompactList}\small\item\em Pointer to the sound\+\_\+effect played with the animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure of how animations textures are loaded. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{struct_8h}{struct.\+h}\end{DoxyCompactItemize}

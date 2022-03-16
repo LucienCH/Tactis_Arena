@@ -1,0 +1,113 @@
+\hypertarget{grid_8c}{}\section{src/grid.c File Reference}
+\label{grid_8c}\index{src/grid.\+c@{src/grid.\+c}}
+
+
+Contains all the functions relative to the grid of the game.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{grid_8c_af255265266c7bffd8e2b3526038636ea}\label{grid_8c_af255265266c7bffd8e2b3526038636ea}} 
+\#define {\bfseries \+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\item 
+\mbox{\Hypertarget{grid_8c_aa319b11913fc00b38adf54ee0b56ae09}\label{grid_8c_aa319b11913fc00b38adf54ee0b56ae09}} 
+\#define {\bfseries \+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{grid_8c_a6d0993a07fc78b22ba00c32f66de122d}\label{grid_8c_a6d0993a07fc78b22ba00c32f66de122d}} 
+void {\bfseries create\+Grid} (\hyperlink{struct_tile}{Tile} $\ast$grid, int seed, int x, int y)
+\item 
+\mbox{\Hypertarget{grid_8c_a865984f4becde27daf2faff22d722bcc}\label{grid_8c_a865984f4becde27daf2faff22d722bcc}} 
+void {\bfseries debug\+Grid} (\hyperlink{struct_tile}{Tile} $\ast$grid, int x, int y)
+\item 
+\mbox{\Hypertarget{grid_8c_a161c8d508206e4797f734e8b6fdf50a6}\label{grid_8c_a161c8d508206e4797f734e8b6fdf50a6}} 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$ {\bfseries get\+Entity} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_af17ea57b343669065e1f87b686506587}\label{grid_8c_af17ea57b343669065e1f87b686506587}} 
+int {\bfseries Set\+\_\+\+Trap} (\hyperlink{struct_trap__t}{Trap\+\_\+t} trap, \hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a694c746b25c44a3a9f6d1597548560ab}\label{grid_8c_a694c746b25c44a3a9f6d1597548560ab}} 
+\hyperlink{struct_trap__t}{Trap\+\_\+t} {\bfseries Get\+\_\+\+Trap} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a44b7cf03204e24812d6dcb1011759714}\label{grid_8c_a44b7cf03204e24812d6dcb1011759714}} 
+\hyperlink{struct_tile}{Tile} {\bfseries get\+Selected} ()
+\item 
+\mbox{\Hypertarget{grid_8c_a3da0369e36b30b8c6e113ee27cd84e3b}\label{grid_8c_a3da0369e36b30b8c6e113ee27cd84e3b}} 
+\hyperlink{struct_coord}{Coord} {\bfseries get\+Selected\+Pos} ()
+\item 
+\mbox{\Hypertarget{grid_8c_a807567de9075f77c2c3abd77c4eb32ba}\label{grid_8c_a807567de9075f77c2c3abd77c4eb32ba}} 
+void {\bfseries unselect} ()
+\item 
+\mbox{\Hypertarget{grid_8c_a7b163ba7da73a072ffca522ea7409ccd}\label{grid_8c_a7b163ba7da73a072ffca522ea7409ccd}} 
+void {\bfseries unhover} ()
+\item 
+\mbox{\Hypertarget{grid_8c_aac3efd734fecf263f8a632d7caa66305}\label{grid_8c_aac3efd734fecf263f8a632d7caa66305}} 
+void {\bfseries set\+Hovered} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_ae44d2ed966b72642caba44c91e9ab67b}\label{grid_8c_ae44d2ed966b72642caba44c91e9ab67b}} 
+void {\bfseries set\+Selected} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a5de02eec9f65561a0cb397aa85234237}\label{grid_8c_a5de02eec9f65561a0cb397aa85234237}} 
+void {\bfseries freeze\+Water} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a8704b2a7774daf5abf1613d55bcc9b4f}\label{grid_8c_a8704b2a7774daf5abf1613d55bcc9b4f}} 
+\hyperlink{struct_tile}{Tile} $\ast$ {\bfseries get\+Tile} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a6e4c37819a1b2b201e3a2bd6328f7fa7}\label{grid_8c_a6e4c37819a1b2b201e3a2bd6328f7fa7}} 
+void {\bfseries turn\+Right} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$entity)
+\item 
+\mbox{\Hypertarget{grid_8c_a984fc6d7e2221e5cf0ae0f731b682d17}\label{grid_8c_a984fc6d7e2221e5cf0ae0f731b682d17}} 
+void {\bfseries turn\+Left} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$entity)
+\item 
+\mbox{\Hypertarget{grid_8c_ad8cd38d2329dd04ee3fd01efd0616cc5}\label{grid_8c_ad8cd38d2329dd04ee3fd01efd0616cc5}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} {\bfseries is\+In\+Grid} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_ae2da30c57e0a8f9fa988bdd2f5e7ce53}\label{grid_8c_ae2da30c57e0a8f9fa988bdd2f5e7ce53}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} {\bfseries is\+Walkable} (\hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_a988a738f595243b4734025a6c22941b1}\label{grid_8c_a988a738f595243b4734025a6c22941b1}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} {\bfseries is\+In\+Coord\+Tab} (\hyperlink{struct_coord}{Coord} tab\mbox{[}$\,$\mbox{]}, \hyperlink{struct_coord}{Coord} pos)
+\item 
+\mbox{\Hypertarget{grid_8c_ac681790c8a41ccd13d208e8a4f624f96}\label{grid_8c_ac681790c8a41ccd13d208e8a4f624f96}} 
+\hyperlink{struct_coord}{Coord} {\bfseries to2D} (\hyperlink{struct_coord}{Coord} pos)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{grid_8c_ad5c097647ebbcd40e73c5c06a450b285}\label{grid_8c_ad5c097647ebbcd40e73c5c06a450b285}} 
+\hyperlink{struct_tile}{Tile} {\bfseries grid} \mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}
+\item 
+\mbox{\Hypertarget{grid_8c_ae2c9da14d0d56f9aca34fac00a44f4a9}\label{grid_8c_ae2c9da14d0d56f9aca34fac00a44f4a9}} 
+\hyperlink{struct_tile}{Tile} {\bfseries blank\+Grid} \mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}
+\item 
+\mbox{\Hypertarget{grid_8c_ab8ce8baed6cb6d8f7fd2905e7e5668b5}\label{grid_8c_ab8ce8baed6cb6d8f7fd2905e7e5668b5}} 
+\hyperlink{struct_tile}{Tile} $\ast$ {\bfseries matrix} = \&grid\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\mbox{\Hypertarget{grid_8c_ae1a4d5084bbb72fc4212ca734575a1aa}\label{grid_8c_ae1a4d5084bbb72fc4212ca734575a1aa}} 
+\hyperlink{struct_tile}{Tile} $\ast$ {\bfseries blank\+Matrix} = \&blank\+Grid\mbox{[}0\mbox{]}\mbox{[}0\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains all the functions relative to the grid of the game. 
+
+\begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/01/2020 
+\end{DoxyDate}

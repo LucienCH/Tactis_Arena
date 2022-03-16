@@ -1,0 +1,148 @@
+\hypertarget{deplacement_8c}{}\section{src/deplacement.c File Reference}
+\label{deplacement_8c}\index{src/deplacement.\+c@{src/deplacement.\+c}}
+
+
+Mouvement program for Tactics\+Arena.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+coord.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}passives.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}abilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{deplacement_8c_a098be28fd54f954f10c04807baabb7d4}{closest\+\_\+free\+\_\+tile} (\hyperlink{struct_coord}{Coord} c)
+\begin{DoxyCompactList}\small\item\em Indicates the closest and walkable cell to the coordinate. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{deplacement_8c_a04677a03a3d26daafee210d160432112}{fill\+\_\+tiles} (\hyperlink{struct_coord}{Coord} c, int matrice\mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}, int max)
+\begin{DoxyCompactList}\small\item\em Fill in the matrix that indicates the number of cells between the starting coordinate and the current one. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{deplacement_8c_a4dbe3eea67d8bbd66105f125f27c94d9}{pathfinding} (int matrice\mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}, \hyperlink{struct_coord}{Coord} tabcoord\mbox{[}$\,$\mbox{]}, \hyperlink{struct_coord}{Coord} goal)
+\begin{DoxyCompactList}\small\item\em Find the shortest path between the base coordinate and the desired one. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{deplacement_8c_a841caed9a90ac419a43834e63976586d}{simple\+\_\+move} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_coord}{Coord} tabcoord\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves the character on each cells from the starting point to the finish one without animation. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{deplacement_8c_a9aa423229049a14058b1ccc7db38309a}{total\+\_\+move} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_coord}{Coord} tabcoord\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves the character on each cells from the starting point to the finish one with animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mouvement program for Tactics\+Arena. 
+
+Contains pathfinding and movement fonctions \begin{DoxyAuthor}{Author}
+Louis L\+A\+F\+AY, Robin B\+U\+T\+EL, Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{deplacement_8c_a098be28fd54f954f10c04807baabb7d4}\label{deplacement_8c_a098be28fd54f954f10c04807baabb7d4}} 
+\index{deplacement.\+c@{deplacement.\+c}!closest\+\_\+free\+\_\+tile@{closest\+\_\+free\+\_\+tile}}
+\index{closest\+\_\+free\+\_\+tile@{closest\+\_\+free\+\_\+tile}!deplacement.\+c@{deplacement.\+c}}
+\subsubsection{\texorpdfstring{closest\+\_\+free\+\_\+tile()}{closest\_free\_tile()}}
+{\footnotesize\ttfamily closest\+\_\+free\+\_\+tile (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c }\end{DoxyParamCaption})}
+
+
+
+Indicates the closest and walkable cell to the coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Actual coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest and walkable coordinate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{deplacement_8c_a04677a03a3d26daafee210d160432112}\label{deplacement_8c_a04677a03a3d26daafee210d160432112}} 
+\index{deplacement.\+c@{deplacement.\+c}!fill\+\_\+tiles@{fill\+\_\+tiles}}
+\index{fill\+\_\+tiles@{fill\+\_\+tiles}!deplacement.\+c@{deplacement.\+c}}
+\subsubsection{\texorpdfstring{fill\+\_\+tiles()}{fill\_tiles()}}
+{\footnotesize\ttfamily fill\+\_\+tiles (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{int}]{matrice\mbox{[}\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]}\mbox{[}\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]},  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Fill in the matrix that indicates the number of cells between the starting coordinate and the current one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Starting coordinate \\
+\hline
+{\em matrice} & The matrix that will contain the number of boxes \\
+\hline
+{\em max} & The max distance possible for the character to move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filled matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{deplacement_8c_a4dbe3eea67d8bbd66105f125f27c94d9}\label{deplacement_8c_a4dbe3eea67d8bbd66105f125f27c94d9}} 
+\index{deplacement.\+c@{deplacement.\+c}!pathfinding@{pathfinding}}
+\index{pathfinding@{pathfinding}!deplacement.\+c@{deplacement.\+c}}
+\subsubsection{\texorpdfstring{pathfinding()}{pathfinding()}}
+{\footnotesize\ttfamily pathfinding (\begin{DoxyParamCaption}\item[{int}]{matrice\mbox{[}\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]}\mbox{[}\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{tabcoord\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{goal }\end{DoxyParamCaption})}
+
+
+
+Find the shortest path between the base coordinate and the desired one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrice} & The matrix that countains all the numbers (cf fn fill\+\_\+tiles) \\
+\hline
+{\em tabcoord} & The table that will contain each movement step \\
+\hline
+{\em goal} & The final coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tabcoord filled with all coords needed to move 
+\end{DoxyReturn}
+\mbox{\Hypertarget{deplacement_8c_a841caed9a90ac419a43834e63976586d}\label{deplacement_8c_a841caed9a90ac419a43834e63976586d}} 
+\index{deplacement.\+c@{deplacement.\+c}!simple\+\_\+move@{simple\+\_\+move}}
+\index{simple\+\_\+move@{simple\+\_\+move}!deplacement.\+c@{deplacement.\+c}}
+\subsubsection{\texorpdfstring{simple\+\_\+move()}{simple\_move()}}
+{\footnotesize\ttfamily simple\+\_\+move (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_coord}{Coord}}]{tabcoord\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Moves the character on each cells from the starting point to the finish one without animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The selected character \\
+\hline
+{\em tabcoord} & The table that wich contain each movement step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K(cf err\+\_\+t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{deplacement_8c_a9aa423229049a14058b1ccc7db38309a}\label{deplacement_8c_a9aa423229049a14058b1ccc7db38309a}} 
+\index{deplacement.\+c@{deplacement.\+c}!total\+\_\+move@{total\+\_\+move}}
+\index{total\+\_\+move@{total\+\_\+move}!deplacement.\+c@{deplacement.\+c}}
+\subsubsection{\texorpdfstring{total\+\_\+move()}{total\_move()}}
+{\footnotesize\ttfamily total\+\_\+move (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_coord}{Coord}}]{tabcoord\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Moves the character on each cells from the starting point to the finish one with animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The selected character \\
+\hline
+{\em tabcoord} & The table that wich contain each movement step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+K(cf err\+\_\+t) 
+\end{DoxyReturn}

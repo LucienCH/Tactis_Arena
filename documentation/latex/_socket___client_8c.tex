@@ -1,0 +1,83 @@
+\hypertarget{_socket___client_8c}{}\section{src/\+Socket\+\_\+\+Client.c File Reference}
+\label{_socket___client_8c}\index{src/\+Socket\+\_\+\+Client.\+c@{src/\+Socket\+\_\+\+Client.\+c}}
+
+
+Client programm for Tactics Arena.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map\+\_\+editor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_ab6b45251e218af8f09c5d627b5262398}\label{_socket___client_8c_ab6b45251e218af8f09c5d627b5262398}} 
+\#define {\bfseries closesocket}(param)~close(param)
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a26769957ec1a2beaf223f33b66ee64ab}\label{_socket___client_8c_a26769957ec1a2beaf223f33b66ee64ab}} 
+\#define {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET}~-\/1
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a633b0396ff93d336a088412a190a5072}\label{_socket___client_8c_a633b0396ff93d336a088412a190a5072}} 
+\#define {\bfseries S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}~-\/1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a8dc8083897335125630f1af5dafd5831}\label{_socket___client_8c_a8dc8083897335125630f1af5dafd5831}} 
+typedef int {\bfseries S\+O\+C\+K\+ET}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a29046dc0232f0e5c70adbc25090d77b8}\label{_socket___client_8c_a29046dc0232f0e5c70adbc25090d77b8}} 
+typedef struct sockaddr\+\_\+in {\bfseries S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_ae334b73cedf7204187dce3f817576009}\label{_socket___client_8c_ae334b73cedf7204187dce3f817576009}} 
+typedef struct sockaddr {\bfseries S\+O\+C\+K\+A\+D\+DR}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a5a1cb05355e304a1017ae4caaa5f68e6}\label{_socket___client_8c_a5a1cb05355e304a1017ae4caaa5f68e6}} 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} {\bfseries stop\+T\+C\+P\+Socket\+Cli} (int socket\+Cli)
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{_socket___client_8c_a600ebef0566e3afe2b1473ed367843ff}{start\+T\+C\+P\+Socket\+Cli} (int socket\+Cli)
+\begin{DoxyCompactList}\small\item\em Function to start to connect a client to a server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___client_8c_a063ca4ecdee87a9a9d56f216301b9f91}\label{_socket___client_8c_a063ca4ecdee87a9a9d56f216301b9f91}} 
+int {\bfseries socket\+Cli} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client programm for Tactics Arena. 
+
+Contains T\+CP Client function \begin{DoxyAuthor}{Author}
+Lucien Chauvin 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_socket___client_8c_a600ebef0566e3afe2b1473ed367843ff}\label{_socket___client_8c_a600ebef0566e3afe2b1473ed367843ff}} 
+\index{Socket\+\_\+\+Client.\+c@{Socket\+\_\+\+Client.\+c}!start\+T\+C\+P\+Socket\+Cli@{start\+T\+C\+P\+Socket\+Cli}}
+\index{start\+T\+C\+P\+Socket\+Cli@{start\+T\+C\+P\+Socket\+Cli}!Socket\+\_\+\+Client.\+c@{Socket\+\_\+\+Client.\+c}}
+\subsubsection{\texorpdfstring{start\+T\+C\+P\+Socket\+Cli()}{startTCPSocketCli()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} start\+T\+C\+P\+Socket\+Cli (\begin{DoxyParamCaption}\item[{int}]{socket }\end{DoxyParamCaption})}
+
+
+
+Function to start to connect a client to a server. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t C\+L\+I\+\_\+\+OK or C\+L\+I\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}

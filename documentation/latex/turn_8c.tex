@@ -1,0 +1,394 @@
+\hypertarget{turn_8c}{}\section{src/turn.c File Reference}
+\label{turn_8c}\index{src/turn.\+c@{src/turn.\+c}}
+
+
+Main functions relevant to players\textquotesingle{} turns.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}passives.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}deplacement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}abilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}animations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_aff249852cd2990ba89808cc14ba5802c}{coin\+\_\+flip} ()
+\begin{DoxyCompactList}\small\item\em Gives a random outcome between T\+R\+UE and F\+A\+L\+SE. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_ae0b7ab6257481001e70de5db72f529c2}{coin\+\_\+receive} ()
+\begin{DoxyCompactList}\small\item\em Receives the result of the coin flip. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a470f9bd6f33a506f0a61e2fb27604171}{online\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em Sets necessary variables to their correct values for online play. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a16ba6165faa1d913de01a0c4eb0f43b0}{endgame\+\_\+message} (\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} Id)
+\begin{DoxyCompactList}\small\item\em Temporary function, sends a log telling the player wether they have won or lost. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_a00972c681239dd17f84cdc42a778902b}{your\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em Indicates if it\textquotesingle{}s the local player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_ae9cc58fc9ee17c6415a3043fba7dfe65}{apply\+\_\+movement} (\hyperlink{structaction}{action} a)
+\begin{DoxyCompactList}\small\item\em Applies the movement specified by the taken action. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a9721e96eeaa277b941da3acc3142422d}{apply\+\_\+action} (\hyperlink{structaction}{action} a)
+\begin{DoxyCompactList}\small\item\em Applies the ability specified by the taken action. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a3b148895d5774d45cd0a07b0e1b6de5b}{turn\+\_\+start} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Applies necessary actions to start a turn. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a89e64644e801e0ffeb7cfb2807fc8ab2}{turn\+\_\+end} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Applies necessary actions to end a turn. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a278a57066f80f24deae9512ebed6960f}{test\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em Temporary test function used to applied turn\+\_\+start and turn\+\_\+end while giving playability back to local player, for testing gameplay offline. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a5eaca6f40108d62ba724f855bd43f596}{set\+\_\+endturn} ()
+\begin{DoxyCompactList}\small\item\em Communicates an end button input. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_ae7465d756a4f61e1ed9dfbe312ff444f}{play\+\_\+check} ()
+\begin{DoxyCompactList}\small\item\em Checks if allies still have characters who can play. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a87d54930b13d9d3312be55eb4d810c0d}{opponent\+\_\+action} ()
+\begin{DoxyCompactList}\small\item\em Calls necessary functions to apply action received from opponent. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{turn_8c_a1fc6b9b84600d89b059a239c652f3c8d}{action\+\_\+set} (\hyperlink{structaction}{action} a)
+\begin{DoxyCompactList}\small\item\em Calls necessary functions to apply local action. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_a780e933ee49343ea95375078b365fec4}{local\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em Main local turn loop function. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_ae2c023c625f4635d4408355a28c64a65}{opposing\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em Main opposing turn loop function. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_a17f45a5f3139fab809abda2666cc3aab}{game\+\_\+loop} (\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}($\ast$turn1)(void), \hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}($\ast$turn2)(void))
+\begin{DoxyCompactList}\small\item\em Game loop used for turn management. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_ab2b7deafd8b7bd8596b34e3475731999}{init\+\_\+client} ()
+\begin{DoxyCompactList}\small\item\em Initialises things client side. \end{DoxyCompactList}\item 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_ae8bf2d343a820be874c299ecfe082b8b}{init\+\_\+server} ()
+\begin{DoxyCompactList}\small\item\em Initialises things server side. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{turn_8c_a4baaa90c107b1a37049122f2bd1498e5}\label{turn_8c_a4baaa90c107b1a37049122f2bd1498e5}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_a4baaa90c107b1a37049122f2bd1498e5}{game\+\_\+setup} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE if game is setting up, used to communicate game setup state between threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a3ad9d087459e02e637cbc67bf4811e7a}\label{turn_8c_a3ad9d087459e02e637cbc67bf4811e7a}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_a3ad9d087459e02e637cbc67bf4811e7a}{is\+\_\+online} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE if the game is online, used to not try to send socket information when testing in offline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a4f1d6ed1794a01a7d8b0700a0a26189b}\label{turn_8c_a4f1d6ed1794a01a7d8b0700a0a26189b}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_a4f1d6ed1794a01a7d8b0700a0a26189b}{turn\+\_\+active} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839}{T\+R\+UE}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE if local player\textquotesingle{}s turn, used to for showing certain things as well as allowing selection of abilities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_aa48f7027111c00e0ffbf2c289c88ee14}\label{turn_8c_aa48f7027111c00e0ffbf2c289c88ee14}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{turn_8c_aa48f7027111c00e0ffbf2c289c88ee14}{opponent\+\_\+set} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}
+\begin{DoxyCompactList}\small\item\em T\+R\+UE if an action was received from the opponent, used to communicate with the main loop to apply this action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a2d105099b7223005938430dc93bbe049}\label{turn_8c_a2d105099b7223005938430dc93bbe049}} 
+\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id} \hyperlink{turn_8c_a2d105099b7223005938430dc93bbe049}{game\+\_\+over\+\_\+global} = \hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0faaea9e2a8ce4339ceb6af69f47c7610012}{O\+N\+G\+O\+I\+NG}
+\begin{DoxyCompactList}\small\item\em Gloabl win\+Id variable to keep track of game state in between threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a3c14fb5d13f2487146e46cb53dd9d9a2}\label{turn_8c_a3c14fb5d13f2487146e46cb53dd9d9a2}} 
+\hyperlink{structaction}{action} \hyperlink{turn_8c_a3c14fb5d13f2487146e46cb53dd9d9a2}{turn\+\_\+over} = \{0,\{0,0\},0\}
+\begin{DoxyCompactList}\small\item\em Blank action structure to indicate end of turn when sent to opponent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a246a7b2e75e5feca56257c15a50b283d}\label{turn_8c_a246a7b2e75e5feca56257c15a50b283d}} 
+\hyperlink{structaction}{action} \hyperlink{turn_8c_a246a7b2e75e5feca56257c15a50b283d}{a\+\_\+global}
+\begin{DoxyCompactList}\small\item\em Global action variable where received action is kept to communicate it between threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_a5967831986704c33c9cf483c7ede2684}\label{turn_8c_a5967831986704c33c9cf483c7ede2684}} 
+\hyperlink{struct_coord}{Coord} \hyperlink{turn_8c_a5967831986704c33c9cf483c7ede2684}{spawn\+\_\+red} \mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]} = \{\{0,0\},\{1,3\},\{3,1\},\{1,7\},\{4,4\},\{7,1\}\}
+\begin{DoxyCompactList}\small\item\em Spawn coordinates for the client\textquotesingle{}s characters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{turn_8c_ac913f97b0902e5035c4bd9c0272dfd5f}\label{turn_8c_ac913f97b0902e5035c4bd9c0272dfd5f}} 
+\hyperlink{struct_coord}{Coord} \hyperlink{turn_8c_ac913f97b0902e5035c4bd9c0272dfd5f}{spawn\+\_\+blue} \mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]} = \{\{29,29\},\{26,28\},\{28,26\},\{22,28\},\{25,25\},\{28,22\}\}
+\begin{DoxyCompactList}\small\item\em Spawn coordinates for the host\textquotesingle{}s characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main functions relevant to players\textquotesingle{} turns. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{turn_8c_a1fc6b9b84600d89b059a239c652f3c8d}\label{turn_8c_a1fc6b9b84600d89b059a239c652f3c8d}} 
+\index{turn.\+c@{turn.\+c}!action\+\_\+set@{action\+\_\+set}}
+\index{action\+\_\+set@{action\+\_\+set}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{action\+\_\+set()}{action\_set()}}
+{\footnotesize\ttfamily action\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action}}]{a }\end{DoxyParamCaption})}
+
+
+
+Calls necessary functions to apply local action. 
+
+Communicates cast action with opponent 
+\begin{DoxyParams}{Parameters}
+{\em a} & action variable containing information on cast ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a9721e96eeaa277b941da3acc3142422d}\label{turn_8c_a9721e96eeaa277b941da3acc3142422d}} 
+\index{turn.\+c@{turn.\+c}!apply\+\_\+action@{apply\+\_\+action}}
+\index{apply\+\_\+action@{apply\+\_\+action}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+action()}{apply\_action()}}
+{\footnotesize\ttfamily apply\+\_\+action (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action}}]{a }\end{DoxyParamCaption})}
+
+
+
+Applies the ability specified by the taken action. 
+
+Determines when and if ability method needs to be called, then calls apply\+\_\+to (to apply damage and mods), if caster is ennemy mage, sets correct ability, applies ability cooldown and calculats ennemies killed to trigger bloodlust if necessary. 
+\begin{DoxyParams}{Parameters}
+{\em a} & the action variable that has the necessary information to apply the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ae9cc58fc9ee17c6415a3043fba7dfe65}\label{turn_8c_ae9cc58fc9ee17c6415a3043fba7dfe65}} 
+\index{turn.\+c@{turn.\+c}!apply\+\_\+movement@{apply\+\_\+movement}}
+\index{apply\+\_\+movement@{apply\+\_\+movement}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{apply\+\_\+movement()}{apply\_movement()}}
+{\footnotesize\ttfamily apply\+\_\+movement (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action}}]{a }\end{DoxyParamCaption})}
+
+
+
+Applies the movement specified by the taken action. 
+
+calls functions pathfinding to find path to target and total move to apply the movement specified 
+\begin{DoxyParams}{Parameters}
+{\em a} & the action variable that has the necessary information to apply the movement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_aff249852cd2990ba89808cc14ba5802c}\label{turn_8c_aff249852cd2990ba89808cc14ba5802c}} 
+\index{turn.\+c@{turn.\+c}!coin\+\_\+flip@{coin\+\_\+flip}}
+\index{coin\+\_\+flip@{coin\+\_\+flip}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{coin\+\_\+flip()}{coin\_flip()}}
+{\footnotesize\ttfamily coin\+\_\+flip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gives a random outcome between T\+R\+UE and F\+A\+L\+SE. 
+
+Decides which player starts by using the rand function \begin{DoxyReturn}{Returns}
+T\+R\+UE if the local(host) player starts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ae0b7ab6257481001e70de5db72f529c2}\label{turn_8c_ae0b7ab6257481001e70de5db72f529c2}} 
+\index{turn.\+c@{turn.\+c}!coin\+\_\+receive@{coin\+\_\+receive}}
+\index{coin\+\_\+receive@{coin\+\_\+receive}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{coin\+\_\+receive()}{coin\_receive()}}
+{\footnotesize\ttfamily coin\+\_\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Receives the result of the coin flip. 
+
+This function returns the opposite of what it received so that both coin\+\_\+flip and coin\+\_\+received return T\+R\+UE if their local player starts \begin{DoxyReturn}{Returns}
+T\+R\+UE if local(client) player starts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a16ba6165faa1d913de01a0c4eb0f43b0}\label{turn_8c_a16ba6165faa1d913de01a0c4eb0f43b0}} 
+\index{turn.\+c@{turn.\+c}!endgame\+\_\+message@{endgame\+\_\+message}}
+\index{endgame\+\_\+message@{endgame\+\_\+message}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{endgame\+\_\+message()}{endgame\_message()}}
+{\footnotesize\ttfamily endgame\+\_\+message (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}}]{Id }\end{DoxyParamCaption})}
+
+
+
+Temporary function, sends a log telling the player wether they have won or lost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & the win\+Id determined at the end of the game in which the output of the game was stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a17f45a5f3139fab809abda2666cc3aab}\label{turn_8c_a17f45a5f3139fab809abda2666cc3aab}} 
+\index{turn.\+c@{turn.\+c}!game\+\_\+loop@{game\+\_\+loop}}
+\index{game\+\_\+loop@{game\+\_\+loop}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+loop()}{game\_loop()}}
+{\footnotesize\ttfamily game\+\_\+loop (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}($\ast$)(void)}]{turn1,  }\item[{\hyperlink{substruct_8h_ab704d7ffb93a719d0b0fc2028cfdb0fa}{win\+Id}($\ast$)(void)}]{turn2 }\end{DoxyParamCaption})}
+
+
+
+Game loop used for turn management. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em turn1} & either local\+\_\+turn or opposing\+\_\+turn depending on who is going to play first, determined by the coin toss \\
+\hline
+{\em turn2} & either local\+\_\+turn or opposing\+\_\+turn depending on who is going to play second, determined by the coin toss \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+win\+Id indicating if game was lost or won 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ab2b7deafd8b7bd8596b34e3475731999}\label{turn_8c_ab2b7deafd8b7bd8596b34e3475731999}} 
+\index{turn.\+c@{turn.\+c}!init\+\_\+client@{init\+\_\+client}}
+\index{init\+\_\+client@{init\+\_\+client}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+client()}{init\_client()}}
+{\footnotesize\ttfamily init\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialises things client side. 
+
+Initialises character spawns for the client, calls game\+\_\+loop with corresponding parametres \begin{DoxyReturn}{Returns}
+win\+Id indicating if game was lost or won 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ae8bf2d343a820be874c299ecfe082b8b}\label{turn_8c_ae8bf2d343a820be874c299ecfe082b8b}} 
+\index{turn.\+c@{turn.\+c}!init\+\_\+server@{init\+\_\+server}}
+\index{init\+\_\+server@{init\+\_\+server}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+server()}{init\_server()}}
+{\footnotesize\ttfamily init\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialises things server side. 
+
+Initialises character spawns for the host, calls game\+\_\+loop with corresponding parametres \begin{DoxyReturn}{Returns}
+win\+Id indicating if game was lost or won 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a780e933ee49343ea95375078b365fec4}\label{turn_8c_a780e933ee49343ea95375078b365fec4}} 
+\index{turn.\+c@{turn.\+c}!local\+\_\+turn@{local\+\_\+turn}}
+\index{local\+\_\+turn@{local\+\_\+turn}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{local\+\_\+turn()}{local\_turn()}}
+{\footnotesize\ttfamily local\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main local turn loop function. 
+
+Checks for game over conditions \begin{DoxyReturn}{Returns}
+win\+Id indicating if game was lost or won 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a470f9bd6f33a506f0a61e2fb27604171}\label{turn_8c_a470f9bd6f33a506f0a61e2fb27604171}} 
+\index{turn.\+c@{turn.\+c}!online\+\_\+setup@{online\+\_\+setup}}
+\index{online\+\_\+setup@{online\+\_\+setup}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{online\+\_\+setup()}{online\_setup()}}
+{\footnotesize\ttfamily online\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets necessary variables to their correct values for online play. 
+
+Sets is\+\_\+online to T\+R\+UE and turn\+\_\+active to F\+A\+L\+SE \begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a87d54930b13d9d3312be55eb4d810c0d}\label{turn_8c_a87d54930b13d9d3312be55eb4d810c0d}} 
+\index{turn.\+c@{turn.\+c}!opponent\+\_\+action@{opponent\+\_\+action}}
+\index{opponent\+\_\+action@{opponent\+\_\+action}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{opponent\+\_\+action()}{opponent\_action()}}
+{\footnotesize\ttfamily opponent\+\_\+action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls necessary functions to apply action received from opponent. 
+
+Action to apply is stored in a\+\_\+global \begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ae2c023c625f4635d4408355a28c64a65}\label{turn_8c_ae2c023c625f4635d4408355a28c64a65}} 
+\index{turn.\+c@{turn.\+c}!opposing\+\_\+turn@{opposing\+\_\+turn}}
+\index{opposing\+\_\+turn@{opposing\+\_\+turn}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{opposing\+\_\+turn()}{opposing\_turn()}}
+{\footnotesize\ttfamily opposing\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main opposing turn loop function. 
+
+Receives opponent actions and indicates to main thread an action was received \begin{DoxyReturn}{Returns}
+win\+Id indicating if game was lost or won 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_ae7465d756a4f61e1ed9dfbe312ff444f}\label{turn_8c_ae7465d756a4f61e1ed9dfbe312ff444f}} 
+\index{turn.\+c@{turn.\+c}!play\+\_\+check@{play\+\_\+check}}
+\index{play\+\_\+check@{play\+\_\+check}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{play\+\_\+check()}{play\_check()}}
+{\footnotesize\ttfamily play\+\_\+check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if allies still have characters who can play. 
+
+Used to automaticaly give playability to opponent once all action points are used \begin{DoxyReturn}{Returns}
+T\+R\+UE if local player can still play 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a5eaca6f40108d62ba724f855bd43f596}\label{turn_8c_a5eaca6f40108d62ba724f855bd43f596}} 
+\index{turn.\+c@{turn.\+c}!set\+\_\+endturn@{set\+\_\+endturn}}
+\index{set\+\_\+endturn@{set\+\_\+endturn}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+endturn()}{set\_endturn()}}
+{\footnotesize\ttfamily set\+\_\+endturn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Communicates an end button input. 
+
+Sets necessary variables to end local turn, if not local turn, shows log warning \begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a278a57066f80f24deae9512ebed6960f}\label{turn_8c_a278a57066f80f24deae9512ebed6960f}} 
+\index{turn.\+c@{turn.\+c}!test\+\_\+turn@{test\+\_\+turn}}
+\index{test\+\_\+turn@{test\+\_\+turn}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+turn()}{test\_turn()}}
+{\footnotesize\ttfamily test\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Temporary test function used to applied turn\+\_\+start and turn\+\_\+end while giving playability back to local player, for testing gameplay offline. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a89e64644e801e0ffeb7cfb2807fc8ab2}\label{turn_8c_a89e64644e801e0ffeb7cfb2807fc8ab2}} 
+\index{turn.\+c@{turn.\+c}!turn\+\_\+end@{turn\+\_\+end}}
+\index{turn\+\_\+end@{turn\+\_\+end}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{turn\+\_\+end()}{turn\_end()}}
+{\footnotesize\ttfamily turn\+\_\+end (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Applies necessary actions to end a turn. 
+
+Decreases buff and debuff durations, applies burning damage, and decreases ability cooldowns 
+\begin{DoxyParams}{Parameters}
+{\em e} & the list of entities whoe turn just ended \\
+\hline
+{\em list} & the statelist to decrease buffs/debuffs from, st\+Sent if local turn, st\+Received if opposing turn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a3b148895d5774d45cd0a07b0e1b6de5b}\label{turn_8c_a3b148895d5774d45cd0a07b0e1b6de5b}} 
+\index{turn.\+c@{turn.\+c}!turn\+\_\+start@{turn\+\_\+start}}
+\index{turn\+\_\+start@{turn\+\_\+start}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{turn\+\_\+start()}{turn\_start()}}
+{\footnotesize\ttfamily turn\+\_\+start (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Applies necessary actions to start a turn. 
+
+Restores action points as well as applies Angel\textquotesingle{}s Aura 
+\begin{DoxyParams}{Parameters}
+{\em e} & The list of entities whose turn will start \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{turn_8c_a00972c681239dd17f84cdc42a778902b}\label{turn_8c_a00972c681239dd17f84cdc42a778902b}} 
+\index{turn.\+c@{turn.\+c}!your\+\_\+turn@{your\+\_\+turn}}
+\index{your\+\_\+turn@{your\+\_\+turn}!turn.\+c@{turn.\+c}}
+\subsubsection{\texorpdfstring{your\+\_\+turn()}{your\_turn()}}
+{\footnotesize\ttfamily your\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indicates if it\textquotesingle{}s the local player\textquotesingle{}s turn. 
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if local player\textquotesingle{}s turn 
+\end{DoxyReturn}

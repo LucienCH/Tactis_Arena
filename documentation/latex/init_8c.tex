@@ -1,0 +1,172 @@
+\hypertarget{init_8c}{}\section{src/init.c File Reference}
+\label{init_8c}\index{src/init.\+c@{src/init.\+c}}
+
+
+Functions related to the intialisation and destruction of game information.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init\+\_\+classes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_a69f64b4e4ed64f6b8bdda52ce1f80903}{init\+\_\+spawn} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_coord}{Coord} c)
+\begin{DoxyCompactList}\small\item\em Sets the spawn of an entity. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_a998bcdc40cce6eb93d0c14e3ec0245f5}{ent\+\_\+common\+\_\+init} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em initialises common variables among all entities \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_ab3ab7af19296743d5f36840907890994}{init\+\_\+\+Entity} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_coord}{Coord} spawn\mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]}, \hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}{d}, char title\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]}, int id\+\_\+mod)
+\begin{DoxyCompactList}\small\item\em Initialises a team of entities. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_aca9322b2a92ecbaf471d16c188acc977}{ent\+\_\+init\+\_\+test} ()
+\begin{DoxyCompactList}\small\item\em Test function used to quickly intialise all entities for offline playtesting. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_aa6942bd962327d4fd1725c9127a8b6b1}{init\+\_\+classes} ()
+\begin{DoxyCompactList}\small\item\em Calls all init\+\_\+classes functions to init all classes. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init_8c_a25b7ba3198bcf88d6eae7a52912a38d2}{destroy\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em Destroys all classes and their abilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{init_8c_a7ebb0205ce725cf1b7f77f03180ed678}\label{init_8c_a7ebb0205ce725cf1b7f77f03180ed678}} 
+\hyperlink{struct_state_list}{State\+List} $\ast$ \hyperlink{init_8c_a7ebb0205ce725cf1b7f77f03180ed678}{st\+Sent} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em The Statelist containing all modifiers applied during the local player\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_ad54af1c9cd2a7309b0d321576bfc4193}\label{init_8c_ad54af1c9cd2a7309b0d321576bfc4193}} 
+\hyperlink{struct_state_list}{State\+List} $\ast$ \hyperlink{init_8c_ad54af1c9cd2a7309b0d321576bfc4193}{st\+Received} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em The Statelist containing all modifiers applied during the opponent\textquotesingle{}s turn. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_aad8bfa86fe0525863ba5f81c4d790984}\label{init_8c_aad8bfa86fe0525863ba5f81c4d790984}} 
+\hyperlink{struct_class}{Class} \hyperlink{init_8c_aad8bfa86fe0525863ba5f81c4d790984}{classes} \mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]} = \{\}
+\begin{DoxyCompactList}\small\item\em An array to store all the classes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_acd3de735ed048241113389d24426bb4c}\label{init_8c_acd3de735ed048241113389d24426bb4c}} 
+\hyperlink{struct_ability}{Ability} \hyperlink{init_8c_acd3de735ed048241113389d24426bb4c}{mage\+\_\+ab} \mbox{[}3\mbox{]}\mbox{[}\hyperlink{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}{N\+U\+M\+\_\+\+AB}\mbox{]} = \{\}
+\begin{DoxyCompactList}\small\item\em A 2 dimensional array to store the Mage\textquotesingle{}s three movesets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_a76d8f08cf366897ed3479caf57ce2b57}\label{init_8c_a76d8f08cf366897ed3479caf57ce2b57}} 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} \hyperlink{init_8c_a76d8f08cf366897ed3479caf57ce2b57}{Allies} \mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]} = \{\}
+\begin{DoxyCompactList}\small\item\em An array to store the local player\textquotesingle{}s entities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_ab2a4990fbb7044e2196d077c9556b911}\label{init_8c_ab2a4990fbb7044e2196d077c9556b911}} 
+\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} \hyperlink{init_8c_ab2a4990fbb7044e2196d077c9556b911}{Foes} \mbox{[}\hyperlink{substruct_8h_aca3bf6b28481c1a1ea8b19709c1d0d9e}{N\+U\+M\+\_\+\+C\+L\+A\+SS}\mbox{]} = \{\}
+\begin{DoxyCompactList}\small\item\em An array to store the opponent\textquotesingle{}s entities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_aff4fa9f65d9debfdc8ab29506493bdd5}\label{init_8c_aff4fa9f65d9debfdc8ab29506493bdd5}} 
+\hyperlink{struct_ability}{Ability} \hyperlink{init_8c_aff4fa9f65d9debfdc8ab29506493bdd5}{Aura\+\_\+ab}
+\begin{DoxyCompactList}\small\item\em An ability structure to store the Angel\textquotesingle{}s passive ability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{init_8c_acaa9197ff6fb771bc72c532c4eaf9a9a}\label{init_8c_acaa9197ff6fb771bc72c532c4eaf9a9a}} 
+\hyperlink{struct_ability}{Ability} \hyperlink{init_8c_acaa9197ff6fb771bc72c532c4eaf9a9a}{Move\+\_\+ab}
+\begin{DoxyCompactList}\small\item\em An ability structure to store the Movement ability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related to the intialisation and destruction of game information. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{init_8c_a25b7ba3198bcf88d6eae7a52912a38d2}\label{init_8c_a25b7ba3198bcf88d6eae7a52912a38d2}} 
+\index{init.\+c@{init.\+c}!destroy\+\_\+game@{destroy\+\_\+game}}
+\index{destroy\+\_\+game@{destroy\+\_\+game}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{destroy\+\_\+game()}{destroy\_game()}}
+{\footnotesize\ttfamily destroy\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys all classes and their abilities. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a998bcdc40cce6eb93d0c14e3ec0245f5}\label{init_8c_a998bcdc40cce6eb93d0c14e3ec0245f5}} 
+\index{init.\+c@{init.\+c}!ent\+\_\+common\+\_\+init@{ent\+\_\+common\+\_\+init}}
+\index{ent\+\_\+common\+\_\+init@{ent\+\_\+common\+\_\+init}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{ent\+\_\+common\+\_\+init()}{ent\_common\_init()}}
+{\footnotesize\ttfamily ent\+\_\+common\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+initialises common variables among all entities 
+
+initialises an entities\textquotesingle{} cooldowns to zero, his status effects to zero, his stats to that of his class\textquotesingle{}s basic stats, his active to Alive, his action points to 3 and his animation Id to zero. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_aca9322b2a92ecbaf471d16c188acc977}\label{init_8c_aca9322b2a92ecbaf471d16c188acc977}} 
+\index{init.\+c@{init.\+c}!ent\+\_\+init\+\_\+test@{ent\+\_\+init\+\_\+test}}
+\index{ent\+\_\+init\+\_\+test@{ent\+\_\+init\+\_\+test}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{ent\+\_\+init\+\_\+test()}{ent\_init\_test()}}
+{\footnotesize\ttfamily ent\+\_\+init\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test function used to quickly intialise all entities for offline playtesting. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_aa6942bd962327d4fd1725c9127a8b6b1}\label{init_8c_aa6942bd962327d4fd1725c9127a8b6b1}} 
+\index{init.\+c@{init.\+c}!init\+\_\+classes@{init\+\_\+classes}}
+\index{init\+\_\+classes@{init\+\_\+classes}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+classes()}{init\_classes()}}
+{\footnotesize\ttfamily init\+\_\+classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls all init\+\_\+classes functions to init all classes. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_ab3ab7af19296743d5f36840907890994}\label{init_8c_ab3ab7af19296743d5f36840907890994}} 
+\index{init.\+c@{init.\+c}!init\+\_\+\+Entity@{init\+\_\+\+Entity}}
+\index{init\+\_\+\+Entity@{init\+\_\+\+Entity}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+\+Entity()}{init\_Entity()}}
+{\footnotesize\ttfamily init\+\_\+\+Entity (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_coord}{Coord}}]{spawn\mbox{[}\+N\+U\+M\+\_\+\+C\+L\+A\+S\+S\mbox{]},  }\item[{\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}]{d,  }\item[{char}]{title\mbox{[}\+S\+T\+R\+\_\+\+S\+H\+O\+R\+T\mbox{]},  }\item[{int}]{id\+\_\+mod }\end{DoxyParamCaption})}
+
+
+
+Initialises a team of entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to entity to store the initialised team \\
+\hline
+{\em spawn} & An array of coordinates depicting where to spawn each entity \\
+\hline
+{\em d} & The direction which those entities will be facing (W for host, S for client) \\
+\hline
+{\em title} & The title put before the class name for the entitie\textquotesingle{}s name (Friendly for Allies, Ennemy for Foes) \\
+\hline
+{\em id\+\_\+mod} & Set to -\/1 if initialising opponents, else set to 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init_8c_a69f64b4e4ed64f6b8bdda52ce1f80903}\label{init_8c_a69f64b4e4ed64f6b8bdda52ce1f80903}} 
+\index{init.\+c@{init.\+c}!init\+\_\+spawn@{init\+\_\+spawn}}
+\index{init\+\_\+spawn@{init\+\_\+spawn}!init.\+c@{init.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+spawn()}{init\_spawn()}}
+{\footnotesize\ttfamily init\+\_\+spawn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_coord}{Coord}}]{c }\end{DoxyParamCaption})}
+
+
+
+Sets the spawn of an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to spawn \\
+\hline
+{\em c} & The coordinate to spawn him at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}

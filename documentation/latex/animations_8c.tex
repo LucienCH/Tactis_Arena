@@ -1,0 +1,183 @@
+\hypertarget{animations_8c}{}\section{src/animations.c File Reference}
+\label{animations_8c}\index{src/animations.\+c@{src/animations.\+c}}
+
+
+Animations method functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}textures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}border.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{animations_8c_ae8d535a15d41a784109a3eb96d49f1d8}{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+}~50
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{animations_8c_a3898e7af8c563e482542fcf32888cb54}\label{animations_8c_a3898e7af8c563e482542fcf32888cb54}} 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} {\bfseries add\+Anim\+Texture} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id, char $\ast$name, int start\+\_\+index, int end\+\_\+index, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} aoe, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} on\+\_\+ground, int speed, char $\ast$sound\+\_\+effect)
+\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{animations_8c_a69e6fa6169d0c6e994faadd3619486be}{get\+Anim\+Texture} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id, int index, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} big)
+\begin{DoxyCompactList}\small\item\em Get the texture of the given ability at a specific index. \end{DoxyCompactList}\item 
+int \hyperlink{animations_8c_a9e6f17ff4e2041e5750c0bb65caf1db1}{get\+Anim\+Steps} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Return the number of sprites of an animation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{animations_8c_ac40f13e8187f395410b38e455e6100b6}\label{animations_8c_ac40f13e8187f395410b38e455e6100b6}} 
+\hyperlink{struct_anim_texture}{Anim\+Texture} {\bfseries get\+Anim} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{animations_8c_a65ff779b04ba04b8c489262a09f3f646}{load\+Animation\+Textures} ()
+\begin{DoxyCompactList}\small\item\em Load all the animations textures. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{animations_8c_a95f93e1f11ef762fad2cef56930dc2e9}{is\+Loaded} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Check if the animation of a given ability has correctly been loaded. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{animations_8c_aee5b915deccb749a23f8af540f517098}{is\+On\+Ground} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Check if the animation should be displayed on the ground. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{animations_8c_ab9342b36fec6982365fe982808efca0d}{play\+\_\+ability\+\_\+animation} (\hyperlink{struct_ability}{Ability} ab, \hyperlink{struct_coord}{Coord} pos)
+\begin{DoxyCompactList}\small\item\em Play the animation of the given ability. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Animations method functions. 
+
+Contains all animations relative functions for displaying and loading \begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{animations_8c_ae8d535a15d41a784109a3eb96d49f1d8}\label{animations_8c_ae8d535a15d41a784109a3eb96d49f1d8}} 
+\index{animations.\+c@{animations.\+c}!\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+@{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+}}
+\index{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+@{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+}{\_NB\_MAX\_TEXTURES\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+T\+E\+X\+T\+U\+R\+E\+S\+\_\+~50}
+
+Size of the anim\+Texture table (loaded textures) 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{animations_8c_a9e6f17ff4e2041e5750c0bb65caf1db1}\label{animations_8c_a9e6f17ff4e2041e5750c0bb65caf1db1}} 
+\index{animations.\+c@{animations.\+c}!get\+Anim\+Steps@{get\+Anim\+Steps}}
+\index{get\+Anim\+Steps@{get\+Anim\+Steps}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{get\+Anim\+Steps()}{getAnimSteps()}}
+{\footnotesize\ttfamily get\+Anim\+Steps (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Return the number of sprites of an animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of sprites of the animation (int) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8c_a69e6fa6169d0c6e994faadd3619486be}\label{animations_8c_a69e6fa6169d0c6e994faadd3619486be}} 
+\index{animations.\+c@{animations.\+c}!get\+Anim\+Texture@{get\+Anim\+Texture}}
+\index{get\+Anim\+Texture@{get\+Anim\+Texture}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{get\+Anim\+Texture()}{getAnimTexture()}}
+{\footnotesize\ttfamily get\+Anim\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id,  }\item[{int}]{index,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{big }\end{DoxyParamCaption})}
+
+
+
+Get the texture of the given ability at a specific index. 
+
+Looks at the anim\+Textures table to return the wanted texture 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+{\em index} & Index of the sprite of the animation \\
+\hline
+{\em big} & Bool to choose if it has to return the 64x64 texture or the 128x128 (T\+R\+UE for 128x128) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the texture (S\+Dl\+\_\+\+Texture $\ast$) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8c_a95f93e1f11ef762fad2cef56930dc2e9}\label{animations_8c_a95f93e1f11ef762fad2cef56930dc2e9}} 
+\index{animations.\+c@{animations.\+c}!is\+Loaded@{is\+Loaded}}
+\index{is\+Loaded@{is\+Loaded}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{is\+Loaded()}{isLoaded()}}
+{\footnotesize\ttfamily is\+Loaded (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if the animation of a given ability has correctly been loaded. 
+
+Looks for the animation in the anim\+Textures table 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean (T\+R\+UE if the animation is loaded) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8c_aee5b915deccb749a23f8af540f517098}\label{animations_8c_aee5b915deccb749a23f8af540f517098}} 
+\index{animations.\+c@{animations.\+c}!is\+On\+Ground@{is\+On\+Ground}}
+\index{is\+On\+Ground@{is\+On\+Ground}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{is\+On\+Ground()}{isOnGround()}}
+{\footnotesize\ttfamily is\+On\+Ground (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if the animation should be displayed on the ground. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean (T\+R\+UE if the animation should be displayed on the ground) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8c_a65ff779b04ba04b8c489262a09f3f646}\label{animations_8c_a65ff779b04ba04b8c489262a09f3f646}} 
+\index{animations.\+c@{animations.\+c}!load\+Animation\+Textures@{load\+Animation\+Textures}}
+\index{load\+Animation\+Textures@{load\+Animation\+Textures}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{load\+Animation\+Textures()}{loadAnimationTextures()}}
+{\footnotesize\ttfamily load\+Animation\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load all the animations textures. 
+
+Uses add\+Anim\+Texture method for all the game\textquotesingle{}s abilities \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8c_ab9342b36fec6982365fe982808efca0d}\label{animations_8c_ab9342b36fec6982365fe982808efca0d}} 
+\index{animations.\+c@{animations.\+c}!play\+\_\+ability\+\_\+animation@{play\+\_\+ability\+\_\+animation}}
+\index{play\+\_\+ability\+\_\+animation@{play\+\_\+ability\+\_\+animation}!animations.\+c@{animations.\+c}}
+\subsubsection{\texorpdfstring{play\+\_\+ability\+\_\+animation()}{play\_ability\_animation()}}
+{\footnotesize\ttfamily play\+\_\+ability\+\_\+animation (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability}}]{ab,  }\item[{\hyperlink{struct_coord}{Coord}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Play the animation of the given ability. 
+
+Display each step of an animation 
+\begin{DoxyParams}{Parameters}
+{\em ab} & \hyperlink{struct_ability}{Ability} to display its animation \\
+\hline
+{\em pos} & Coordinates on the map the animation will be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an error code (err\+\_\+t) 
+\end{DoxyReturn}

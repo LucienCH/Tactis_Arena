@@ -1,0 +1,279 @@
+\hypertarget{state_8c}{}\section{src/state.c File Reference}
+\label{state_8c}\index{src/state.\+c@{src/state.\+c}}
+
+
+Primitive functions for the Statelist system.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}state.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_a7df3e064ca42b8a9373519a9bdbe1e81}{init\+\_\+list} (\hyperlink{struct_state_list}{State\+List} $\ast$$\ast$list)
+\begin{DoxyCompactList}\small\item\em Initialises a list. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{state_8c_ad38f995485ec3f751c914e9eea9b0ebc}{out\+\_\+of\+\_\+list} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Indicates if current element is out of the list. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{state_8c_acb7162c506c263af8de1d2501c7dec00}{list\+\_\+empty} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Indicates if a list is empty. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_a0535a10eff57b11f15b20937cd98d02c}{start\+\_\+list} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Sets the current element to the beginning of the list. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_acc57105618a7a87b1fdf0794bb52dadf}{end\+\_\+list} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Sets the current element to the end of the list. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_a12e0bd0ea68ab7d66b62b2251b14127e}{list\+\_\+next} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Sets the current element to the next element of the list. \end{DoxyCompactList}\item 
+\hyperlink{state_8h_ab8c49f96c64a8f87ba42ec735b9fd1fb}{List\+\_\+\+Elem} $\ast$ \hyperlink{state_8c_a49ffb1a6690bcd6ad7915b929755639b}{list\+\_\+change} (\hyperlink{struct_state_list}{State\+List} $\ast$list, int \hyperlink{pointers_8h_a4a07ca4e18acc73f5417ff466de86bd9}{d})
+\begin{DoxyCompactList}\small\item\em Increases or decreases current mod\textquotesingle{}s duration. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_a875ee9f1ffc78da544673da34b3b92b1}{list\+\_\+remove} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Removes the current element from the list. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_ae26aa49996773334f1162975ab1aa092}{list\+\_\+add} (\hyperlink{struct_state_list}{State\+List} $\ast$list, \hyperlink{struct_status}{Status} v, struct \hyperlink{structentity__t}{entity\+\_\+t} $\ast$entity)
+\begin{DoxyCompactList}\small\item\em Adds a new element to the list. \end{DoxyCompactList}\item 
+\hyperlink{state_8h_ab8c49f96c64a8f87ba42ec735b9fd1fb}{List\+\_\+\+Elem} $\ast$ \hyperlink{state_8c_a213e2bf8545e90b770e07f9ba2def1eb}{list\+\_\+search} (\hyperlink{struct_state_list}{State\+List} $\ast$list, struct \hyperlink{structentity__t}{entity\+\_\+t} $\ast$entity, \hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id} status)
+\begin{DoxyCompactList}\small\item\em Search a list for a certain element. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{state_8c_af352a1be49705142d3a5a516e88dd06d}{list\+\_\+check} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Checks if the current element is a buff or a debuff. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{state_8c_aa7b156b683d0309aa6544578d660dd52}{list\+\_\+destroy} (\hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Destroys a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Primitive functions for the Statelist system. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL
+\end{DoxyAuthor}
+All functions used to navigate the buff/debuff list system made using pointers 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{state_8c_acc57105618a7a87b1fdf0794bb52dadf}\label{state_8c_acc57105618a7a87b1fdf0794bb52dadf}} 
+\index{state.\+c@{state.\+c}!end\+\_\+list@{end\+\_\+list}}
+\index{end\+\_\+list@{end\+\_\+list}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{end\+\_\+list()}{end\_list()}}
+{\footnotesize\ttfamily end\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Sets the current element to the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a7df3e064ca42b8a9373519a9bdbe1e81}\label{state_8c_a7df3e064ca42b8a9373519a9bdbe1e81}} 
+\index{state.\+c@{state.\+c}!init\+\_\+list@{init\+\_\+list}}
+\index{init\+\_\+list@{init\+\_\+list}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+list()}{init\_list()}}
+{\footnotesize\ttfamily init\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$$\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Initialises a list. 
+
+Allocates dyanmically space for the list, the flag and sets the current element onto it, as well as sets the flag\textquotesingle{}s next and precedent pointers to itself 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list to initialise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, otherwise err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_ae26aa49996773334f1162975ab1aa092}\label{state_8c_ae26aa49996773334f1162975ab1aa092}} 
+\index{state.\+c@{state.\+c}!list\+\_\+add@{list\+\_\+add}}
+\index{list\+\_\+add@{list\+\_\+add}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+add()}{list\_add()}}
+{\footnotesize\ttfamily list\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{\hyperlink{struct_status}{Status}}]{v,  }\item[{struct \hyperlink{structentity__t}{entity\+\_\+t} $\ast$}]{entity }\end{DoxyParamCaption})}
+
+
+
+Adds a new element to the list. 
+
+allocates dyanmically a new List\+\_\+\+Elem as well as a \hyperlink{struct_status}{Status} 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to add to \\
+\hline
+{\em v} & The status to add \\
+\hline
+{\em entity} & The targeted entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a49ffb1a6690bcd6ad7915b929755639b}\label{state_8c_a49ffb1a6690bcd6ad7915b929755639b}} 
+\index{state.\+c@{state.\+c}!list\+\_\+change@{list\+\_\+change}}
+\index{list\+\_\+change@{list\+\_\+change}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+change()}{list\_change()}}
+{\footnotesize\ttfamily list\+\_\+change (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Increases or decreases current mod\textquotesingle{}s duration. 
+
+Changes current element\textquotesingle{}s \hyperlink{struct_status}{Status}\textquotesingle{} duration by d (increase if positive, decrease if negative), if the duration falls to or under zero, then a pointer to the element is returned so that the mod may be removed 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to change \\
+\hline
+{\em d} & How much to change the duration by (negative value if a decrease is wanted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the current element if the duration falls to or under zero, otherwise N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_af352a1be49705142d3a5a516e88dd06d}\label{state_8c_af352a1be49705142d3a5a516e88dd06d}} 
+\index{state.\+c@{state.\+c}!list\+\_\+check@{list\+\_\+check}}
+\index{list\+\_\+check@{list\+\_\+check}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+check()}{list\_check()}}
+{\footnotesize\ttfamily list\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Checks if the current element is a buff or a debuff. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if buff, F\+A\+L\+SE if debuff 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_aa7b156b683d0309aa6544578d660dd52}\label{state_8c_aa7b156b683d0309aa6544578d660dd52}} 
+\index{state.\+c@{state.\+c}!list\+\_\+destroy@{list\+\_\+destroy}}
+\index{list\+\_\+destroy@{list\+\_\+destroy}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+destroy()}{list\_destroy()}}
+{\footnotesize\ttfamily list\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Destroys a list. 
+
+frees all dynamically allocated pointers and sets their values to N\+U\+LL to avoid any double frees 
+\begin{DoxyParams}{Parameters}
+{\em list} & pointer to the list to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_acb7162c506c263af8de1d2501c7dec00}\label{state_8c_acb7162c506c263af8de1d2501c7dec00}} 
+\index{state.\+c@{state.\+c}!list\+\_\+empty@{list\+\_\+empty}}
+\index{list\+\_\+empty@{list\+\_\+empty}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+empty()}{list\_empty()}}
+{\footnotesize\ttfamily list\+\_\+empty (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Indicates if a list is empty. 
+
+A list is empty if the flag\textquotesingle{}s next element and precedent element point to itself 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the list is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a12e0bd0ea68ab7d66b62b2251b14127e}\label{state_8c_a12e0bd0ea68ab7d66b62b2251b14127e}} 
+\index{state.\+c@{state.\+c}!list\+\_\+next@{list\+\_\+next}}
+\index{list\+\_\+next@{list\+\_\+next}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+next()}{list\_next()}}
+{\footnotesize\ttfamily list\+\_\+next (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Sets the current element to the next element of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a875ee9f1ffc78da544673da34b3b92b1}\label{state_8c_a875ee9f1ffc78da544673da34b3b92b1}} 
+\index{state.\+c@{state.\+c}!list\+\_\+remove@{list\+\_\+remove}}
+\index{list\+\_\+remove@{list\+\_\+remove}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+remove()}{list\_remove()}}
+{\footnotesize\ttfamily list\+\_\+remove (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Removes the current element from the list. 
+
+frees all dynamically allocated pointers and sets their values to N\+U\+LL to avoid any double frees 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to remove from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a213e2bf8545e90b770e07f9ba2def1eb}\label{state_8c_a213e2bf8545e90b770e07f9ba2def1eb}} 
+\index{state.\+c@{state.\+c}!list\+\_\+search@{list\+\_\+search}}
+\index{list\+\_\+search@{list\+\_\+search}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{list\+\_\+search()}{list\_search()}}
+{\footnotesize\ttfamily list\+\_\+search (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list,  }\item[{struct \hyperlink{structentity__t}{entity\+\_\+t} $\ast$}]{entity,  }\item[{\hyperlink{substruct_8h_a28c4ba069c82b615b006828888a97a47}{status\+Id}}]{status }\end{DoxyParamCaption})}
+
+
+
+Search a list for a certain element. 
+
+Searches a list starting from the current element and returns the first element that fits the search parametres (at least one parametre has to be specified) 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to search \\
+\hline
+{\em entity} & A search parametre, the entity affected by the mod, can be N\+U\+LL to specify no specific entity \\
+\hline
+{\em status} & A search parametre, the status effect, can be -\/1 to specify no specific status effect \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em standard\+\_\+out\+:\+N\+O\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+P\+A\+R\+A\+M\+E\+T\+R\+ES} & Neither of the search parametres were specified \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+a pointer to the current element if one is found, else N\+U\+LL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_ad38f995485ec3f751c914e9eea9b0ebc}\label{state_8c_ad38f995485ec3f751c914e9eea9b0ebc}} 
+\index{state.\+c@{state.\+c}!out\+\_\+of\+\_\+list@{out\+\_\+of\+\_\+list}}
+\index{out\+\_\+of\+\_\+list@{out\+\_\+of\+\_\+list}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{out\+\_\+of\+\_\+list()}{out\_of\_list()}}
+{\footnotesize\ttfamily out\+\_\+of\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Indicates if current element is out of the list. 
+
+Current element is not in the list if it points to the flag 
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the current element (ec) is out of list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{state_8c_a0535a10eff57b11f15b20937cd98d02c}\label{state_8c_a0535a10eff57b11f15b20937cd98d02c}} 
+\index{state.\+c@{state.\+c}!start\+\_\+list@{start\+\_\+list}}
+\index{start\+\_\+list@{start\+\_\+list}!state.\+c@{state.\+c}}
+\subsubsection{\texorpdfstring{start\+\_\+list()}{start\_list()}}
+{\footnotesize\ttfamily start\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Sets the current element to the beginning of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an err\+\_\+t custom error type 
+\end{DoxyReturn}

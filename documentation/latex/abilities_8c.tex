@@ -1,0 +1,317 @@
+\hypertarget{abilities_8c}{}\section{src/abilities.c File Reference}
+\label{abilities_8c}\index{src/abilities.\+c@{src/abilities.\+c}}
+
+
+\hyperlink{struct_ability}{Ability} method functions.  
+
+
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}deplacement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}border.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}animations.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{abilities_8c_a1d6e7f9c2aa26e648c50e1e758b62c03}{Killing\+\_\+\+Blow\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Berserker\textquotesingle{}s Killing Blow Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a1584ca9315c70586aa7db82790733990}{Fury\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Berserker\textquotesingle{}s Killing Blow Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a7791c320a551796737da194a1538c045}{Frenzied\+\_\+\+Dash\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Berserker\textquotesingle{}s Frenzied Dash Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a2b54deee293dd5d9f3f54e15e7339d0d}{Focus\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Ranger\textquotesingle{}s Focus Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_ae5b8ed3a69ad774ed4583f4b618e58a8}{Trap\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Ranger\textquotesingle{}s Trap Method. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{abilities_8c_a8e92fbca4813f9293b77bdeee555a0a4}{trap\+\_\+check} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Checks for a trap under an entity. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a10279f89dbaf47a49787e9eb4f011975}{Detain\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Goliath\textquotesingle{}s Detain Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_ac666d1b1cf94def573624fcbb1b5f34a}{Banner\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Goliath\textquotesingle{}s Banner Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a1ae575bbbf3939fcf06e0e6c2692b504}{mage\+\_\+switch} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Mage\textquotesingle{}s Skill 1 Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_ac381b3d5903961c51e3ad872d5be1d3e}{Flame\+Charge\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Fire Mage\textquotesingle{}s Flamecharge Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a289ae7319810595af7bdf074c28d94a3}{Flare\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Fire Mage\textquotesingle{}s Flare Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a35ded43b0ff7a2ca690a39b773bc22f4}{Blizzard\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Ice Mage\textquotesingle{}s Blizzard Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_af8bb200598f82a18098c289a543e031c}{Volt\+\_\+\+Switch\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Electric Mage\textquotesingle{}s Volt Switch Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a6e19f02889fa7ea79b9c7f0cc78f2463}{Lightning\+\_\+\+Chain\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Electric Mage\textquotesingle{}s Lightning Chain Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a6ad9cc6cb477c2e8f90e7b859c2c1c71}{Thrust\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Valkyrie\textquotesingle{}s Thrust Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a9355ae42a40038421d5840b5125c7fe7}{Life\+\_\+\+Transfer\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Valkyrie\textquotesingle{}s Life Transfer Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_a49dbd8b6e6534d5498cad5039163bf73}{Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Valkyrie\textquotesingle{}s Gates of Valhalla Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_ada02a573c5269bbb4b113552bc05ba43}{Last\+\_\+\+Sacrifice\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Angel\textquotesingle{}s Last Sacrifice Method. \end{DoxyCompactList}\item 
+int \hyperlink{abilities_8c_aa65da5f785023c549cb084d0289d3c58}{Gods\+\_\+\+Blessing\+\_\+fn} (\hyperlink{struct_coord}{Coord} c, \hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Angel\textquotesingle{}s Gods Blessing Method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{struct_ability}{Ability} method functions. 
+
+Contains all ability methode functions as well as small other functions relative purely to abilities \begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{abilities_8c_ac666d1b1cf94def573624fcbb1b5f34a}\label{abilities_8c_ac666d1b1cf94def573624fcbb1b5f34a}} 
+\index{abilities.\+c@{abilities.\+c}!Banner\+\_\+fn@{Banner\+\_\+fn}}
+\index{Banner\+\_\+fn@{Banner\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Banner\+\_\+fn()}{Banner\_fn()}}
+{\footnotesize\ttfamily Banner\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Goliath\textquotesingle{}s Banner Method. 
+
+Resets all allies\textquotesingle{} cooldowns \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a35ded43b0ff7a2ca690a39b773bc22f4}\label{abilities_8c_a35ded43b0ff7a2ca690a39b773bc22f4}} 
+\index{abilities.\+c@{abilities.\+c}!Blizzard\+\_\+fn@{Blizzard\+\_\+fn}}
+\index{Blizzard\+\_\+fn@{Blizzard\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Blizzard\+\_\+fn()}{Blizzard\_fn()}}
+{\footnotesize\ttfamily Blizzard\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Ice Mage\textquotesingle{}s Blizzard Method. 
+
+Changes water blocks to ice and other blocks to snow \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a10279f89dbaf47a49787e9eb4f011975}\label{abilities_8c_a10279f89dbaf47a49787e9eb4f011975}} 
+\index{abilities.\+c@{abilities.\+c}!Detain\+\_\+fn@{Detain\+\_\+fn}}
+\index{Detain\+\_\+fn@{Detain\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Detain\+\_\+fn()}{Detain\_fn()}}
+{\footnotesize\ttfamily Detain\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Goliath\textquotesingle{}s Detain Method. 
+
+Removes the detained ennemy from the map \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_ac381b3d5903961c51e3ad872d5be1d3e}\label{abilities_8c_ac381b3d5903961c51e3ad872d5be1d3e}} 
+\index{abilities.\+c@{abilities.\+c}!Flame\+Charge\+\_\+fn@{Flame\+Charge\+\_\+fn}}
+\index{Flame\+Charge\+\_\+fn@{Flame\+Charge\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Flame\+Charge\+\_\+fn()}{FlameCharge\_fn()}}
+{\footnotesize\ttfamily Flame\+Charge\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Fire Mage\textquotesingle{}s Flamecharge Method. 
+
+Calculates Flamecharge\textquotesingle{}s path and applies corresponding effects \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a289ae7319810595af7bdf074c28d94a3}\label{abilities_8c_a289ae7319810595af7bdf074c28d94a3}} 
+\index{abilities.\+c@{abilities.\+c}!Flare\+\_\+fn@{Flare\+\_\+fn}}
+\index{Flare\+\_\+fn@{Flare\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Flare\+\_\+fn()}{Flare\_fn()}}
+{\footnotesize\ttfamily Flare\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Fire Mage\textquotesingle{}s Flare Method. 
+
+Checks for and reveals traps \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a2b54deee293dd5d9f3f54e15e7339d0d}\label{abilities_8c_a2b54deee293dd5d9f3f54e15e7339d0d}} 
+\index{abilities.\+c@{abilities.\+c}!Focus\+\_\+fn@{Focus\+\_\+fn}}
+\index{Focus\+\_\+fn@{Focus\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Focus\+\_\+fn()}{Focus\_fn()}}
+{\footnotesize\ttfamily Focus\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Ranger\textquotesingle{}s Focus Method. 
+
+Uses list\+\_\+search and list\+\_\+check to find all buffs and debuffs and apply corresponding action \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a7791c320a551796737da194a1538c045}\label{abilities_8c_a7791c320a551796737da194a1538c045}} 
+\index{abilities.\+c@{abilities.\+c}!Frenzied\+\_\+\+Dash\+\_\+fn@{Frenzied\+\_\+\+Dash\+\_\+fn}}
+\index{Frenzied\+\_\+\+Dash\+\_\+fn@{Frenzied\+\_\+\+Dash\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Frenzied\+\_\+\+Dash\+\_\+fn()}{Frenzied\_Dash\_fn()}}
+{\footnotesize\ttfamily Frenzied\+\_\+\+Dash\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Berserker\textquotesingle{}s Frenzied Dash Method. 
+
+Applies the movement \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a1584ca9315c70586aa7db82790733990}\label{abilities_8c_a1584ca9315c70586aa7db82790733990}} 
+\index{abilities.\+c@{abilities.\+c}!Fury\+\_\+fn@{Fury\+\_\+fn}}
+\index{Fury\+\_\+fn@{Fury\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Fury\+\_\+fn()}{Fury\_fn()}}
+{\footnotesize\ttfamily Fury\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Berserker\textquotesingle{}s Killing Blow Method. 
+
+Uses list\+\_\+search and list\+\_\+check to find all debuffs and remove them, as well as apply the attack increase \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a49dbd8b6e6534d5498cad5039163bf73}\label{abilities_8c_a49dbd8b6e6534d5498cad5039163bf73}} 
+\index{abilities.\+c@{abilities.\+c}!Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn@{Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn}}
+\index{Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn@{Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn()}{Gates\_of\_Valhalla\_fn()}}
+{\footnotesize\ttfamily Gates\+\_\+of\+\_\+\+Valhalla\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Valkyrie\textquotesingle{}s Gates of Valhalla Method. 
+
+Summons all dead allies \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_aa65da5f785023c549cb084d0289d3c58}\label{abilities_8c_aa65da5f785023c549cb084d0289d3c58}} 
+\index{abilities.\+c@{abilities.\+c}!Gods\+\_\+\+Blessing\+\_\+fn@{Gods\+\_\+\+Blessing\+\_\+fn}}
+\index{Gods\+\_\+\+Blessing\+\_\+fn@{Gods\+\_\+\+Blessing\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Gods\+\_\+\+Blessing\+\_\+fn()}{Gods\_Blessing\_fn()}}
+{\footnotesize\ttfamily Gods\+\_\+\+Blessing\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Angel\textquotesingle{}s Gods Blessing Method. 
+
+Doubles action points \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a1d6e7f9c2aa26e648c50e1e758b62c03}\label{abilities_8c_a1d6e7f9c2aa26e648c50e1e758b62c03}} 
+\index{abilities.\+c@{abilities.\+c}!Killing\+\_\+\+Blow\+\_\+fn@{Killing\+\_\+\+Blow\+\_\+fn}}
+\index{Killing\+\_\+\+Blow\+\_\+fn@{Killing\+\_\+\+Blow\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Killing\+\_\+\+Blow\+\_\+fn()}{Killing\_Blow\_fn()}}
+{\footnotesize\ttfamily Killing\+\_\+\+Blow\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Berserker\textquotesingle{}s Killing Blow Method. 
+
+Permenantly increases caster\textquotesingle{}s attack if killing blow was lethal \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_ada02a573c5269bbb4b113552bc05ba43}\label{abilities_8c_ada02a573c5269bbb4b113552bc05ba43}} 
+\index{abilities.\+c@{abilities.\+c}!Last\+\_\+\+Sacrifice\+\_\+fn@{Last\+\_\+\+Sacrifice\+\_\+fn}}
+\index{Last\+\_\+\+Sacrifice\+\_\+fn@{Last\+\_\+\+Sacrifice\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Last\+\_\+\+Sacrifice\+\_\+fn()}{Last\_Sacrifice\_fn()}}
+{\footnotesize\ttfamily Last\+\_\+\+Sacrifice\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Angel\textquotesingle{}s Last Sacrifice Method. 
+
+Kills self then ressurects corresponding ally \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a9355ae42a40038421d5840b5125c7fe7}\label{abilities_8c_a9355ae42a40038421d5840b5125c7fe7}} 
+\index{abilities.\+c@{abilities.\+c}!Life\+\_\+\+Transfer\+\_\+fn@{Life\+\_\+\+Transfer\+\_\+fn}}
+\index{Life\+\_\+\+Transfer\+\_\+fn@{Life\+\_\+\+Transfer\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Life\+\_\+\+Transfer\+\_\+fn()}{Life\_Transfer\_fn()}}
+{\footnotesize\ttfamily Life\+\_\+\+Transfer\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Valkyrie\textquotesingle{}s Life Transfer Method. 
+
+Calculates the healing required and then applies the corresponding heal and slow \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a6e19f02889fa7ea79b9c7f0cc78f2463}\label{abilities_8c_a6e19f02889fa7ea79b9c7f0cc78f2463}} 
+\index{abilities.\+c@{abilities.\+c}!Lightning\+\_\+\+Chain\+\_\+fn@{Lightning\+\_\+\+Chain\+\_\+fn}}
+\index{Lightning\+\_\+\+Chain\+\_\+fn@{Lightning\+\_\+\+Chain\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Lightning\+\_\+\+Chain\+\_\+fn()}{Lightning\_Chain\_fn()}}
+{\footnotesize\ttfamily Lightning\+\_\+\+Chain\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Electric Mage\textquotesingle{}s Lightning Chain Method. 
+
+Finds close enough ennemies and applies the damage to them \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a1ae575bbbf3939fcf06e0e6c2692b504}\label{abilities_8c_a1ae575bbbf3939fcf06e0e6c2692b504}} 
+\index{abilities.\+c@{abilities.\+c}!mage\+\_\+switch@{mage\+\_\+switch}}
+\index{mage\+\_\+switch@{mage\+\_\+switch}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{mage\+\_\+switch()}{mage\_switch()}}
+{\footnotesize\ttfamily mage\+\_\+switch (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Mage\textquotesingle{}s Skill 1 Method. 
+
+Switches local mage\textquotesingle{}s element after casting spell 1 \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a6ad9cc6cb477c2e8f90e7b859c2c1c71}\label{abilities_8c_a6ad9cc6cb477c2e8f90e7b859c2c1c71}} 
+\index{abilities.\+c@{abilities.\+c}!Thrust\+\_\+fn@{Thrust\+\_\+fn}}
+\index{Thrust\+\_\+fn@{Thrust\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Thrust\+\_\+fn()}{Thrust\_fn()}}
+{\footnotesize\ttfamily Thrust\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Valkyrie\textquotesingle{}s Thrust Method. 
+
+Applies the damage the extended range \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_a8e92fbca4813f9293b77bdeee555a0a4}\label{abilities_8c_a8e92fbca4813f9293b77bdeee555a0a4}} 
+\index{abilities.\+c@{abilities.\+c}!trap\+\_\+check@{trap\+\_\+check}}
+\index{trap\+\_\+check@{trap\+\_\+check}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{trap\+\_\+check()}{trap\_check()}}
+{\footnotesize\ttfamily trap\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Checks for a trap under an entity. 
+
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if there is an ennemy trap under the entity, else returns F\+A\+L\+SE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_ae5b8ed3a69ad774ed4583f4b618e58a8}\label{abilities_8c_ae5b8ed3a69ad774ed4583f4b618e58a8}} 
+\index{abilities.\+c@{abilities.\+c}!Trap\+\_\+fn@{Trap\+\_\+fn}}
+\index{Trap\+\_\+fn@{Trap\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Trap\+\_\+fn()}{Trap\_fn()}}
+{\footnotesize\ttfamily Trap\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Ranger\textquotesingle{}s Trap Method. 
+
+Applies a trap to the specified tile \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{abilities_8c_af8bb200598f82a18098c289a543e031c}\label{abilities_8c_af8bb200598f82a18098c289a543e031c}} 
+\index{abilities.\+c@{abilities.\+c}!Volt\+\_\+\+Switch\+\_\+fn@{Volt\+\_\+\+Switch\+\_\+fn}}
+\index{Volt\+\_\+\+Switch\+\_\+fn@{Volt\+\_\+\+Switch\+\_\+fn}!abilities.\+c@{abilities.\+c}}
+\subsubsection{\texorpdfstring{Volt\+\_\+\+Switch\+\_\+fn()}{Volt\_Switch\_fn()}}
+{\footnotesize\ttfamily Volt\+\_\+\+Switch\+\_\+fn (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c,  }\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Electric Mage\textquotesingle{}s Volt Switch Method. 
+
+Switches the two entities \begin{DoxyReturn}{Returns}
+the number of opposing entities killed during the method (always 0) 
+\end{DoxyReturn}

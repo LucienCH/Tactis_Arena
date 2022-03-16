@@ -1,0 +1,225 @@
+\hypertarget{init__classes_8c}{}\section{src/init\+\_\+classes.c File Reference}
+\label{init__classes_8c}\index{src/init\+\_\+classes.\+c@{src/init\+\_\+classes.\+c}}
+
+
+Functions related to the intialisation and destruction of class information.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}abilities.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pointers.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a77a4d54747112bdf5d3a925cd0d47a42}{init\+\_\+aoe} ()
+\begin{DoxyCompactList}\small\item\em Initialises A\+OE attack zones used for multiple different abilities. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_aa01f5e4f9a859fca4af1c1e86c0218a6}{init\+\_\+repetitives} (\hyperlink{struct_ability}{Ability} $\ast$Move)
+\begin{DoxyCompactList}\small\item\em Initialises structures used for multiple different abilities, also intialises the Movement ability. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a49992e1799841d722ffe5d579ac9a62f}{init\+\_\+berserker} (\hyperlink{struct_class}{Class} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initialises the Berserker \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a75615ebd48d8ae05ea0d25ec20eaca2c}{init\+\_\+ranger} (\hyperlink{struct_class}{Class} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initialises the Ranger \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a7a7262a3a8ac46edaf7c1a59f2403a9e}{init\+\_\+goliath} (\hyperlink{struct_class}{Class} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initialises the Goliath \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_ae4ae3035069a88b0e2a06a847e950499}{init\+\_\+mage} (\hyperlink{struct_class}{Class} $\ast$c, \hyperlink{struct_ability}{Ability} movesets\mbox{[}3\mbox{]}\mbox{[}\hyperlink{substruct_8h_ab0790753a89cc6be149f3c435e0c0c94}{N\+U\+M\+\_\+\+AB}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initialises the Mage \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a9fbe8f86d45394c76bcdcca873541c8e}{init\+\_\+valkyrie} (\hyperlink{struct_class}{Class} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initialises the Valkyrie \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_aae3f0a527c350a7e9852bd3fb5ba2e19}{init\+\_\+angel} (\hyperlink{struct_class}{Class} $\ast$c, \hyperlink{struct_ability}{Ability} $\ast$pass)
+\begin{DoxyCompactList}\small\item\em Initialises the Angel \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_aa3af06eebf1cb307b8669c500434616b}{ability\+\_\+destroy} (\hyperlink{struct_ability}{Ability} $\ast$a)
+\begin{DoxyCompactList}\small\item\em Destroys a given \hyperlink{struct_ability}{Ability} structure. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{init__classes_8c_a8c2a22fa81fbfd1d4d0cd9911c1256fa}{class\+\_\+destroy} (\hyperlink{struct_class}{Class} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Destroys a given \hyperlink{struct_class}{Class}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related to the intialisation and destruction of class information. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{init__classes_8c_aa3af06eebf1cb307b8669c500434616b}\label{init__classes_8c_aa3af06eebf1cb307b8669c500434616b}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!ability\+\_\+destroy@{ability\+\_\+destroy}}
+\index{ability\+\_\+destroy@{ability\+\_\+destroy}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{ability\+\_\+destroy()}{ability\_destroy()}}
+{\footnotesize\ttfamily ability\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability} $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+Destroys a given \hyperlink{struct_ability}{Ability} structure. 
+
+Frees all dynamically allocated pointers if they are not N\+U\+LL, and sets them to N\+U\+LL to avoid any double frees, this is why the \hyperlink{struct_ability}{Ability} function has double pointers to \hyperlink{struct_damage}{Damage}, \hyperlink{struct_coord}{Coord} and \hyperlink{struct_modifier}{Modifier} so that we can limit ram usage by using the same structures for redundant information 
+\begin{DoxyParams}{Parameters}
+{\em a} & The ability to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a8c2a22fa81fbfd1d4d0cd9911c1256fa}\label{init__classes_8c_a8c2a22fa81fbfd1d4d0cd9911c1256fa}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!class\+\_\+destroy@{class\+\_\+destroy}}
+\index{class\+\_\+destroy@{class\+\_\+destroy}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{class\+\_\+destroy()}{class\_destroy()}}
+{\footnotesize\ttfamily class\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Destroys a given \hyperlink{struct_class}{Class}. 
+
+A loop going through all of a \hyperlink{struct_class}{Class}\textquotesingle{} abilties and calling ability\+\_\+destroy for each of them. Because of the Mage\textquotesingle{}s peculiar moveset, this function does not destroy the mage, his abilities are destroyed by calling ability\+\_\+destroy in a double loop navigating mage\+\_\+ab (done in destoy\+\_\+game) 
+\begin{DoxyParams}{Parameters}
+{\em c} & The class to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_aae3f0a527c350a7e9852bd3fb5ba2e19}\label{init__classes_8c_aae3f0a527c350a7e9852bd3fb5ba2e19}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+angel@{init\+\_\+angel}}
+\index{init\+\_\+angel@{init\+\_\+angel}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+angel()}{init\_angel()}}
+{\footnotesize\ttfamily init\+\_\+angel (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c,  }\item[{\hyperlink{struct_ability}{Ability} $\ast$}]{pass }\end{DoxyParamCaption})}
+
+
+
+Initialises the Angel \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Angel\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+{\em pass} & A pointer to an \hyperlink{struct_ability}{Ability} structure to store Aura, Angel\textquotesingle{}s passive ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a77a4d54747112bdf5d3a925cd0d47a42}\label{init__classes_8c_a77a4d54747112bdf5d3a925cd0d47a42}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+aoe@{init\+\_\+aoe}}
+\index{init\+\_\+aoe@{init\+\_\+aoe}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+aoe()}{init\_aoe()}}
+{\footnotesize\ttfamily init\+\_\+aoe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialises A\+OE attack zones used for multiple different abilities. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR if initialised coordinates don\textquotesingle{}t match the predicted number, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a49992e1799841d722ffe5d579ac9a62f}\label{init__classes_8c_a49992e1799841d722ffe5d579ac9a62f}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+berserker@{init\+\_\+berserker}}
+\index{init\+\_\+berserker@{init\+\_\+berserker}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+berserker()}{init\_berserker()}}
+{\footnotesize\ttfamily init\+\_\+berserker (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Initialises the Berserker \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Berserker\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a7a7262a3a8ac46edaf7c1a59f2403a9e}\label{init__classes_8c_a7a7262a3a8ac46edaf7c1a59f2403a9e}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+goliath@{init\+\_\+goliath}}
+\index{init\+\_\+goliath@{init\+\_\+goliath}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+goliath()}{init\_goliath()}}
+{\footnotesize\ttfamily init\+\_\+goliath (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Initialises the Goliath \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Goliath\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_ae4ae3035069a88b0e2a06a847e950499}\label{init__classes_8c_ae4ae3035069a88b0e2a06a847e950499}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+mage@{init\+\_\+mage}}
+\index{init\+\_\+mage@{init\+\_\+mage}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+mage()}{init\_mage()}}
+{\footnotesize\ttfamily init\+\_\+mage (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c,  }\item[{\hyperlink{struct_ability}{Ability}}]{movesets\mbox{[}3\mbox{]}\mbox{[}\+N\+U\+M\+\_\+\+A\+B\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Initialises the Mage \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Mage\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+{\em movesets} & A 2 dimension array to store the Mage\textquotesingle{}s three different movesets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a75615ebd48d8ae05ea0d25ec20eaca2c}\label{init__classes_8c_a75615ebd48d8ae05ea0d25ec20eaca2c}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+ranger@{init\+\_\+ranger}}
+\index{init\+\_\+ranger@{init\+\_\+ranger}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+ranger()}{init\_ranger()}}
+{\footnotesize\ttfamily init\+\_\+ranger (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Initialises the Ranger \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Ranger\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_aa01f5e4f9a859fca4af1c1e86c0218a6}\label{init__classes_8c_aa01f5e4f9a859fca4af1c1e86c0218a6}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+repetitives@{init\+\_\+repetitives}}
+\index{init\+\_\+repetitives@{init\+\_\+repetitives}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+repetitives()}{init\_repetitives()}}
+{\footnotesize\ttfamily init\+\_\+repetitives (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability} $\ast$}]{Move }\end{DoxyParamCaption})}
+
+
+
+Initialises structures used for multiple different abilities, also intialises the Movement ability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Move} & A pointer to an ability to store the created Movement ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+what init\+\_\+aoe returns \+: err\+\_\+t I\+N\+I\+T\+\_\+\+C\+O\+O\+R\+D\+\_\+\+E\+RR if initialised coordinates don\textquotesingle{}t match the predicted number, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{init__classes_8c_a9fbe8f86d45394c76bcdcca873541c8e}\label{init__classes_8c_a9fbe8f86d45394c76bcdcca873541c8e}} 
+\index{init\+\_\+classes.\+c@{init\+\_\+classes.\+c}!init\+\_\+valkyrie@{init\+\_\+valkyrie}}
+\index{init\+\_\+valkyrie@{init\+\_\+valkyrie}!init\+\_\+classes.\+c@{init\+\_\+classes.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+valkyrie()}{init\_valkyrie()}}
+{\footnotesize\ttfamily init\+\_\+valkyrie (\begin{DoxyParamCaption}\item[{\hyperlink{struct_class}{Class} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Initialises the Valkyrie \hyperlink{struct_class}{Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to a \hyperlink{struct_class}{Class} structure to store the Valkyrie\textquotesingle{}s \hyperlink{struct_class}{Class} information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}

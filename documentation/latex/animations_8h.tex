@@ -1,0 +1,179 @@
+\hypertarget{animations_8h}{}\section{src/animations.h File Reference}
+\label{animations_8h}\index{src/animations.\+h@{src/animations.\+h}}
+
+
+Animations method functions.  
+
+
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{animations_8h_af894afaa7b4eb2f0d7d9b3a4fc3094de}{add\+Anim\+Texture} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id, char $\ast$name, int start\+\_\+index, int end\+\_\+index, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} aoe, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} on\+\_\+ground, int speed)
+\begin{DoxyCompactList}\small\item\em Add the different textures to the loaded animations textures table to a given ability\+Id. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{animations_8h_a3cab5d9954c4b5f6c3220f283de3950b}{get\+Anim\+Texture} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id, int index, \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} big)
+\begin{DoxyCompactList}\small\item\em Get the texture of the given ability at a specific index. \end{DoxyCompactList}\item 
+int \hyperlink{animations_8h_ac9b7117d241cea6263cde033b0826227}{get\+Anim\+Steps} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Return the number of sprites of an animation. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{animations_8h_af31b3c4f9c6ec92cc2353aefee11f251}{load\+Animation\+Textures} ()
+\begin{DoxyCompactList}\small\item\em Load all the animations textures. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{animations_8h_aaf489cd7ba3e39aae2426406356061bd}{play\+\_\+ability\+\_\+animation} (\hyperlink{struct_ability}{Ability} ab, \hyperlink{struct_coord}{Coord} pos)
+\begin{DoxyCompactList}\small\item\em Play the animation of the given ability. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{animations_8h_a350ca245c6b9774ba60aca6f2eb2f854}{is\+Loaded} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Check if the animation of a given ability has correctly been loaded. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{animations_8h_a6dd0811ac58ed79cf20bdf685546fccb}{is\+On\+Ground} (\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} id)
+\begin{DoxyCompactList}\small\item\em Check if the animation should be displayed on the ground. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Animations method functions. 
+
+\begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{animations_8h_af894afaa7b4eb2f0d7d9b3a4fc3094de}\label{animations_8h_af894afaa7b4eb2f0d7d9b3a4fc3094de}} 
+\index{animations.\+h@{animations.\+h}!add\+Anim\+Texture@{add\+Anim\+Texture}}
+\index{add\+Anim\+Texture@{add\+Anim\+Texture}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{add\+Anim\+Texture()}{addAnimTexture()}}
+{\footnotesize\ttfamily add\+Anim\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id,  }\item[{char $\ast$}]{name,  }\item[{int}]{start\+\_\+index,  }\item[{int}]{end\+\_\+index,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{aoe,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{on\+\_\+ground,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+Add the different textures to the loaded animations textures table to a given ability\+Id. 
+
+Load the textures in a \hyperlink{struct_anim_texture}{Anim\+Texture} structure put in the anim\+Textures table 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+{\em name} & Specific path to the images to load ($<$class$>$/$<$anim\+\_\+name$>$) \\
+\hline
+{\em start\+\_\+index} & Index of the first texture to load \\
+\hline
+{\em end\+\_\+index} & Index of the last texture to load \\
+\hline
+{\em aoe} & Specifies if the animation should be displayed on each tile of aoe abilities \\
+\hline
+{\em on\+\_\+ground} & Specifies if the animation should be displayed on the ground or on the head of the characters \\
+\hline
+{\em speed} & Time in ms between each sprite of the animation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an error code (err\+\_\+t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_ac9b7117d241cea6263cde033b0826227}\label{animations_8h_ac9b7117d241cea6263cde033b0826227}} 
+\index{animations.\+h@{animations.\+h}!get\+Anim\+Steps@{get\+Anim\+Steps}}
+\index{get\+Anim\+Steps@{get\+Anim\+Steps}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{get\+Anim\+Steps()}{getAnimSteps()}}
+{\footnotesize\ttfamily int get\+Anim\+Steps (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Return the number of sprites of an animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of sprites of the animation (int) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_a3cab5d9954c4b5f6c3220f283de3950b}\label{animations_8h_a3cab5d9954c4b5f6c3220f283de3950b}} 
+\index{animations.\+h@{animations.\+h}!get\+Anim\+Texture@{get\+Anim\+Texture}}
+\index{get\+Anim\+Texture@{get\+Anim\+Texture}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{get\+Anim\+Texture()}{getAnimTexture()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture$\ast$ get\+Anim\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id,  }\item[{int}]{index,  }\item[{\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}]{big }\end{DoxyParamCaption})}
+
+
+
+Get the texture of the given ability at a specific index. 
+
+Looks at the anim\+Textures table to return the wanted texture 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+{\em index} & Index of the sprite of the animation \\
+\hline
+{\em big} & Bool to choose if it has to return the 64x64 texture or the 128x128 (T\+R\+UE for 128x128) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the texture (S\+Dl\+\_\+\+Texture $\ast$) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_a350ca245c6b9774ba60aca6f2eb2f854}\label{animations_8h_a350ca245c6b9774ba60aca6f2eb2f854}} 
+\index{animations.\+h@{animations.\+h}!is\+Loaded@{is\+Loaded}}
+\index{is\+Loaded@{is\+Loaded}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{is\+Loaded()}{isLoaded()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} is\+Loaded (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if the animation of a given ability has correctly been loaded. 
+
+Looks for the animation in the anim\+Textures table 
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean (T\+R\+UE if the animation is loaded) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_a6dd0811ac58ed79cf20bdf685546fccb}\label{animations_8h_a6dd0811ac58ed79cf20bdf685546fccb}} 
+\index{animations.\+h@{animations.\+h}!is\+On\+Ground@{is\+On\+Ground}}
+\index{is\+On\+Ground@{is\+On\+Ground}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{is\+On\+Ground()}{isOnGround()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} is\+On\+Ground (\begin{DoxyParamCaption}\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Check if the animation should be displayed on the ground. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the ability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean (T\+R\+UE if the animation should be displayed on the ground) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_af31b3c4f9c6ec92cc2353aefee11f251}\label{animations_8h_af31b3c4f9c6ec92cc2353aefee11f251}} 
+\index{animations.\+h@{animations.\+h}!load\+Animation\+Textures@{load\+Animation\+Textures}}
+\index{load\+Animation\+Textures@{load\+Animation\+Textures}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{load\+Animation\+Textures()}{loadAnimationTextures()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} load\+Animation\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load all the animations textures. 
+
+Uses add\+Anim\+Texture method for all the game\textquotesingle{}s abilities \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{animations_8h_aaf489cd7ba3e39aae2426406356061bd}\label{animations_8h_aaf489cd7ba3e39aae2426406356061bd}} 
+\index{animations.\+h@{animations.\+h}!play\+\_\+ability\+\_\+animation@{play\+\_\+ability\+\_\+animation}}
+\index{play\+\_\+ability\+\_\+animation@{play\+\_\+ability\+\_\+animation}!animations.\+h@{animations.\+h}}
+\subsubsection{\texorpdfstring{play\+\_\+ability\+\_\+animation()}{play\_ability\_animation()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} play\+\_\+ability\+\_\+animation (\begin{DoxyParamCaption}\item[{\hyperlink{struct_ability}{Ability}}]{ab,  }\item[{\hyperlink{struct_coord}{Coord}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Play the animation of the given ability. 
+
+Display each step of an animation 
+\begin{DoxyParams}{Parameters}
+{\em ab} & \hyperlink{struct_ability}{Ability} to display its animation \\
+\hline
+{\em pos} & Coordinates on the map the animation will be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an error code (err\+\_\+t) 
+\end{DoxyReturn}

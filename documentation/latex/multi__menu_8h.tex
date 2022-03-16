@@ -1,0 +1,132 @@
+\hypertarget{multi__menu_8h}{}\section{src/multi\+\_\+menu.h File Reference}
+\label{multi__menu_8h}\index{src/multi\+\_\+menu.\+h@{src/multi\+\_\+menu.\+h}}
+
+
+Menu for multiplayer mod.  
+
+
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{multi__menu_8h_a9da89d9ae8364971306c7c50477ac6e3}{display\+Menu\+Multi} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Create the main window for multiplayer mod. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8h_ae82e9f31b7efa314ce112c7d4bdc4ea4}{disp\+Join\+Menu} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y)
+\begin{DoxyCompactList}\small\item\em Adjust the window for the user that pressed Join button to join a hosted game. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8h_aed378dae7059176bd5d80a225931042a}{disp\+Host\+Menu} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y, int index)
+\begin{DoxyCompactList}\small\item\em Adjust the window for the user that pressed Host button to host the game. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8h_a2adf094cb36cb999f16a1c300a430148}{free\+Multi\+Menu\+Textures} ()
+\begin{DoxyCompactList}\small\item\em Function to free all multiplayer menu textures. \end{DoxyCompactList}\item 
+void \hyperlink{multi__menu_8h_a0f98a8322fbefdd3dd2c8e710840396a}{load\+Multi\+Menu\+Textures} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Function to load all multiplayer menu textures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Menu for multiplayer mod. 
+
+\begin{DoxyAuthor}{Author}
+Lucien C\+H\+A\+U\+V\+IN 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{multi__menu_8h_aed378dae7059176bd5d80a225931042a}\label{multi__menu_8h_aed378dae7059176bd5d80a225931042a}} 
+\index{multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}!disp\+Host\+Menu@{disp\+Host\+Menu}}
+\index{disp\+Host\+Menu@{disp\+Host\+Menu}!multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}}
+\subsubsection{\texorpdfstring{disp\+Host\+Menu()}{dispHostMenu()}}
+{\footnotesize\ttfamily void disp\+Host\+Menu (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Adjust the window for the user that pressed Host button to host the game. 
+
+Display all the necessary tools to create the game server 
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer to render the window \\
+\hline
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+{\em index} & an index of the list of map that can be selected by the host \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8h_ae82e9f31b7efa314ce112c7d4bdc4ea4}\label{multi__menu_8h_ae82e9f31b7efa314ce112c7d4bdc4ea4}} 
+\index{multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}!disp\+Join\+Menu@{disp\+Join\+Menu}}
+\index{disp\+Join\+Menu@{disp\+Join\+Menu}!multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}}
+\subsubsection{\texorpdfstring{disp\+Join\+Menu()}{dispJoinMenu()}}
+{\footnotesize\ttfamily void disp\+Join\+Menu (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Adjust the window for the user that pressed Join button to join a hosted game. 
+
+Display all the necessary tools to connect the user to the server 
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer to render the window \\
+\hline
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8h_a9da89d9ae8364971306c7c50477ac6e3}\label{multi__menu_8h_a9da89d9ae8364971306c7c50477ac6e3}} 
+\index{multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}!display\+Menu\+Multi@{display\+Menu\+Multi}}
+\index{display\+Menu\+Multi@{display\+Menu\+Multi}!multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}}
+\subsubsection{\texorpdfstring{display\+Menu\+Multi()}{displayMenuMulti()}}
+{\footnotesize\ttfamily int display\+Menu\+Multi (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Create the main window for multiplayer mod. 
+
+Create a window and adjust it between client and server 
+\begin{DoxyParams}{Parameters}
+{\em x} & Size of the window \\
+\hline
+{\em y} & Size of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the client or server have started the game or 0 if a player press quit button 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8h_a2adf094cb36cb999f16a1c300a430148}\label{multi__menu_8h_a2adf094cb36cb999f16a1c300a430148}} 
+\index{multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}!free\+Multi\+Menu\+Textures@{free\+Multi\+Menu\+Textures}}
+\index{free\+Multi\+Menu\+Textures@{free\+Multi\+Menu\+Textures}!multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}}
+\subsubsection{\texorpdfstring{free\+Multi\+Menu\+Textures()}{freeMultiMenuTextures()}}
+{\footnotesize\ttfamily void free\+Multi\+Menu\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to free all multiplayer menu textures. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{multi__menu_8h_a0f98a8322fbefdd3dd2c8e710840396a}\label{multi__menu_8h_a0f98a8322fbefdd3dd2c8e710840396a}} 
+\index{multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}!load\+Multi\+Menu\+Textures@{load\+Multi\+Menu\+Textures}}
+\index{load\+Multi\+Menu\+Textures@{load\+Multi\+Menu\+Textures}!multi\+\_\+menu.\+h@{multi\+\_\+menu.\+h}}
+\subsubsection{\texorpdfstring{load\+Multi\+Menu\+Textures()}{loadMultiMenuTextures()}}
+{\footnotesize\ttfamily void load\+Multi\+Menu\+Textures (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Function to load all multiplayer menu textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & S\+DL renderer where to load all textures \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}

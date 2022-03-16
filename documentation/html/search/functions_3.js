@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['death_5fcheck',['death_check',['../gameplay_8c.html#a276f0f4dfb870b3ac01a5191fb8691ad',1,'death_check(Entity *e):&#160;gameplay.c'],['../gameplay_8h.html#a0ea78254c604e02c83cce53019c6598b',1,'death_check(Entity *e):&#160;gameplay.c']]],
+  ['defiler',['defiler',['../file__coord_8c.html#a3afa1eeb5f127f8d7e528855d0e72973',1,'defiler(File *f):&#160;file_coord.c'],['../file__coord_8h.html#a6e4677315add576dd9ce0b92a2584201',1,'defiler(File *file):&#160;file_coord.c']]],
+  ['destroy_5fgame',['destroy_game',['../init_8c.html#a25b7ba3198bcf88d6eae7a52912a38d2',1,'destroy_game():&#160;init.c'],['../init_8h.html#a097ab1e90e3d8bf414551411734b969a',1,'destroy_game():&#160;init.c']]],
+  ['detain_5ffn',['Detain_fn',['../abilities_8c.html#a10279f89dbaf47a49787e9eb4f011975',1,'Detain_fn(Coord c, Entity *e, StateList *list):&#160;abilities.c'],['../abilities_8h.html#a652c3a017d90b25f76582c809b2ced28',1,'Detain_fn(Coord c, Entity *e, StateList *list):&#160;abilities.c']]],
+  ['detruire_5ffile',['detruire_file',['../file__coord_8c.html#a1131a6c90cc0924bae3820de28df9e61',1,'detruire_file(File *f):&#160;file_coord.c'],['../file__coord_8h.html#a83baee94b9e3ec9d82c91c817596ce14',1,'detruire_file(File *file):&#160;file_coord.c']]],
+  ['disphostmenu',['dispHostMenu',['../multi__menu_8c.html#aaf68af7687ebfe9f7874a5a5e7c4cd24',1,'dispHostMenu(SDL_Renderer *renderer, int x, int y, int index):&#160;multi_menu.c'],['../multi__menu_8h.html#aed378dae7059176bd5d80a225931042a',1,'dispHostMenu(SDL_Renderer *renderer, int x, int y, int index):&#160;multi_menu.c']]],
+  ['dispjoinmenu',['dispJoinMenu',['../multi__menu_8c.html#ab1d227f9e3aef000678d3d288fb0b9dd',1,'dispJoinMenu(SDL_Renderer *renderer, int x, int y):&#160;multi_menu.c'],['../multi__menu_8h.html#ae82e9f31b7efa314ce112c7d4bdc4ea4',1,'dispJoinMenu(SDL_Renderer *renderer, int x, int y):&#160;multi_menu.c']]],
+  ['displaymapmulti',['displayMapMulti',['../serv_fcnt_8c.html#a7ae773c1e5a20159426d15e27bd48c9b',1,'displayMapMulti(MultiTile *mapMulti):&#160;servFcnt.c'],['../serv_fcnt_8h.html#a2889aef081e5c55b3ddb50d52329dd52',1,'displayMapMulti(MultiTile *mapMulti):&#160;servFcnt.c']]],
+  ['displaymenumulti',['displayMenuMulti',['../multi__menu_8c.html#afe95e4c35ad7e7057db02c7965a94096',1,'displayMenuMulti(int x, int y):&#160;multi_menu.c'],['../multi__menu_8h.html#a9da89d9ae8364971306c7c50477ac6e3',1,'displayMenuMulti(int x, int y):&#160;multi_menu.c']]]
+];

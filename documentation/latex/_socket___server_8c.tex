@@ -1,0 +1,90 @@
+\hypertarget{_socket___server_8c}{}\section{src/\+Socket\+\_\+\+Server.c File Reference}
+\label{_socket___server_8c}\index{src/\+Socket\+\_\+\+Server.\+c@{src/\+Socket\+\_\+\+Server.\+c}}
+
+
+Server programm for Tactics Arena.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map\+\_\+editor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_a26769957ec1a2beaf223f33b66ee64ab}\label{_socket___server_8c_a26769957ec1a2beaf223f33b66ee64ab}} 
+\#define {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET}~-\/1
+\item 
+\mbox{\Hypertarget{_socket___server_8c_a633b0396ff93d336a088412a190a5072}\label{_socket___server_8c_a633b0396ff93d336a088412a190a5072}} 
+\#define {\bfseries S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}~-\/1
+\item 
+\mbox{\Hypertarget{_socket___server_8c_ab6b45251e218af8f09c5d627b5262398}\label{_socket___server_8c_ab6b45251e218af8f09c5d627b5262398}} 
+\#define {\bfseries closesocket}(param)~close(param)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_a8dc8083897335125630f1af5dafd5831}\label{_socket___server_8c_a8dc8083897335125630f1af5dafd5831}} 
+typedef int {\bfseries S\+O\+C\+K\+ET}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_a29046dc0232f0e5c70adbc25090d77b8}\label{_socket___server_8c_a29046dc0232f0e5c70adbc25090d77b8}} 
+typedef struct sockaddr\+\_\+in {\bfseries S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_ae334b73cedf7204187dce3f817576009}\label{_socket___server_8c_ae334b73cedf7204187dce3f817576009}} 
+typedef struct sockaddr {\bfseries S\+O\+C\+K\+A\+D\+DR}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_a9a30bde4cca88b8ad9f22f147e489d48}\label{_socket___server_8c_a9a30bde4cca88b8ad9f22f147e489d48}} 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} {\bfseries stop\+Tcp\+Socket\+Serv} (int socket\+Connected)
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{_socket___server_8c_a6b15b495b991cef90460091cff47c0e9}{start\+T\+C\+P\+Socket\+Serv} ()
+\begin{DoxyCompactList}\small\item\em Function to create the server and wait incoming connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_socket___server_8c_ae564d9eedfab6ede5a0f86398b9b095b}\label{_socket___server_8c_ae564d9eedfab6ede5a0f86398b9b095b}} 
+unsigned int {\bfseries log\+Flag} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Server programm for Tactics Arena. 
+
+Contains T\+CP server function \begin{DoxyAuthor}{Author}
+Lucien Chauvin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/03/2020 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_socket___server_8c_a6b15b495b991cef90460091cff47c0e9}\label{_socket___server_8c_a6b15b495b991cef90460091cff47c0e9}} 
+\index{Socket\+\_\+\+Server.\+c@{Socket\+\_\+\+Server.\+c}!start\+T\+C\+P\+Socket\+Serv@{start\+T\+C\+P\+Socket\+Serv}}
+\index{start\+T\+C\+P\+Socket\+Serv@{start\+T\+C\+P\+Socket\+Serv}!Socket\+\_\+\+Server.\+c@{Socket\+\_\+\+Server.\+c}}
+\subsubsection{\texorpdfstring{start\+T\+C\+P\+Socket\+Serv()}{startTCPSocketServ()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} start\+T\+C\+P\+Socket\+Serv (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to create the server and wait incoming connection. 
+
+\begin{DoxyReturn}{Returns}
+err\+\_\+t S\+E\+R\+V\+\_\+\+OK or S\+E\+R\+V\+\_\+\+E\+R\+R\+OR 
+\end{DoxyReturn}

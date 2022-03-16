@@ -1,0 +1,130 @@
+\hypertarget{game__window_8c}{}\section{src/game\+\_\+window.c File Reference}
+\label{game__window_8c}\index{src/game\+\_\+window.\+c@{src/game\+\_\+window.\+c}}
+
+
+Game window method functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+mixer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+S\+D\+L2/include/\+S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}characters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}map\+\_\+editor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}textures.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}turn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}print.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serv\+Fcnt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}animations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}end\+\_\+window.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game__window_8c_a3209b52ff5c82f114f75f63429c6799e}\label{game__window_8c_a3209b52ff5c82f114f75f63429c6799e}} 
+\#define {\bfseries \+\_\+\+N\+B\+\_\+\+M\+A\+X\+\_\+\+M\+A\+P\+S\+\_\+}~50
+\item 
+\mbox{\Hypertarget{game__window_8c_af255265266c7bffd8e2b3526038636ea}\label{game__window_8c_af255265266c7bffd8e2b3526038636ea}} 
+\#define {\bfseries \+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\item 
+\mbox{\Hypertarget{game__window_8c_aa319b11913fc00b38adf54ee0b56ae09}\label{game__window_8c_aa319b11913fc00b38adf54ee0b56ae09}} 
+\#define {\bfseries \+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}~30
+\item 
+\mbox{\Hypertarget{game__window_8c_a0d0e161c364826ec11c10a43a28fa9ce}\label{game__window_8c_a0d0e161c364826ec11c10a43a28fa9ce}} 
+\#define {\bfseries \+\_\+\+F\+P\+S\+\_\+}~60
+\item 
+\mbox{\Hypertarget{game__window_8c_a2ca89dd5fd60b1db858d1da0c5ddfa71}\label{game__window_8c_a2ca89dd5fd60b1db858d1da0c5ddfa71}} 
+\#define {\bfseries \+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G\+\_\+\+T\+I\+M\+E\+\_\+}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{game__window_8c_aab79f55a8b6c17e7f706506c32af0fe0}{create\+Game\+Window} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Create the window where the game is played. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{game__window_8c_a966da7a60c4ea3ba301e26ccc5efe452}\label{game__window_8c_a966da7a60c4ea3ba301e26ccc5efe452}} 
+S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries renderer} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{game__window_8c_a41da1d9c960c28bf3d7e2ec2138425c8}\label{game__window_8c_a41da1d9c960c28bf3d7e2ec2138425c8}} 
+S\+D\+L\+\_\+\+Window $\ast$ {\bfseries p\+Window} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{game__window_8c_ab300e36986f042959d7a48ebd08044ed}\label{game__window_8c_ab300e36986f042959d7a48ebd08044ed}} 
+int {\bfseries X\+P\+OS} = 50
+\item 
+\mbox{\Hypertarget{game__window_8c_a5af40e9989dc2eaf91ca1f4ef72f6270}\label{game__window_8c_a5af40e9989dc2eaf91ca1f4ef72f6270}} 
+int {\bfseries Y\+P\+OS} = 50
+\item 
+\mbox{\Hypertarget{game__window_8c_a56413a1e96b00003c7ae2ec378f51848}\label{game__window_8c_a56413a1e96b00003c7ae2ec378f51848}} 
+int {\bfseries selected\+\_\+ability} = -\/1
+\item 
+\mbox{\Hypertarget{game__window_8c_a888f2135e73aa84232652f4f2685f6da}\label{game__window_8c_a888f2135e73aa84232652f4f2685f6da}} 
+int {\bfseries hover\+\_\+ability} = -\/1
+\item 
+\mbox{\Hypertarget{game__window_8c_a74f25efd55e23ada6a3960295c18a476}\label{game__window_8c_a74f25efd55e23ada6a3960295c18a476}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} {\bfseries hover\+\_\+next\+\_\+turn} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}
+\item 
+\mbox{\Hypertarget{game__window_8c_aa1e66b74ca08399d9edf6f864dd71eec}\label{game__window_8c_aa1e66b74ca08399d9edf6f864dd71eec}} 
+int {\bfseries hover\+\_\+stats} = 0
+\item 
+\mbox{\Hypertarget{game__window_8c_ad74cb659e82d3067abedbe27c8fb01e7}\label{game__window_8c_ad74cb659e82d3067abedbe27c8fb01e7}} 
+int {\bfseries hover\+\_\+passive\+\_\+help} = 0
+\item 
+\mbox{\Hypertarget{game__window_8c_a72a66dcea9782a6e435f99a7c990562e}\label{game__window_8c_a72a66dcea9782a6e435f99a7c990562e}} 
+int {\bfseries end\+\_\+of\+\_\+turn} = 0
+\item 
+\mbox{\Hypertarget{game__window_8c_a0689f783148866226e7cf8192588022f}\label{game__window_8c_a0689f783148866226e7cf8192588022f}} 
+char {\bfseries on\+Loading\+Screen} \mbox{[}\+\_\+\+N\+B\+\_\+\+C\+L\+A\+S\+S\+E\+S\+\_\+\mbox{]}\mbox{[}\hyperlink{common_8h_adea6e0778ed738e315a134cb865c141f}{S\+T\+R\+\_\+\+S\+H\+O\+RT}\mbox{]} = \{\char`\"{}Goliath\char`\"{}, \char`\"{}\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8a2999922e962f36b297694bccfb421e}{Valkyrie}\char`\"{}, \char`\"{}\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a01d66a1869b66b942dca8ceee8a4e07b}{Angel}\char`\"{}, \char`\"{}\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a8143b141c160c315e21fff83ed2e2341}{Ranger}\char`\"{}, \char`\"{}\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07ade6c51f323040e24a55b72a64f389e86}{Mage}\char`\"{}, \char`\"{}\hyperlink{substruct_8h_ac838c216df52582085ca9e1eb6d19d07a64fa9b5631109f0253d95adde1ba1ac9}{Berserker}\char`\"{}\}
+\item 
+\mbox{\Hypertarget{game__window_8c_a1d0c350d850768eea3e553036eca4be8}\label{game__window_8c_a1d0c350d850768eea3e553036eca4be8}} 
+\hyperlink{substruct_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} {\bfseries cam\+Move} = -\/1
+\item 
+\mbox{\Hypertarget{game__window_8c_ac426ef569ef79647b0ea2c683d749b8e}\label{game__window_8c_ac426ef569ef79647b0ea2c683d749b8e}} 
+int $\ast$ {\bfseries exit\+Thread}
+\item 
+\mbox{\Hypertarget{game__window_8c_a1bfcc49f38a6783dea3c86ae84f787ab}\label{game__window_8c_a1bfcc49f38a6783dea3c86ae84f787ab}} 
+int {\bfseries x\+Win\+Size}
+\item 
+\mbox{\Hypertarget{game__window_8c_a6b4e1cd48feb8880946daa9d0584ac81}\label{game__window_8c_a6b4e1cd48feb8880946daa9d0584ac81}} 
+int {\bfseries y\+Win\+Size}
+\item 
+\mbox{\Hypertarget{game__window_8c_aa4b75cc92456fd2921ac0f0fd736453b}\label{game__window_8c_aa4b75cc92456fd2921ac0f0fd736453b}} 
+\hyperlink{struct_coord}{Coord} {\bfseries mouse\+\_\+position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Game window method functions. 
+
+Contains all the events of the game window \begin{DoxyAuthor}{Author}
+Thibault D\+O\+U\+C\+ET 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game__window_8c_aab79f55a8b6c17e7f706506c32af0fe0}\label{game__window_8c_aab79f55a8b6c17e7f706506c32af0fe0}} 
+\index{game\+\_\+window.\+c@{game\+\_\+window.\+c}!create\+Game\+Window@{create\+Game\+Window}}
+\index{create\+Game\+Window@{create\+Game\+Window}!game\+\_\+window.\+c@{game\+\_\+window.\+c}}
+\subsubsection{\texorpdfstring{create\+Game\+Window()}{createGameWindow()}}
+{\footnotesize\ttfamily create\+Game\+Window (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Create the window where the game is played. 
+
+This function manages the different events of the window \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}

@@ -1,0 +1,143 @@
+\hypertarget{file__coord_8h}{}\section{src/file\+\_\+coord.h File Reference}
+\label{file__coord_8h}\index{src/file\+\_\+coord.\+h@{src/file\+\_\+coord.\+h}}
+
+
+Countains all fonctions needed to manage a file.  
+
+
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_element}{Element}
+\begin{DoxyCompactList}\small\item\em Structure representing an element of a file, used to navigate between elements. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_file}{File}
+\begin{DoxyCompactList}\small\item\em Structure representing the first element of a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{file__coord_8h_a4d9e4171e0ee83fe777219f894992340}\label{file__coord_8h_a4d9e4171e0ee83fe777219f894992340}} 
+typedef struct \hyperlink{struct_element}{Element} {\bfseries Element}
+\item 
+\mbox{\Hypertarget{file__coord_8h_a35addb8715fe28f18f6cf3b6a7f7a1b4}\label{file__coord_8h_a35addb8715fe28f18f6cf3b6a7f7a1b4}} 
+typedef struct \hyperlink{struct_file}{File} {\bfseries File}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_file}{File} $\ast$ \hyperlink{file__coord_8h_a362060a8e8cccb3fac7171d626170bb9}{initialiser} ()
+\begin{DoxyCompactList}\small\item\em Initializes the empty file. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{file__coord_8h_a3bd9d73d95f791abf98807f0055c9d12}{file\+\_\+vide} (\hyperlink{struct_file}{File} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Deliver true if the file is empty, false otherwise. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8h_af67096f4cca24cb7b2452c078b6ef12d}{enfiler} (\hyperlink{struct_file}{File} $\ast$file, \hyperlink{struct_coord}{Coord} nv\+Nombre)
+\begin{DoxyCompactList}\small\item\em Adds the queue value. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{file__coord_8h_a6e4677315add576dd9ce0b92a2584201}{defiler} (\hyperlink{struct_file}{File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Removes the file head value. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8h_a1dfc1c512be2a4d3c63748df3228b965}{afficher\+File} (\hyperlink{struct_file}{File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Display the file. \end{DoxyCompactList}\item 
+void \hyperlink{file__coord_8h_a83baee94b9e3ec9d82c91c817596ce14}{detruire\+\_\+file} (\hyperlink{struct_file}{File} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Destruct the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Countains all fonctions needed to manage a file. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{file__coord_8h_a1dfc1c512be2a4d3c63748df3228b965}\label{file__coord_8h_a1dfc1c512be2a4d3c63748df3228b965}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!afficher\+File@{afficher\+File}}
+\index{afficher\+File@{afficher\+File}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{afficher\+File()}{afficherFile()}}
+{\footnotesize\ttfamily void afficher\+File (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Display the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8h_a6e4677315add576dd9ce0b92a2584201}\label{file__coord_8h_a6e4677315add576dd9ce0b92a2584201}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!defiler@{defiler}}
+\index{defiler@{defiler}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{defiler()}{defiler()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord} defiler (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Removes the file head value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_element}{Element}\textquotesingle{}s value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__coord_8h_a83baee94b9e3ec9d82c91c817596ce14}\label{file__coord_8h_a83baee94b9e3ec9d82c91c817596ce14}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!detruire\+\_\+file@{detruire\+\_\+file}}
+\index{detruire\+\_\+file@{detruire\+\_\+file}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{detruire\+\_\+file()}{detruire\_file()}}
+{\footnotesize\ttfamily void detruire\+\_\+file (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Destruct the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8h_af67096f4cca24cb7b2452c078b6ef12d}\label{file__coord_8h_af67096f4cca24cb7b2452c078b6ef12d}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!enfiler@{enfiler}}
+\index{enfiler@{enfiler}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{enfiler()}{enfiler()}}
+{\footnotesize\ttfamily void enfiler (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f,  }\item[{\hyperlink{struct_coord}{Coord}}]{nv\+Nombre }\end{DoxyParamCaption})}
+
+
+
+Adds the queue value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file \\
+\hline
+{\em nv\+Nombre} & Value that we put in file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{file__coord_8h_a3bd9d73d95f791abf98807f0055c9d12}\label{file__coord_8h_a3bd9d73d95f791abf98807f0055c9d12}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!file\+\_\+vide@{file\+\_\+vide}}
+\index{file\+\_\+vide@{file\+\_\+vide}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{file\+\_\+vide()}{file\_vide()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} file\+\_\+vide (\begin{DoxyParamCaption}\item[{\hyperlink{struct_file}{File} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Deliver true if the file is empty, false otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__coord_8h_a362060a8e8cccb3fac7171d626170bb9}\label{file__coord_8h_a362060a8e8cccb3fac7171d626170bb9}} 
+\index{file\+\_\+coord.\+h@{file\+\_\+coord.\+h}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!file\+\_\+coord.\+h@{file\+\_\+coord.\+h}}
+\subsubsection{\texorpdfstring{initialiser()}{initialiser()}}
+{\footnotesize\ttfamily \hyperlink{struct_file}{File}$\ast$ initialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the empty file. 
+
+\begin{DoxyReturn}{Returns}
+the file 
+\end{DoxyReturn}

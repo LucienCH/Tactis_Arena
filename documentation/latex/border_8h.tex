@@ -1,0 +1,202 @@
+\hypertarget{border_8h}{}\section{src/border.h File Reference}
+\label{border_8h}\index{src/border.\+h@{src/border.\+h}}
+
+
+Functions related to zones and borders.  
+
+
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}grid.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{border_8h_ae659cc31557ea4b6015813e502cf2b44}{is\+In\+Range} (\hyperlink{struct_coord}{Coord} coor\+Tab\mbox{[}$\,$\mbox{]}, \hyperlink{struct_coord}{Coord} target)
+\begin{DoxyCompactList}\small\item\em Checks if certain coordinates are in a zone. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} \hyperlink{border_8h_a4df6433775f3aeac0501af5b545c3304}{normalize} (\hyperlink{struct_coord}{Coord} c)
+\begin{DoxyCompactList}\small\item\em Normalizes coordinates back into the grid. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{border_8h_a2a90f624bdeed8887574c92d998c3b64}{set\+Action\+Border} (\hyperlink{struct_coord}{Coord} start, int range, \hyperlink{struct_coord}{Coord} tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates an abilities\textquotesingle{} cast border. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{border_8h_ac0c3ba7a1485976b1922b1b247e2bb49}{set\+Action\+Zone} (int range, \hyperlink{struct_coord}{Coord} Border\mbox{[}$\,$\mbox{]}, \hyperlink{struct_coord}{Coord} Zone\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates an abilities\textquotesingle{} cast zone. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{border_8h_a86f818012e1f652dcbef29c30404c69e}{set\+Movement\+Border} (int matrice\mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}, \hyperlink{struct_coord}{Coord} tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a movement range border. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{border_8h_a408fb6a7759924bb2bb279bc5219f61a}{set\+Movement\+Zone} (int matrice\mbox{[}\hyperlink{common_8h_af255265266c7bffd8e2b3526038636ea}{\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}\mbox{[}\hyperlink{common_8h_aa319b11913fc00b38adf54ee0b56ae09}{\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+}\mbox{]}, \hyperlink{struct_coord}{Coord} tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates a movement range zone. \end{DoxyCompactList}\item 
+\hyperlink{struct_coord}{Coord} $\ast$ \hyperlink{border_8h_a7a5bd665bf72553987602a80c4428a3d}{get\+\_\+border} (int cha\+\_\+id, \hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} Id, \hyperlink{struct_coord}{Coord} coor\+Tab\mbox{[}$\,$\mbox{]}, \hyperlink{struct_coord}{Coord} zone\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Get the zone and the border for a certain ability/movement. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{border_8h_a4acf0e4fce894b9a1ad18d7360ea7b7d}{Cast\+\_\+check} (\hyperlink{structaction}{action} a, \hyperlink{struct_coord}{Coord} coor\+Tab\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks if an ability can be cast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related to zones and borders. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{border_8h_a4acf0e4fce894b9a1ad18d7360ea7b7d}\label{border_8h_a4acf0e4fce894b9a1ad18d7360ea7b7d}} 
+\index{border.\+h@{border.\+h}!Cast\+\_\+check@{Cast\+\_\+check}}
+\index{Cast\+\_\+check@{Cast\+\_\+check}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{Cast\+\_\+check()}{Cast\_check()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} Cast\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{structaction}{action}}]{a,  }\item[{\hyperlink{struct_coord}{Coord}}]{coor\+Tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Checks if an ability can be cast. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the action cast \\
+\hline
+{\em coor\+Tab} & the castable zone border to use with is\+In\+Range to verify the chosen tile\\
+\hline
+\end{DoxyParams}
+Checks if the selected coordinates are in the castable zone, as well as double checks if the character is not stopped, by status effects or cooldowns and such, from casting the ability \begin{DoxyReturn}{Returns}
+T\+R\+UE if the ability can be cast, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_a7a5bd665bf72553987602a80c4428a3d}\label{border_8h_a7a5bd665bf72553987602a80c4428a3d}} 
+\index{border.\+h@{border.\+h}!get\+\_\+border@{get\+\_\+border}}
+\index{get\+\_\+border@{get\+\_\+border}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+border()}{get\_border()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord}$\ast$ get\+\_\+border (\begin{DoxyParamCaption}\item[{int}]{cha\+\_\+id,  }\item[{\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id}}]{Id,  }\item[{\hyperlink{struct_coord}{Coord}}]{coor\+Tab\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{zone\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Get the zone and the border for a certain ability/movement. 
+
+calls the corresponding functions to create the border and zone for the given ability 
+\begin{DoxyParams}{Parameters}
+{\em cha\+\_\+id} & the id of the entity who cast the ability, usefull for finding the starting coordinates \\
+\hline
+{\em Id} & the ability\+Id of the cast ability \\
+\hline
+{\em coor\+Tab} & an array in which to store the border \\
+\hline
+{\em zone} & an array in which to store the zone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the zone (zone) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_ae659cc31557ea4b6015813e502cf2b44}\label{border_8h_ae659cc31557ea4b6015813e502cf2b44}} 
+\index{border.\+h@{border.\+h}!is\+In\+Range@{is\+In\+Range}}
+\index{is\+In\+Range@{is\+In\+Range}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{is\+In\+Range()}{isInRange()}}
+{\footnotesize\ttfamily \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} is\+In\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{coor\+Tab\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{target }\end{DoxyParamCaption})}
+
+
+
+Checks if certain coordinates are in a zone. 
+
+Draws a line from the edge of the grid through the point and then to the other side, depending on the number of times the zone\textquotesingle{}s border was crossed, that determines wether the coordinates are contained in the zone 
+\begin{DoxyParams}{Parameters}
+{\em coor\+Tab} & the border of the zone \\
+\hline
+{\em target} & the target coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if the target is in range, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_a4df6433775f3aeac0501af5b545c3304}\label{border_8h_a4df6433775f3aeac0501af5b545c3304}} 
+\index{border.\+h@{border.\+h}!normalize@{normalize}}
+\index{normalize@{normalize}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord} normalize (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{c }\end{DoxyParamCaption})}
+
+
+
+Normalizes coordinates back into the grid. 
+
+checks if coordinates are out of the grid and normalizes back to the closest point in the grid 
+\begin{DoxyParams}{Parameters}
+{\em c} & the coordinate to normalize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the normalized coord 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_a2a90f624bdeed8887574c92d998c3b64}\label{border_8h_a2a90f624bdeed8887574c92d998c3b64}} 
+\index{border.\+h@{border.\+h}!set\+Action\+Border@{set\+Action\+Border}}
+\index{set\+Action\+Border@{set\+Action\+Border}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{set\+Action\+Border()}{setActionBorder()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord}$\ast$ set\+Action\+Border (\begin{DoxyParamCaption}\item[{\hyperlink{struct_coord}{Coord}}]{start,  }\item[{int}]{range,  }\item[{\hyperlink{struct_coord}{Coord}}]{tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates an abilities\textquotesingle{} cast border. 
+
+uses ability range and caster\textquotesingle{}s vision to create a castable border in which that spell can be cast 
+\begin{DoxyParams}{Parameters}
+{\em start} & the caster\textquotesingle{}s coordinates \\
+\hline
+{\em range} & the result of the range function which uses the caster\textquotesingle{}s vision and the ability\textquotesingle{}s range to determine the castable range \\
+\hline
+{\em tab} & an array in which to store the border \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the border (tab) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_ac0c3ba7a1485976b1922b1b247e2bb49}\label{border_8h_ac0c3ba7a1485976b1922b1b247e2bb49}} 
+\index{border.\+h@{border.\+h}!set\+Action\+Zone@{set\+Action\+Zone}}
+\index{set\+Action\+Zone@{set\+Action\+Zone}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{set\+Action\+Zone()}{setActionZone()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord}$\ast$ set\+Action\+Zone (\begin{DoxyParamCaption}\item[{int}]{range,  }\item[{\hyperlink{struct_coord}{Coord}}]{Border\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{Zone\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates an abilities\textquotesingle{} cast zone. 
+
+uses the border and the is\+In\+Range function to fill out the zone 
+\begin{DoxyParams}{Parameters}
+{\em range} & the result of the range function which uses the caster\textquotesingle{}s vision and the ability\textquotesingle{}s range to determine the castable range, used to determine if a zone is needed \\
+\hline
+{\em Border} & the border created by set\+Action\+Border \\
+\hline
+{\em Zone} & an array in which to store the zone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the zone (Zone) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_a86f818012e1f652dcbef29c30404c69e}\label{border_8h_a86f818012e1f652dcbef29c30404c69e}} 
+\index{border.\+h@{border.\+h}!set\+Movement\+Border@{set\+Movement\+Border}}
+\index{set\+Movement\+Border@{set\+Movement\+Border}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{set\+Movement\+Border()}{setMovementBorder()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord}$\ast$ set\+Movement\+Border (\begin{DoxyParamCaption}\item[{int}]{matrice\mbox{[}\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]}\mbox{[}\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a movement range border. 
+
+uses a matrix returned by fill\+\_\+tiles to find the limits of the character\textquotesingle{}s movement range, creates a border by finding all coords adjacent to none walkable tiles 
+\begin{DoxyParams}{Parameters}
+{\em matrice} & the matrix returned by fill\+\_\+tiles \\
+\hline
+{\em tab} & an array in which to store the border \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the border (tab) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{border_8h_a408fb6a7759924bb2bb279bc5219f61a}\label{border_8h_a408fb6a7759924bb2bb279bc5219f61a}} 
+\index{border.\+h@{border.\+h}!set\+Movement\+Zone@{set\+Movement\+Zone}}
+\index{set\+Movement\+Zone@{set\+Movement\+Zone}!border.\+h@{border.\+h}}
+\subsubsection{\texorpdfstring{set\+Movement\+Zone()}{setMovementZone()}}
+{\footnotesize\ttfamily \hyperlink{struct_coord}{Coord}$\ast$ set\+Movement\+Zone (\begin{DoxyParamCaption}\item[{int}]{matrice\mbox{[}\+\_\+\+X\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]}\mbox{[}\+\_\+\+Y\+\_\+\+S\+I\+Z\+E\+\_\+\mbox{]},  }\item[{\hyperlink{struct_coord}{Coord}}]{tab\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates a movement range zone. 
+
+uses a matrix returned by fill\+\_\+tiles to find the limits of the character\textquotesingle{}s movement range, creates a zone by finding all walkeable coords 
+\begin{DoxyParams}{Parameters}
+{\em matrice} & the matrix returned by fill\+\_\+tiles \\
+\hline
+{\em tab} & an array in which to store the zone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the zone (tab) 
+\end{DoxyReturn}

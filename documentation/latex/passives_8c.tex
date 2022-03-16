@@ -1,0 +1,102 @@
+\hypertarget{passives_8c}{}\section{src/passives.c File Reference}
+\label{passives_8c}\index{src/passives.\+c@{src/passives.\+c}}
+
+
+Contains functions in relation to passive abilities.  
+
+
+{\ttfamily \#include \char`\"{}gameplay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init\+\_\+classes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}border.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}animations.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{passives_8c_a4c1eeb3641bbfaf16d349fdbec49efa0}{activate\+\_\+bloodlust} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Activates Berserker\textquotesingle{}s passive \hyperlink{struct_ability}{Ability} Bloodlust. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_a5edd7aad54ac059bf561cf2f92017698}{err\+\_\+t} \hyperlink{passives_8c_a01ad95eec5467bd7163ab628c99f5bc2}{activate\+\_\+aura} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e, \hyperlink{struct_state_list}{State\+List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Activates Angel\textquotesingle{}s passive \hyperlink{struct_ability}{Ability} Aura. \end{DoxyCompactList}\item 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{passives_8c_ab590e7489d801173cbd01d6145421b0f}{sentinel\+\_\+check} (\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Checks if an entity is in the opposing Ranger\textquotesingle{}s bolt range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{passives_8c_a784284141b2aae43bf68b3c14e3fe50f}\label{passives_8c_a784284141b2aae43bf68b3c14e3fe50f}} 
+int \hyperlink{passives_8c_a784284141b2aae43bf68b3c14e3fe50f}{Bloodlust\+\_\+counter} = 0
+\begin{DoxyCompactList}\small\item\em Counter used to keep track of kills made by the Berserker for Bloodlust activation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{passives_8c_ae93d5bf9566faea9b96820cf719a7f7c}\label{passives_8c_ae93d5bf9566faea9b96820cf719a7f7c}} 
+\hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{passives_8c_ae93d5bf9566faea9b96820cf719a7f7c}{Sentinel\+\_\+counter} = \hyperlink{common_8h_af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839}{T\+R\+UE}
+\begin{DoxyCompactList}\small\item\em Boolean keeps track if sentinel already went off this round \+: T\+R\+UE already triggered, F\+A\+L\+SE not yet triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains functions in relation to passive abilities. 
+
+\begin{DoxyAuthor}{Author}
+Robin B\+U\+T\+EL 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{passives_8c_a01ad95eec5467bd7163ab628c99f5bc2}\label{passives_8c_a01ad95eec5467bd7163ab628c99f5bc2}} 
+\index{passives.\+c@{passives.\+c}!activate\+\_\+aura@{activate\+\_\+aura}}
+\index{activate\+\_\+aura@{activate\+\_\+aura}!passives.\+c@{passives.\+c}}
+\subsubsection{\texorpdfstring{activate\+\_\+aura()}{activate\_aura()}}
+{\footnotesize\ttfamily activate\+\_\+aura (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Activates Angel\textquotesingle{}s passive \hyperlink{struct_ability}{Ability} Aura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to the active player\textquotesingle{}s Angel \\
+\hline
+{\em list} & The active list (st\+Sent if local turn, st\+Received if opponent\textquotesingle{}s turn) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err\+\_\+t OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{passives_8c_a4c1eeb3641bbfaf16d349fdbec49efa0}\label{passives_8c_a4c1eeb3641bbfaf16d349fdbec49efa0}} 
+\index{passives.\+c@{passives.\+c}!activate\+\_\+bloodlust@{activate\+\_\+bloodlust}}
+\index{activate\+\_\+bloodlust@{activate\+\_\+bloodlust}!passives.\+c@{passives.\+c}}
+\subsubsection{\texorpdfstring{activate\+\_\+bloodlust()}{activate\_bloodlust()}}
+{\footnotesize\ttfamily activate\+\_\+bloodlust (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e,  }\item[{\hyperlink{struct_state_list}{State\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+
+
+Activates Berserker\textquotesingle{}s passive \hyperlink{struct_ability}{Ability} Bloodlust. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to the Bloodlusting Berserker \\
+\hline
+{\em list} & The active list (st\+Sent if local turn, st\+Received if opponent\textquotesingle{}s turn) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+what list\+\_\+add returns, err\+\_\+t P\+O\+I\+N\+T\+E\+R\+\_\+\+N\+U\+LL if malloc fails, err\+\_\+t OK otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{passives_8c_ab590e7489d801173cbd01d6145421b0f}\label{passives_8c_ab590e7489d801173cbd01d6145421b0f}} 
+\index{passives.\+c@{passives.\+c}!sentinel\+\_\+check@{sentinel\+\_\+check}}
+\index{sentinel\+\_\+check@{sentinel\+\_\+check}!passives.\+c@{passives.\+c}}
+\subsubsection{\texorpdfstring{sentinel\+\_\+check()}{sentinel\_check()}}
+{\footnotesize\ttfamily sentinel\+\_\+check (\begin{DoxyParamCaption}\item[{\hyperlink{struct_8h_a2228f5f8d54732b2077779d47c6f5ffb}{Entity} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Checks if an entity is in the opposing Ranger\textquotesingle{}s bolt range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to the active entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if sentinel was triggered, F\+A\+L\+SE otherwise 
+\end{DoxyReturn}

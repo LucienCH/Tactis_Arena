@@ -1,0 +1,61 @@
+\hypertarget{struct_ability}{}\section{Ability Struct Reference}
+\label{struct_ability}\index{Ability@{Ability}}
+
+
+Structure representing a castable ability.  
+
+
+
+
+{\ttfamily \#include $<$struct.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_ability_a241fca6ef56ea17cbd0786e316af1518}\label{struct_ability_a241fca6ef56ea17cbd0786e316af1518}} 
+\hyperlink{substruct_8h_a474a755e4cfa53534567029009496507}{ability\+Id} \hyperlink{struct_ability_a241fca6ef56ea17cbd0786e316af1518}{ab\+\_\+id}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability} Id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_ad2542a2f5b2e180534c035010ff86eaa}\label{struct_ability_ad2542a2f5b2e180534c035010ff86eaa}} 
+int \hyperlink{struct_ability_ad2542a2f5b2e180534c035010ff86eaa}{ab\+\_\+cost}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability} cost in action points (act\+\_\+points). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a7147800c2b3c37b8b617da17aada04a7}\label{struct_ability_a7147800c2b3c37b8b617da17aada04a7}} 
+int \hyperlink{struct_ability_a7147800c2b3c37b8b617da17aada04a7}{ab\+\_\+cooldown}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability} Cooldown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_afcf8b94216dbe4187fbed7d6bf2ec6f5}\label{struct_ability_afcf8b94216dbe4187fbed7d6bf2ec6f5}} 
+int \hyperlink{struct_ability_afcf8b94216dbe4187fbed7d6bf2ec6f5}{range}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability} Range, used alongside caster\textquotesingle{}s vision to determine appliable range. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_ad8ce342fec3278694bee817631fd3445}\label{struct_ability_ad8ce342fec3278694bee817631fd3445}} 
+\hyperlink{substruct_8h_a02962753cb153ca273ca219aa4c33ba2}{target\+Type} \hyperlink{struct_ability_ad8ce342fec3278694bee817631fd3445}{target}
+\begin{DoxyCompactList}\small\item\em Indicates which tiles can be targeted by this ability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a3ce9e100d75fec1f76f38c443a42342a}\label{struct_ability_a3ce9e100d75fec1f76f38c443a42342a}} 
+\hyperlink{struct_damage}{Damage} $\ast$$\ast$ \hyperlink{struct_ability_a3ce9e100d75fec1f76f38c443a42342a}{damage}
+\begin{DoxyCompactList}\small\item\em A double pointer to this ability\textquotesingle{}s damage structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_ab5ce6b0edb6e9297b66b1fd9737a230f}\label{struct_ability_ab5ce6b0edb6e9297b66b1fd9737a230f}} 
+int \hyperlink{struct_ability_ab5ce6b0edb6e9297b66b1fd9737a230f}{nb\+\_\+coords}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability} zone size, number of coordinates where ability will be applied, used to navigate through coord. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_aa26fadc3824d52cec6265751534c2a6d}\label{struct_ability_aa26fadc3824d52cec6265751534c2a6d}} 
+\hyperlink{struct_coord}{Coord} $\ast$$\ast$ \hyperlink{struct_ability_aa26fadc3824d52cec6265751534c2a6d}{coord}
+\begin{DoxyCompactList}\small\item\em A double pointer to this ability\textquotesingle{}s list of coordinates which indicate it\textquotesingle{}s zone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a6a9c77c6fee4bfcfa015c45472ca7964}\label{struct_ability_a6a9c77c6fee4bfcfa015c45472ca7964}} 
+int \hyperlink{struct_ability_a6a9c77c6fee4bfcfa015c45472ca7964}{nb\+\_\+mods}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_ability}{Ability}\textquotesingle{}s number of modifiers, used to navigate through mods. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a9b238ea0483f5db1bc952e0b79f86aac}\label{struct_ability_a9b238ea0483f5db1bc952e0b79f86aac}} 
+\hyperlink{struct_modifier}{Modifier} $\ast$$\ast$ \hyperlink{struct_ability_a9b238ea0483f5db1bc952e0b79f86aac}{mods}
+\begin{DoxyCompactList}\small\item\em A double pointer to this ability\textquotesingle{}s list of applicable modifiers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_ac8a0a86236da7622bf3fd6f4a9cb06bb}\label{struct_ability_ac8a0a86236da7622bf3fd6f4a9cb06bb}} 
+\hyperlink{substruct_8h_aca32bbff6b66718eb538b2bfef2b5354}{fnid} \hyperlink{struct_ability_ac8a0a86236da7622bf3fd6f4a9cb06bb}{fn\+\_\+use}
+\begin{DoxyCompactList}\small\item\em Indicates when to use special ability function method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a0ef8d4d8ff07c99977d7bacddb55a0b3}\label{struct_ability_a0ef8d4d8ff07c99977d7bacddb55a0b3}} 
+int($\ast$ \hyperlink{struct_ability_a0ef8d4d8ff07c99977d7bacddb55a0b3}{function} )(\hyperlink{struct_coord}{Coord}, struct \hyperlink{structentity__t}{entity\+\_\+t} $\ast$, \hyperlink{struct_state_list}{State\+List} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method that allows special behavior to happen during casting of ability. N\+U\+LL if none is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_ability_a166660a51a7b59c47ff4ef2ad5f30258}\label{struct_ability_a166660a51a7b59c47ff4ef2ad5f30258}} 
+\hyperlink{structlang}{lang} \hyperlink{struct_ability_a166660a51a7b59c47ff4ef2ad5f30258}{eng}
+\begin{DoxyCompactList}\small\item\em Name and Desription of \hyperlink{struct_ability}{Ability} in English. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure representing a castable ability. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{struct_8h}{struct.\+h}\end{DoxyCompactItemize}
